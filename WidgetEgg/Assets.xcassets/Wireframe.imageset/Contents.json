@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Frame 5-3.png",
+      "filename" : "Frame 5-3 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -43,6 +43,11 @@
       ],
       "idiom" : "universal",
       "scale" : "3x"
+    },
+    {
+      "filename" : "Frame 5-3.png",
+      "idiom" : "watch",
+      "scale" : "2x"
     }
   ],
   "info" : {

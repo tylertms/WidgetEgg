@@ -16,23 +16,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2F20FDDE2BE431B600B30302"
-               BuildableName = "MissionInfoExtension.appex"
-               BlueprintName = "MissionInfoExtension"
-               ReferencedContainer = "container:WidgetEgg.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2F4772D52BE41E9600EC6E07"
-               BuildableName = "WidgetEgg.app"
-               BlueprintName = "WidgetEgg"
+               BlueprintIdentifier = "2FE674AE2C18C16D00B0D2E1"
+               BuildableName = "MissionInfoWatchExtension.appex"
+               BlueprintName = "MissionInfoWatchExtension"
                ReferencedContainer = "container:WidgetEgg.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,27 +43,16 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <RemoteRunnable
-         runnableDebuggingMode = "1"
-         BundleIdentifier = "com.apple.widgetkit.simulator"
-         RemotePath = "/System/Library/CoreServices/WidgetKit Simulator.app/Contents/MacOS/WidgetKit Simulator">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2F20FDDE2BE431B600B30302"
-            BuildableName = "MissionInfoExtension.appex"
-            BlueprintName = "MissionInfoExtension"
+            BlueprintIdentifier = "2FE674AE2C18C16D00B0D2E1"
+            BuildableName = "MissionInfoWatchExtension.appex"
+            BlueprintName = "MissionInfoWatchExtension"
             ReferencedContainer = "container:WidgetEgg.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2F4772D52BE41E9600EC6E07"
-            BuildableName = "WidgetEgg.app"
-            BlueprintName = "WidgetEgg"
-            ReferencedContainer = "container:WidgetEgg.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "_XCWidgetKind"
@@ -86,7 +61,7 @@
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "_XCWidgetDefaultView"
-            value = "snapshot"
+            value = "timeline"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
@@ -104,16 +79,15 @@
       debugDocumentVersioning = "YES"
       askForAppToLaunch = "Yes"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2F4772D52BE41E9600EC6E07"
-            BuildableName = "WidgetEgg.app"
-            BlueprintName = "WidgetEgg"
+            BlueprintIdentifier = "2FE674AE2C18C16D00B0D2E1"
+            BuildableName = "MissionInfoWatchExtension.appex"
+            BlueprintName = "MissionInfoWatchExtension"
             ReferencedContainer = "container:WidgetEgg.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
