@@ -21,16 +21,6 @@ struct SignedOutView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: 50)
-            
-#if os(iOS)
-            if family != .accessoryRectangular && family != .accessoryCircular {
-                Text("Tap to sign in to WidgetEgg.")
-                    .multilineTextAlignment(.center)
-                    .font(.system(size: 16, weight: .semibold))
-            }
-#endif
-            
         }
-        .padding(15)
     }
 }

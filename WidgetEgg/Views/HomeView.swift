@@ -18,8 +18,6 @@ struct HomeView: View {
     @State private var showEIDHelp: Bool = false
     @State private var showWhatNext: Bool = false
     
-    let smallIcon = resizeImage(image: UIImage(named: "wireframe")!, targetSize: CGSize(width: 256, height: 256))
-    
     init() {
         self.EIUserName = UserDefaults(suiteName: "group.com.MissionInfo")?.string(forKey: "EIUserName") ?? ""
     }
@@ -35,7 +33,7 @@ struct HomeView: View {
                 .padding()
                 .frame(maxWidth: 150)
 #else
-            Image(uiImage: smallIcon)
+            Image(.wireframe)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: 60)
