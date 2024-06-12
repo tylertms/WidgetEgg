@@ -22,7 +22,7 @@ struct MissionInfoAccessoryRectangular : View {
             HStack(spacing: CGFloat(scale)/4) {
                 ForEach(0..<3) { index in
                     if index < activeMissions.count {
-                        CustomGauge(mission: activeMissions[index], scale: Double(scale), lineWidth: 4)
+                        CustomGauge(mission: activeMissions[index], scale: Double(scale), lineWidth: 5)
                     } else {
                         MissionInfoEmptySmall(scale: scale)
                     }

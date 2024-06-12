@@ -17,12 +17,12 @@ struct MissionInfoAccessoryCircular : View {
 #if os(iOS)
             let lineWidth = 5.5
 #else
-            let lineWidth = 4
+            let lineWidth = 5.0
 #endif
             
             Group {
                 if let earliestMission {
-                    CustomGauge(mission: earliestMission, scale: Double(scale), lineWidth: 4)
+                    CustomGauge(mission: earliestMission, scale: Double(scale), lineWidth: lineWidth)
                         .onAppear {
                             print(min(1, 1 - earliestMission.secondsRemaining / earliestMission.durationSeconds))
                         }

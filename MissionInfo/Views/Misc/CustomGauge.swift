@@ -22,7 +22,7 @@ struct CustomGauge: View {
     init(mission: Ei_MissionInfo, scale: CGFloat, lineWidth: CGFloat? = nil) {
         self.mission = mission
         self.scale = scale
-        self.lineWidth = lineWidth ?? 5.0
+        self.lineWidth = lineWidth ?? 5.5
     }
     
     var body: some View {
