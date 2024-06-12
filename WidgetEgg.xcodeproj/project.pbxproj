@@ -1068,7 +1068,7 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MissionInfoExtension copy-Info.plist";
+				INFOPLIST_FILE = MissionInfo/MissionInfoExtensionInfo.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MissionInfo;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -1110,7 +1110,7 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "MissionInfoExtension copy-Info.plist";
+				INFOPLIST_FILE = MissionInfo/MissionInfoExtensionInfo.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MissionInfo;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
