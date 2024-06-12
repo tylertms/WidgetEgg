@@ -29,15 +29,15 @@ struct FuelList: View {
                 ForEach(0..<4, id: \.self) { index in
                     if index < indexedArray.count {
                         let eggInfo = indexedArray[index]
-                        if let egg = Ei_Egg(rawValue: Int(eggInfo[0])), let image = PlatformImage(named: "egg_" + egg.description) {
+                        if let egg = Ei_Egg(rawValue: Int(eggInfo[0])), let image = UIImage(named: "egg_" + egg.description) {
                             Image(uiImage: image)
                                 .resizable()
                         } else {
-                            Image(uiImage: PlatformImage(named: "egg_unknown") ?? UIImage())
+                            Image(uiImage: UIImage(named: "egg_unknown") ?? UIImage())
                                 .resizable()
                         }
                     } else {
-                        Image(uiImage: PlatformImage(named: "egg_unknown") ?? UIImage())
+                        Image(uiImage: UIImage(named: "egg_unknown") ?? UIImage())
                             .resizable()
                     }
                 }
