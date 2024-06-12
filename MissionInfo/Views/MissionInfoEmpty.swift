@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EmptyMissionInfoSmall: View {
+struct MissionInfoEmptySmall: View {
     let scale: CGFloat
     
     var body: some View {
@@ -18,7 +18,7 @@ struct EmptyMissionInfoSmall: View {
     }
 }
 
-struct EmptyMissionInfoMedium: View {
+struct MissionInfoEmptyMedium: View {
     let scale: CGFloat
     var body: some View {
         HStack {

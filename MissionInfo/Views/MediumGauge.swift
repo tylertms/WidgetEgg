@@ -69,13 +69,13 @@ struct MediumGauge: View {
                 )
             } else {
                 return AnyView(
-                    EmptyMissionInfoMedium(scale: scale)
+                    MissionInfoEmptyMedium(scale: scale)
                         .frame(maxWidth: .infinity)
                 )
             }
         } else {
             return AnyView(
-                EmptyMissionInfoMedium(scale: scale)
+                MissionInfoEmptyMedium(scale: scale)
                     .frame(maxWidth: .infinity)
             )
         }

@@ -12,19 +12,33 @@ struct MissionInfoEntryView: View {
     let entry: Provider.Entry
     
     var body: some View {
-        if entry.date == Date(timeIntervalSince1970: 0) {
-            SignedOutView()
-        } else {
-            switch family {
-            case .systemSmall:
-                MissionInfoEntryViewSmall(entry: entry)
-            case .systemMedium:
-                MissionInfoEntryViewMedium(entry: entry)
-            //case .accessoryRectangular:
-            //    MissionInfoEntryViewSmall(entry: entry)
-            default:
-                EmptyView()
+        Group {
+            if entry.date == Date(timeIntervalSince1970: 0) {
+                SignedOutView()
+            } else {
+                switch family {
+                    
+                case .systemSmall:
+                    MissionInfoSmall(entry: entry)
+                    
+                case .systemMedium:
+                    MissionInfoMedium(entry: entry)
+                    
+                case .accessoryRectangular:
+                    MissionInfoAccessoryRectangular(entry: entry)
+                    
+                case .accessoryCircular:
+                    MissionInfoAccessoryCircular(entry: entry)
+                    
+                case .accessoryCorner:
+                    MissionInfoAccessoryCorner(entry: entry)
+                    
+                default:
+                    EmptyView()
+                }
             }
         }
+        .widgetBackground(Color.gray.opacity(0.15))
     }
+
 }
