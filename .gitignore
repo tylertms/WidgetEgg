@@ -1,7 +1,6 @@
 # Custom
-
-MissionInfo/Tools/SecureAPI.swift
 .DS_Store
+MissionInfo/Info.plist
 
 # Xcode
 #
