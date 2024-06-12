@@ -17,6 +17,7 @@ struct HomeView: View {
     @State private var checkingEID: Bool = false
     @State private var showEIDHelp: Bool = false
     @State private var showWhatNext: Bool = false
+    @State private var showConfirmation: Bool = false
     
     init() {
         self.EIUserName = UserDefaults(suiteName: "group.com.MissionInfo")?.string(forKey: "EIUserName") ?? ""
@@ -136,19 +137,7 @@ struct HomeView: View {
                 .clipShape(RoundedRectangle(cornerRadius: .infinity))
                 
                 Button(action: {
-                    if let defaults = UserDefaults(suiteName: "group.com.MissionInfo") {
-                        defaults.removeObject(forKey: "EID")
-                        defaults.removeObject(forKey: "EIUserName")
-                        
-                        self.EID.removeAll()
-                        self.EIUserName.removeAll()
-                        
-#if os(iOS)
-                        UIApplication.shared.endEditing()
-#endif
-                        
-                        WidgetCenter.shared.reloadAllTimelines()
-                    }
+                    showConfirmation = true
                 }, label: {
                     Text("Sign Out")
                         .font(.system(size: 18, weight: .semibold))
@@ -157,14 +146,35 @@ struct HomeView: View {
                         .padding(12.5)
                         .frame(maxWidth: .infinity)
                         .contentShape(Rectangle())
-                    
                 })
+                .confirmationDialog(
+                    "Are you sure?",
+                    isPresented: $showConfirmation,
+                    titleVisibility: .visible
+                ) {
+                    Button("Sign Out", role: .destructive) {
+                        if let defaults = UserDefaults(suiteName: "group.com.MissionInfo") {
+                            defaults.removeObject(forKey: "EID")
+                            defaults.removeObject(forKey: "EIUserName")
+                            
+                            self.EID.removeAll()
+                            self.EIUserName.removeAll()
+                            self.showConfirmation = false
+                            
+#if os(iOS)
+                            UIApplication.shared.endEditing()
+#endif
+                            WidgetCenter.shared.reloadAllTimelines()
+                        }
+                    }
+                }
                 .background(Color.red)
                 .buttonStyle(PlainButtonStyle())
                 .clipShape(RoundedRectangle(cornerRadius: .infinity))
             }
             .foregroundColor(.white)
             .padding(.bottom, 20)
+            
             
 #if os(iOS)
             Spacer()
