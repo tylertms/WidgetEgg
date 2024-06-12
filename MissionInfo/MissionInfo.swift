@@ -6,11 +6,11 @@ struct MissionInfo: Widget {
     var supportedFamilyList: [WidgetFamily]
     
     init() {
-        #if os(iOS)
+#if os(iOS)
         supportedFamilyList = [.systemSmall, .systemMedium, .accessoryCircular, .accessoryRectangular]
-        #elseif os(watchOS)
+#elseif os(watchOS)
         supportedFamilyList = [.accessoryRectangular, .accessoryCircular, .accessoryCorner]
-        #endif
+#endif
     }
     
     var body: some WidgetConfiguration {

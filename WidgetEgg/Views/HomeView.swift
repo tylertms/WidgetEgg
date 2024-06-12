@@ -38,6 +38,7 @@ struct HomeView: View {
                 .frame(maxWidth: 60)
 #endif
             
+            
             Group {
                 if !EIUserName.isEmpty {
                     Text("Welcome, \(EIUserName)!")
@@ -48,7 +49,6 @@ struct HomeView: View {
                 }
             }
             .minimumScaleFactor(0.2)
-
             .padding(.horizontal)
             
 #if os(iOS)
@@ -56,6 +56,7 @@ struct HomeView: View {
 #elseif os(watchOS)
             .font(.system(size: 20, weight: .semibold))
 #endif
+            
             
             TextField("EI0000000000000000", text: $EID)
                 .multilineTextAlignment(.center)
