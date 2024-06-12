@@ -8,7 +8,7 @@ struct MissionInfo: Widget {
     init() {
 #if os(iOS)
         supportedFamilyList = [.systemSmall, .systemMedium, .accessoryCircular, .accessoryRectangular]
-#elseif os(watchOS)
+#else
         supportedFamilyList = [.accessoryRectangular, .accessoryCircular, .accessoryCorner]
 #endif
     }

@@ -14,7 +14,7 @@ struct MissionInfoEntryView: View {
     var body: some View {
         Group {
             if entry.date == Date(timeIntervalSince1970: 0) {
-                SignedOutView()
+                SignedOutView(family: family)
             } else {
                 switch family {
                     

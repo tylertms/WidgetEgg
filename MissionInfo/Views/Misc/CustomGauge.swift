@@ -30,7 +30,7 @@ struct CustomGauge: View {
         
 #if os(iOS)
         let smallerResizeFamilies: [WidgetFamily] = [.accessoryRectangular, .accessoryCircular]
-#elseif os(watchOS)
+#else
         let smallerResizeFamilies: [WidgetFamily] = [.accessoryRectangular, .accessoryCircular, .accessoryCorner]
 #endif
         let resizedSize: CGFloat = smallerResizeFamilies.contains(family) ? 64 : 256

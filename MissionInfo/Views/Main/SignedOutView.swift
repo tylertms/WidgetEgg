@@ -7,20 +7,30 @@
 
 import Foundation
 import SwiftUI
+import WidgetKit
 
 struct SignedOutView: View {
+    
+    let family: WidgetFamily
+    
+    let resizedIcon = resizeImage(image: UIImage(named: "wireframe")!, targetSize: CGSize(width: 256, height: 256))
+    
     var body: some View {
-        VStack {
-#if os(iOS)
-            Image(.wireframe)
+        VStack(alignment: .center) {
+            Image(uiImage: resizedIcon)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 50)
+                .frame(maxWidth: 50)
+            
+#if os(iOS)
+            if family != .accessoryRectangular && family != .accessoryCircular {
+                Text("Tap to sign in to WidgetEgg.")
+                    .multilineTextAlignment(.center)
+                    .font(.system(size: 16, weight: .semibold))
+            }
 #endif
             
-            Text("Tap to sign in to WidgetEgg.")
-                .multilineTextAlignment(.center)
-                .font(.system(size: 16, weight: .semibold))
         }
+        .padding(15)
     }
 }

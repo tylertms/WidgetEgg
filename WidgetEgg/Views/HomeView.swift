@@ -18,6 +18,8 @@ struct HomeView: View {
     @State private var showEIDHelp: Bool = false
     @State private var showWhatNext: Bool = false
     
+    let smallIcon = resizeImage(image: UIImage(named: "wireframe")!, targetSize: CGSize(width: 256, height: 256))
+    
     init() {
         self.EIUserName = UserDefaults(suiteName: "group.com.MissionInfo")?.string(forKey: "EIUserName") ?? ""
     }
@@ -26,15 +28,16 @@ struct HomeView: View {
         VStack(alignment: .center) {
 #if os(iOS)
             Spacer()
-#endif
             
             Image(.wireframe)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-#if os(iOS)
                 .padding()
                 .frame(maxWidth: 150)
-#elseif os(watchOS)
+#else
+            Image(uiImage: smallIcon)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: 60)
 #endif
             
@@ -53,7 +56,7 @@ struct HomeView: View {
             
 #if os(iOS)
             .font(.system(size: 30, weight: .semibold))
-#elseif os(watchOS)
+#else
             .font(.system(size: 20, weight: .semibold))
 #endif
             
@@ -67,7 +70,7 @@ struct HomeView: View {
                 .clipShape(RoundedRectangle(cornerRadius: .infinity))
                 .contentShape(RoundedRectangle(cornerRadius: .infinity))
                 .onTapGesture {}
-#elseif os(watchOS)
+#else
                 .padding(.vertical)
                 .frame(maxWidth: .infinity)
 #endif
@@ -229,7 +232,7 @@ struct HomeView: View {
     private func StackView<Content: View>(@ViewBuilder content: () -> Content) -> some View {
 #if os(iOS)
         HStack(content: content)
-#elseif os(watchOS)
+#else
         VStack(content: content)
 #endif
     }
