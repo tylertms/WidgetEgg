@@ -29,11 +29,6 @@ cat > "$PLIST_PATH" << EOF
 		<key>INDEX</key>
 		<string>$INDEX</string>
 	</dict>
-	<key>NSExtension</key>
-	<dict>
-		<key>NSExtensionPointIdentifier</key>
-		<string>com.apple.widgetkit-extension</string>
-	</dict>
 </dict>
 </plist>
 EOF
