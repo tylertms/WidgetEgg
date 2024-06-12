@@ -39,7 +39,6 @@
 		2F4D914A2BEE815200C6899F /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91482BEE80A600C6899F /* UI.swift */; };
 		2F4D914B2BEE815400C6899F /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91432BEE803700C6899F /* Numbers.swift */; };
 		2F4D914E2BEE823E00C6899F /* MediumGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D914D2BEE823E00C6899F /* MediumGauge.swift */; };
-		2F4D91532BEE84CF00C6899F /* WidgetInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F4D91522BEE84CF00C6899F /* WidgetInfo.plist */; };
 		2F544BCE2BE5BE7500A83B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */; };
 		2F544BCF2BE5CE6200A83B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */; };
 		2F546F0C2BE487860009DBEF /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 2F546F0B2BE487860009DBEF /* SwiftProtobuf */; };
@@ -191,7 +190,6 @@
 		2F4D91432BEE803700C6899F /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
 		2F4D91482BEE80A600C6899F /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		2F4D914D2BEE823E00C6899F /* MediumGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumGauge.swift; sourceTree = "<group>"; };
-		2F4D91522BEE84CF00C6899F /* WidgetInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = WidgetInfo.plist; sourceTree = "<group>"; };
 		2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F96C9C02C195DDF008C7708 /* SecureAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAPI.swift; sourceTree = "<group>"; };
 		2FA3474E2BE7D0FA00C30E7B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -302,7 +300,6 @@
 				2F4772D92BE41E9600EC6E07 /* WidgetEggApp.swift */,
 				2FE674F12C18D24500B0D2E1 /* Views */,
 				2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */,
-				2F4D91522BEE84CF00C6899F /* WidgetInfo.plist */,
 			);
 			path = WidgetEgg;
 			sourceTree = "<group>";
@@ -577,7 +574,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F4D91532BEE84CF00C6899F /* WidgetInfo.plist in Resources */,
 				2F544BCE2BE5BE7500A83B15 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,7 +610,8 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(SRCROOT)/MissionInfo/Info.plist",
+				"$(SRCROOT)/WidgetEgg/Info.plist",
+				"$(SRCROOT)/WidgetEgg/ExtensionInfo.plist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -754,7 +751,7 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MissionInfo/Info.plist;
+				INFOPLIST_FILE = WidgetEgg/ExtensionInfo.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MissionInfo;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -797,7 +794,7 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MissionInfo/Info.plist;
+				INFOPLIST_FILE = WidgetEgg/ExtensionInfo.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MissionInfo;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -966,7 +963,7 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MissionInfo/Info.plist;
+				INFOPLIST_FILE = WidgetEgg/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1005,7 +1002,7 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MissionInfo/Info.plist;
+				INFOPLIST_FILE = WidgetEgg/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1042,7 +1039,7 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MissionInfo/Info.plist;
+				INFOPLIST_FILE = WidgetEgg/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetEgg;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tiller.WidgetEgg;
@@ -1074,7 +1071,7 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MissionInfo/Info.plist;
+				INFOPLIST_FILE = WidgetEgg/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetEgg;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tiller.WidgetEgg;
@@ -1108,7 +1105,7 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MissionInfo/Info.plist;
+				INFOPLIST_FILE = WidgetEgg/ExtensionInfo.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MissionInfo;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -1150,7 +1147,7 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MissionInfo/Info.plist;
+				INFOPLIST_FILE = WidgetEgg/ExtensionInfo.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MissionInfo;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;

@@ -1,6 +1,6 @@
 # Custom
 .DS_Store
-MissionInfo/Info.plist
+WidgetEgg/*.plist
 
 # Xcode
 #
