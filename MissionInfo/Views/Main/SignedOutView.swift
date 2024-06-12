@@ -13,7 +13,7 @@ struct SignedOutView: View {
     
     let family: WidgetFamily
     
-    let resizedIcon = resizeImage(image: UIImage(named: "wireframe")!, targetSize: CGSize(width: 64, height: 64))
+    let resizedIcon = resizeImage(image: UIImage(named: "Wireframe")!, targetSize: CGSize(width: 64, height: 64))
     
     var body: some View {
         VStack(alignment: .center) {
@@ -21,6 +21,7 @@ struct SignedOutView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: 50)
+            
         }
     }
 }

@@ -12,7 +12,10 @@ func fetchActiveMissions(basicRequestInfo: Ei_BasicRequestInfo) async throws -> 
     guard let url = URL(string: MISSION_ENDPOINT) else { throw NSError(domain: "InvalidURL", code: 0, userInfo: nil) }
     
     
-    let authMessage = try buildSecureAuthMessage(data: basicRequestInfo.serializedData())
+    guard let authMessage = buildSecureAuthMessage(data: try basicRequestInfo.serializedData()) else {
+        throw NSError(domain: "InvalidSecrets", code: 0, userInfo: nil)
+    }
+    
     let parameters = ["data": try authMessage.serializedData().base64EncodedString()]
     
     var request = URLRequest(url: url)
@@ -21,7 +24,9 @@ func fetchActiveMissions(basicRequestInfo: Ei_BasicRequestInfo) async throws -> 
     request.httpBody = parameters.queryString.data(using: .utf8)
     
     let (data, _) = try await URLSession.shared.data(for: request)
-    guard let b64decoded = Data(base64Encoded: data) else { throw NSError(domain: "InvalidData", code: 0, userInfo: nil) }
+    guard let b64decoded = Data(base64Encoded: data) else {
+        throw NSError(domain: "InvalidData", code: 0, userInfo: nil)
+    }
     
     let authMessageDecoded = try Ei_AuthenticatedMessage(serializedData: b64decoded).message
     let activeMissionsResponse = try Ei_GetActiveMissionsResponse(serializedData: authMessageDecoded)

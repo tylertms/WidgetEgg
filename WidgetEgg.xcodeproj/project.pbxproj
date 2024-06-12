@@ -39,7 +39,6 @@
 		2F4D914A2BEE815200C6899F /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91482BEE80A600C6899F /* UI.swift */; };
 		2F4D914B2BEE815400C6899F /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91432BEE803700C6899F /* Numbers.swift */; };
 		2F4D914E2BEE823E00C6899F /* MediumGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D914D2BEE823E00C6899F /* MediumGauge.swift */; };
-		2F4D91532BEE84CF00C6899F /* WidgetInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F4D91522BEE84CF00C6899F /* WidgetInfo.plist */; };
 		2F544BCE2BE5BE7500A83B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */; };
 		2F544BCF2BE5CE6200A83B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */; };
 		2F546F0C2BE487860009DBEF /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 2F546F0B2BE487860009DBEF /* SwiftProtobuf */; };
@@ -160,6 +159,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2F117C2F2C1A2FF500226CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F1830112C1A0B5000119A88 /* ci_pre_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_pre_xcodebuild.sh; sourceTree = "<group>"; };
 		2F20FDDF2BE431B600B30302 /* MissionInfoExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MissionInfoExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F20FDE32BE431B600B30302 /* MissionInfoBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoBundle.swift; sourceTree = "<group>"; };
 		2F20FDE52BE431B600B30302 /* MissionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfo.swift; sourceTree = "<group>"; };
@@ -190,15 +191,12 @@
 		2F4D91432BEE803700C6899F /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
 		2F4D91482BEE80A600C6899F /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		2F4D914D2BEE823E00C6899F /* MediumGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumGauge.swift; sourceTree = "<group>"; };
-		2F4D91522BEE84CF00C6899F /* WidgetInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = WidgetInfo.plist; sourceTree = "<group>"; };
-		2F4D91542BEE857F00C6899F /* SecureAPIDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAPIDefault.swift; sourceTree = "<group>"; };
 		2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F96C9C02C195DDF008C7708 /* SecureAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAPI.swift; sourceTree = "<group>"; };
 		2FA3474E2BE7D0FA00C30E7B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2FE6749C2C18C12700B0D2E1 /* WidgetEggWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetEggWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FE6749E2C18C12700B0D2E1 /* WidgetEggWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetEggWatchApp.swift; sourceTree = "<group>"; };
 		2FE674D12C18C16D00B0D2E1 /* MissionInfoWatchExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MissionInfoWatchExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FE674DB2C18C5F300B0D2E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FE674DE2C18C95000B0D2E1 /* WidgetEggWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetEggWatch.entitlements; sourceTree = "<group>"; };
 		2FE674EE2C18CCA300B0D2E1 /* MissionInfoAccessoryRectangular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoAccessoryRectangular.swift; sourceTree = "<group>"; };
 		2FE674F62C18FC8300B0D2E1 /* MissionInfoAccessoryCircular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoAccessoryCircular.swift; sourceTree = "<group>"; };
@@ -249,6 +247,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F18300F2C1A0B4100119A88 /* ci_scripts */ = {
+			isa = PBXGroup;
+			children = (
+				2F1830112C1A0B5000119A88 /* ci_pre_xcodebuild.sh */,
+			);
+			path = ci_scripts;
+			sourceTree = "<group>";
+		};
 		2F20FDE22BE431B600B30302 /* MissionInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,7 +265,6 @@
 				2F20FDE32BE431B600B30302 /* MissionInfoBundle.swift */,
 				2F20FDE52BE431B600B30302 /* MissionInfo.swift */,
 				2F20FDE92BE431B700B30302 /* Assets.xcassets */,
-				2FE674DB2C18C5F300B0D2E1 /* Info.plist */,
 				2F20FDEC2BE431B700B30302 /* MissionInfo.entitlements */,
 			);
 			path = MissionInfo;
@@ -268,6 +273,7 @@
 		2F4772CD2BE41E9600EC6E07 = {
 			isa = PBXGroup;
 			children = (
+				2F18300F2C1A0B4100119A88 /* ci_scripts */,
 				2F4772D82BE41E9600EC6E07 /* WidgetEgg */,
 				2FE6749D2C18C12700B0D2E1 /* WidgetEggWatch */,
 				2F20FDE22BE431B600B30302 /* MissionInfo */,
@@ -295,7 +301,7 @@
 				2F4772D92BE41E9600EC6E07 /* WidgetEggApp.swift */,
 				2FE674F12C18D24500B0D2E1 /* Views */,
 				2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */,
-				2F4D91522BEE84CF00C6899F /* WidgetInfo.plist */,
+				2F117C2F2C1A2FF500226CEF /* Info.plist */,
 			);
 			path = WidgetEgg;
 			sourceTree = "<group>";
@@ -334,7 +340,6 @@
 			children = (
 				2F20FDF82BE43C1700B30302 /* API.swift */,
 				2F96C9C02C195DDF008C7708 /* SecureAPI.swift */,
-				2F4D91542BEE857F00C6899F /* SecureAPIDefault.swift */,
 				2F4D91432BEE803700C6899F /* Numbers.swift */,
 				2F4D91482BEE80A600C6899F /* UI.swift */,
 				2F4A7F782BE55BFF00AD68A0 /* Extensions.swift */,
@@ -425,6 +430,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F20FDF02BE431B700B30302 /* Build configuration list for PBXNativeTarget "MissionInfoExtension" */;
 			buildPhases = (
+				2F117C222C1A13B200226CEF /* ShellScript */,
 				2F20FDDB2BE431B600B30302 /* Sources */,
 				2F20FDDC2BE431B600B30302 /* Frameworks */,
 				2F20FDDD2BE431B600B30302 /* Resources */,
@@ -570,7 +576,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F4D91532BEE84CF00C6899F /* WidgetInfo.plist in Resources */,
 				2F544BCE2BE5BE7500A83B15 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,6 +598,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F117C222C1A13B200226CEF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/WidgetEgg/ExtensionInfo.plist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nsh ${SRCROOT}/ci_scripts/ci_pre_xcodebuild.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F20FDDB2BE431B600B30302 /* Sources */ = {
@@ -726,8 +752,9 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MissionInfo/Info.plist;
+				INFOPLIST_FILE = WidgetEgg/ExtensionInfo.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MissionInfo;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -768,8 +795,9 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MissionInfo/Info.plist;
+				INFOPLIST_FILE = WidgetEgg/ExtensionInfo.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MissionInfo;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -834,7 +862,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -849,6 +877,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = YES;
+				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -899,7 +929,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -908,6 +938,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = YES;
+				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -932,6 +964,7 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetEgg/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -970,6 +1003,7 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetEgg/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1006,6 +1040,7 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetEgg/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetEgg;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tiller.WidgetEgg;
@@ -1037,6 +1072,7 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WidgetEgg/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetEgg;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tiller.WidgetEgg;
@@ -1070,7 +1106,7 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MissionInfo/MissionInfoExtensionInfo.plist;
+				INFOPLIST_FILE = WidgetEgg/ExtensionInfo.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MissionInfo;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -1112,7 +1148,7 @@
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MissionInfo/MissionInfoExtensionInfo.plist;
+				INFOPLIST_FILE = WidgetEgg/ExtensionInfo.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MissionInfo;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;

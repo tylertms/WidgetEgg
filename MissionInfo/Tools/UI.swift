@@ -25,7 +25,11 @@ public func fetchImage(ship: Int? = nil, afx: Int? = nil) -> UIImage? {
     } else if let afx = afx {
         key = getImageFromAfxID(AFX_ID: afx)
     } else {
-        return UIImage(named: "ellipsis")
+        return nil
+    }
+    
+    if key.isEmpty {
+        return nil
     }
     
     return UIImage(named: key)
