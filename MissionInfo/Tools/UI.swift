@@ -7,8 +7,7 @@
 
 import Foundation
 import SwiftUI
-import UIKit
-
+import WidgetKit
 
 func getRoundingCircle(progress: CGFloat, scale: CGFloat) -> AnyView {
     let angle = (-progress * 360 - 90) * CGFloat.pi / 180
@@ -32,7 +31,13 @@ public func fetchImage(ship: Int? = nil, afx: Int? = nil) -> UIImage? {
     return UIImage(named: key)
 }
 
-func getMissionColor(mission: Ei_MissionInfo) -> Color {
+func getMissionColor(mission: Ei_MissionInfo, family: WidgetFamily) -> Color {
+    
+    if family == .accessoryRectangular || family == .accessoryCircular {
+#if os(iOS)
+        return .white
+#endif
+    }
     switch mission.durationType {
     case .tutorial:
         return .white

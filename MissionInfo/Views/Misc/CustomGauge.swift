@@ -59,7 +59,7 @@ struct CustomGauge: View {
                     .rotationEffect(.degrees(-90))
                     .opacity(mission.status == .fueling ? 0.4 : 1)
             }
-            .foregroundStyle(getMissionColor(mission: mission))
+            .foregroundStyle(getMissionColor(mission: mission, family: family))
             
 #if os(iOS)
             if let targetImage = fetchImage(afx: mission.targetArtifact.rawValue),

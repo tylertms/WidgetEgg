@@ -14,9 +14,9 @@ struct MissionInfoAccessoryRectangular : View {
         GeometryReader { proxy in
             let activeMissions = entry.missionData.filter { $0.status != .fueling }
 #if os(iOS)
-            let scale: CGFloat = proxy.size.width * 0.375
-#elseif os(watchOS)
-            let scale: CGFloat = proxy.size.height * 0.9
+            let scale = proxy.size.width / 3.5
+#else
+            let scale = proxy.size.width / 4
 #endif
             
             HStack(spacing: CGFloat(scale)/4) {
@@ -31,6 +31,5 @@ struct MissionInfoAccessoryRectangular : View {
             .frame(width: proxy.size.width, height: proxy.size.height, alignment: .center)
         }
         .font(.system(size: 20, weight: .medium))
-        .padding(15)
     }
 }

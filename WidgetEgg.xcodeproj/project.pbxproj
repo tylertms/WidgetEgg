@@ -27,7 +27,7 @@
 		2F4A7F7F2BE55C8A00AD68A0 /* MissionInfoSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F7E2BE55C8A00AD68A0 /* MissionInfoSmall.swift */; };
 		2F4A7F812BE55CA400AD68A0 /* MissionInfoMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F802BE55CA400AD68A0 /* MissionInfoMedium.swift */; };
 		2F4A7F832BE55CCA00AD68A0 /* MissionInfoEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F822BE55CCA00AD68A0 /* MissionInfoEmpty.swift */; };
-		2F4A7F852BE55D2700AD68A0 /* Gauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F842BE55D2700AD68A0 /* Gauge.swift */; };
+		2F4A7F852BE55D2700AD68A0 /* CustomGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F842BE55D2700AD68A0 /* CustomGauge.swift */; };
 		2F4A7F872BE55E6500AD68A0 /* SignedOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F862BE55E6500AD68A0 /* SignedOutView.swift */; };
 		2F4A7F8B2BE56DE200AD68A0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F782BE55BFF00AD68A0 /* Extensions.swift */; };
 		2F4A7F8D2BE5780700AD68A0 /* EIDHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F8C2BE5780700AD68A0 /* EIDHelp.swift */; };
@@ -51,7 +51,7 @@
 		2FA3474F2BE7D0FA00C30E7B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA3474E2BE7D0FA00C30E7B /* SettingsView.swift */; };
 		2FE6749F2C18C12700B0D2E1 /* WidgetEggWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE6749E2C18C12700B0D2E1 /* WidgetEggWatchApp.swift */; };
 		2FE674AA2C18C12800B0D2E1 /* WidgetEggWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2FE6749C2C18C12700B0D2E1 /* WidgetEggWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2FE674B32C18C16D00B0D2E1 /* Gauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F842BE55D2700AD68A0 /* Gauge.swift */; };
+		2FE674B32C18C16D00B0D2E1 /* CustomGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F842BE55D2700AD68A0 /* CustomGauge.swift */; };
 		2FE674B42C18C16D00B0D2E1 /* FuelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22B0E82BEBF24A00627D5F /* FuelList.swift */; };
 		2FE674B52C18C16D00B0D2E1 /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91432BEE803700C6899F /* Numbers.swift */; };
 		2FE674B62C18C16D00B0D2E1 /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4772EA2BE4231F00EC6E07 /* ei.pb.swift */; };
@@ -182,7 +182,7 @@
 		2F4A7F7E2BE55C8A00AD68A0 /* MissionInfoSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoSmall.swift; sourceTree = "<group>"; };
 		2F4A7F802BE55CA400AD68A0 /* MissionInfoMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoMedium.swift; sourceTree = "<group>"; };
 		2F4A7F822BE55CCA00AD68A0 /* MissionInfoEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoEmpty.swift; sourceTree = "<group>"; };
-		2F4A7F842BE55D2700AD68A0 /* Gauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gauge.swift; sourceTree = "<group>"; };
+		2F4A7F842BE55D2700AD68A0 /* CustomGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGauge.swift; sourceTree = "<group>"; };
 		2F4A7F862BE55E6500AD68A0 /* SignedOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedOutView.swift; sourceTree = "<group>"; };
 		2F4A7F882BE5624F00AD68A0 /* WidgetEgg.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WidgetEgg.entitlements; sourceTree = "<group>"; };
 		2F4A7F8C2BE5780700AD68A0 /* EIDHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EIDHelp.swift; sourceTree = "<group>"; };
@@ -401,7 +401,7 @@
 		2FE674FE2C19263600B0D2E1 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				2F4A7F842BE55D2700AD68A0 /* Gauge.swift */,
+				2F4A7F842BE55D2700AD68A0 /* CustomGauge.swift */,
 				2F4D914D2BEE823E00C6899F /* MediumGauge.swift */,
 				2F22B0E82BEBF24A00627D5F /* FuelList.swift */,
 			);
@@ -599,7 +599,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F4A7F852BE55D2700AD68A0 /* Gauge.swift in Sources */,
+				2F4A7F852BE55D2700AD68A0 /* CustomGauge.swift in Sources */,
 				2F22B0E92BEBF24A00627D5F /* FuelList.swift in Sources */,
 				2F4D91442BEE803700C6899F /* Numbers.swift in Sources */,
 				2F20FDF32BE432FF00B30302 /* ei.pb.swift in Sources */,
@@ -666,7 +666,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FE674B32C18C16D00B0D2E1 /* Gauge.swift in Sources */,
+				2FE674B32C18C16D00B0D2E1 /* CustomGauge.swift in Sources */,
 				2FE674B42C18C16D00B0D2E1 /* FuelList.swift in Sources */,
 				2FE674B52C18C16D00B0D2E1 /* Numbers.swift in Sources */,
 				2FE674B62C18C16D00B0D2E1 /* ei.pb.swift in Sources */,
@@ -720,7 +720,7 @@
 				CODE_SIGN_ENTITLEMENTS = MissionInfo/MissionInfo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
@@ -741,7 +741,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiller.WidgetEgg.MissionInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -762,7 +762,7 @@
 				CODE_SIGN_ENTITLEMENTS = MissionInfo/MissionInfo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
@@ -783,7 +783,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiller.WidgetEgg.MissionInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -925,7 +925,7 @@
 				CODE_SIGN_ENTITLEMENTS = WidgetEgg/WidgetEgg.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_PREVIEWS = YES;
@@ -942,7 +942,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiller.WidgetEgg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -963,7 +963,7 @@
 				CODE_SIGN_ENTITLEMENTS = WidgetEgg/WidgetEgg.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_PREVIEWS = YES;
@@ -980,7 +980,7 @@
 					"@executable_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiller.WidgetEgg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1000,7 +1000,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = WidgetEggWatch/WidgetEggWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1012,7 +1012,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiller.WidgetEgg.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1031,7 +1031,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = WidgetEggWatch/WidgetEggWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1043,7 +1043,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiller.WidgetEgg.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1063,7 +1063,7 @@
 				CODE_SIGN_ENTITLEMENTS = MissionInfo/MissionInfo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_HARDENED_RUNTIME = NO;
@@ -1083,7 +1083,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiller.WidgetEgg.watchkitapp.MissionInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1105,7 +1105,7 @@
 				CODE_SIGN_ENTITLEMENTS = MissionInfo/MissionInfo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_HARDENED_RUNTIME = NO;
@@ -1125,7 +1125,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiller.WidgetEgg.watchkitapp.MissionInfo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
