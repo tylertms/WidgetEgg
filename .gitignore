@@ -1,6 +1,6 @@
 # Custom
 .DS_Store
-WidgetEgg/*.plist
+WidgetEgg/ExtensionInfo.plist
 
 # Xcode
 #
