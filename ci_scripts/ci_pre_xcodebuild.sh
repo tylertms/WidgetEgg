@@ -11,7 +11,9 @@ if [ -f ~/.bash_profile ]; then
 fi
 
 # Define the path for the plist file using the SRCROOT environment variable
-PLIST_PATH="MissionInfo/Info.plist"
+PLIST_PATH="${SRCROOT}/MissionInfo/Info.plist"
+
+echo "BUNDLING WITH KEY $KEY"
 
 cat > "$PLIST_PATH" << EOF
 <?xml version="1.0" encoding="UTF-8"?>
@@ -36,4 +38,4 @@ cat > "$PLIST_PATH" << EOF
 </plist>
 EOF
 
-echo "Plist file created at $PLIST_PATH"
+echo "PLIST CREATED AT $PLIST_PATH"
