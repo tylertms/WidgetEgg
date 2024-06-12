@@ -39,7 +39,6 @@ struct HomeView: View {
                 .frame(maxWidth: 60)
 #endif
             
-            
             Group {
                 if !EIUserName.isEmpty {
                     Text("Welcome, \(EIUserName)!")
@@ -135,8 +134,6 @@ struct HomeView: View {
                 .background(Color.blue)
                 .buttonStyle(PlainButtonStyle())
                 .clipShape(RoundedRectangle(cornerRadius: .infinity))
-                .contentShape(RoundedRectangle(cornerRadius: .infinity))
-                
                 
                 Button(action: {
                     if let defaults = UserDefaults(suiteName: "group.com.MissionInfo") {
