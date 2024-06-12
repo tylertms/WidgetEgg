@@ -22,14 +22,39 @@ struct SettingsView: View {
     @AppStorage("ShowTankLevels", store: UserDefaults(suiteName: "group.com.MissionInfo")) var showTankLevels: Bool = false
     @AppStorage("TargetIconMedium", store: UserDefaults(suiteName: "group.com.MissionInfo")) var targetIconMedium: Bool = true
     
+    @AppStorage("DeepLinkHome", store: UserDefaults(suiteName: "group.com.MissionInfo")) var deepLinkHome: Bool = true
+    @AppStorage("DeepLinkLock", store: UserDefaults(suiteName: "group.com.MissionInfo")) var deepLinkLock: Bool = true
+    
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
                     
+                    Text("General")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                    
+                    Toggle(isOn: $deepLinkHome, label: {
+                        Text("Tap Home screen widgets to open Egg, Inc.")
+                            .fontWeight(.medium)
+                    })
+                    .padding()
+                    .background(Color.gray.opacity(0.15))
+                    .clipShape(RoundedRectangle(cornerRadius: .infinity))
+                    
+                    Toggle(isOn: $deepLinkLock, label: {
+                        Text("Tap Lock screen widgets to open Egg, Inc.")
+                            .fontWeight(.medium)
+                    })
+                    .padding()
+                    .background(Color.gray.opacity(0.15))
+                    .clipShape(RoundedRectangle(cornerRadius: .infinity))
+                    
+                    
                     Text("Small Widget")
                         .font(.title2)
                         .fontWeight(.semibold)
+                        .padding(.top)
                     
                     Toggle(isOn: $targetIconSmall, label: {
                         Text("Show targeted artifact")
