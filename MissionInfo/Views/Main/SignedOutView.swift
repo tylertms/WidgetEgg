@@ -22,9 +22,6 @@ struct SignedOutView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: 50)
             
-            Text(String((Bundle.main.infoDictionary?["LSEnvironment"] as? Dictionary<String, String>)?["KEY"]?.count ?? -1))
-                .font(.system(size: 16))
-                .foregroundStyle(.white)
         }
     }
 }

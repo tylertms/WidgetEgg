@@ -13,7 +13,7 @@ let env = Bundle.main.infoDictionary?["LSEnvironment"] as! Dictionary<String, St
 func buildSecureAuthMessage(data: Data) -> Ei_AuthenticatedMessage? {
     
     // The variables in production cannot be released publically
-    // If needed, you must implement them yourself
+    // You must add these to your local environment to use this function
     
     guard let index = Int(env["INDEX"] ?? ""),
           let marker = UInt8(env["MARKER"] ?? ""),
