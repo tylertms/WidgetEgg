@@ -13,7 +13,7 @@ struct MissionInfoAccessoryCorner : View {
     var body: some View {
         GeometryReader { proxy in
             let earliestMission = entry.missionData.filter { $0.status != .fueling }.sorted { $0.secondsRemaining < $1.secondsRemaining }.first
-            let scale: CGFloat = proxy.size.width * 4
+            let scale: CGFloat = proxy.size.width * 0.9
             
             Group {
                 if let earliestMission {
@@ -28,6 +28,5 @@ struct MissionInfoAccessoryCorner : View {
             .frame(width: proxy.size.width, height: proxy.size.height, alignment: .center)
         }
         .font(.system(size: 20, weight: .medium))
-        .padding(15)
     }
 }
