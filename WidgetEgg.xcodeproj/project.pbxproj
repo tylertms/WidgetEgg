@@ -3,14 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F023F902C1948930029F652 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F023F8F2C1948930029F652 /* SecureAPI.swift */; };
-		2F023F912C1948930029F652 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F023F8F2C1948930029F652 /* SecureAPI.swift */; };
-		2F023F922C1948930029F652 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F023F8F2C1948930029F652 /* SecureAPI.swift */; };
-		2F023F932C1948930029F652 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F023F8F2C1948930029F652 /* SecureAPI.swift */; };
 		2F20FDE02BE431B600B30302 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F47730C2BE430FC00EC6E07 /* WidgetKit.framework */; };
 		2F20FDE12BE431B600B30302 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F47730E2BE430FC00EC6E07 /* SwiftUI.framework */; };
 		2F20FDE42BE431B600B30302 /* MissionInfoBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20FDE32BE431B600B30302 /* MissionInfoBundle.swift */; };
@@ -50,6 +46,10 @@
 		2F546F0E2BE487860009DBEF /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 2F546F0D2BE487860009DBEF /* SwiftProtobufPluginLibrary */; };
 		2F546F102BE487FC0009DBEF /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 2F546F0F2BE487FC0009DBEF /* SwiftProtobuf */; };
 		2F546F122BE487FC0009DBEF /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 2F546F112BE487FC0009DBEF /* SwiftProtobufPluginLibrary */; };
+		2F96C9C12C195DDF008C7708 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96C9C02C195DDF008C7708 /* SecureAPI.swift */; };
+		2F96C9C22C195DDF008C7708 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96C9C02C195DDF008C7708 /* SecureAPI.swift */; };
+		2F96C9C32C195DDF008C7708 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96C9C02C195DDF008C7708 /* SecureAPI.swift */; };
+		2F96C9C42C195DDF008C7708 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96C9C02C195DDF008C7708 /* SecureAPI.swift */; };
 		2FA3474F2BE7D0FA00C30E7B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA3474E2BE7D0FA00C30E7B /* SettingsView.swift */; };
 		2FE6749F2C18C12700B0D2E1 /* WidgetEggWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE6749E2C18C12700B0D2E1 /* WidgetEggWatchApp.swift */; };
 		2FE674AA2C18C12800B0D2E1 /* WidgetEggWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2FE6749C2C18C12700B0D2E1 /* WidgetEggWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -160,7 +160,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2F023F8F2C1948930029F652 /* SecureAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAPI.swift; sourceTree = "<group>"; };
 		2F20FDDF2BE431B600B30302 /* MissionInfoExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MissionInfoExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F20FDE32BE431B600B30302 /* MissionInfoBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoBundle.swift; sourceTree = "<group>"; };
 		2F20FDE52BE431B600B30302 /* MissionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfo.swift; sourceTree = "<group>"; };
@@ -194,6 +193,7 @@
 		2F4D91522BEE84CF00C6899F /* WidgetInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = WidgetInfo.plist; sourceTree = "<group>"; };
 		2F4D91542BEE857F00C6899F /* SecureAPIDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAPIDefault.swift; sourceTree = "<group>"; };
 		2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F96C9C02C195DDF008C7708 /* SecureAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAPI.swift; sourceTree = "<group>"; };
 		2FA3474E2BE7D0FA00C30E7B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2FE6749C2C18C12700B0D2E1 /* WidgetEggWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetEggWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FE6749E2C18C12700B0D2E1 /* WidgetEggWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetEggWatchApp.swift; sourceTree = "<group>"; };
@@ -333,7 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				2F20FDF82BE43C1700B30302 /* API.swift */,
-				2F023F8F2C1948930029F652 /* SecureAPI.swift */,
+				2F96C9C02C195DDF008C7708 /* SecureAPI.swift */,
 				2F4D91542BEE857F00C6899F /* SecureAPIDefault.swift */,
 				2F4D91432BEE803700C6899F /* Numbers.swift */,
 				2F4D91482BEE80A600C6899F /* UI.swift */,
@@ -533,7 +533,7 @@
 				};
 			};
 			buildConfigurationList = 2F4772D12BE41E9600EC6E07 /* Build configuration list for PBXProject "WidgetEgg" */;
-			compatibilityVersion = "Xcode 15.0";
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -600,7 +600,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F4A7F852BE55D2700AD68A0 /* CustomGauge.swift in Sources */,
-				2F023F902C1948930029F652 /* SecureAPI.swift in Sources */,
+				2F96C9C22C195DDF008C7708 /* SecureAPI.swift in Sources */,
 				2F22B0E92BEBF24A00627D5F /* FuelList.swift in Sources */,
 				2F4D91442BEE803700C6899F /* Numbers.swift in Sources */,
 				2F20FDF32BE432FF00B30302 /* ei.pb.swift in Sources */,
@@ -635,7 +635,7 @@
 				2F4772DC2BE41E9600EC6E07 /* HomeView.swift in Sources */,
 				2F22B0E52BEAD47300627D5F /* WhatNext.swift in Sources */,
 				2F4D91472BEE805D00C6899F /* ArtifactInfo.swift in Sources */,
-				2F023F912C1948930029F652 /* SecureAPI.swift in Sources */,
+				2F96C9C12C195DDF008C7708 /* SecureAPI.swift in Sources */,
 				2F4D914B2BEE815400C6899F /* Numbers.swift in Sources */,
 				2F4772DA2BE41E9600EC6E07 /* WidgetEggApp.swift in Sources */,
 				2F4D91462BEE805600C6899F /* API.swift in Sources */,
@@ -654,7 +654,7 @@
 				2FE674F22C18D66200B0D2E1 /* UI.swift in Sources */,
 				2FE674E82C18CAF000B0D2E1 /* ArtifactInfo.swift in Sources */,
 				2FE674E92C18CB5100B0D2E1 /* Extensions.swift in Sources */,
-				2F023F922C1948930029F652 /* SecureAPI.swift in Sources */,
+				2F96C9C32C195DDF008C7708 /* SecureAPI.swift in Sources */,
 				2FE6749F2C18C12700B0D2E1 /* WidgetEggWatchApp.swift in Sources */,
 				2FE674E12C18CA0E00B0D2E1 /* WhatNext.swift in Sources */,
 				2FE674E32C18CA4500B0D2E1 /* API.swift in Sources */,
@@ -667,7 +667,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FE674B32C18C16D00B0D2E1 /* CustomGauge.swift in Sources */,
-				2F023F932C1948930029F652 /* SecureAPI.swift in Sources */,
+				2F96C9C42C195DDF008C7708 /* SecureAPI.swift in Sources */,
 				2FE674B42C18C16D00B0D2E1 /* FuelList.swift in Sources */,
 				2FE674B52C18C16D00B0D2E1 /* Numbers.swift in Sources */,
 				2FE674B62C18C16D00B0D2E1 /* ei.pb.swift in Sources */,
@@ -720,7 +720,7 @@
 				CODE_SIGN_ENTITLEMENTS = MissionInfo/MissionInfo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
@@ -762,7 +762,7 @@
 				CODE_SIGN_ENTITLEMENTS = MissionInfo/MissionInfo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
@@ -849,7 +849,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -857,6 +857,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Debug;
 		};
@@ -907,13 +908,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Release;
 		};
@@ -925,7 +927,7 @@
 				CODE_SIGN_ENTITLEMENTS = WidgetEgg/WidgetEgg.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_PREVIEWS = YES;
@@ -963,7 +965,7 @@
 				CODE_SIGN_ENTITLEMENTS = WidgetEgg/WidgetEgg.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_PREVIEWS = YES;
@@ -1000,7 +1002,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = WidgetEggWatch/WidgetEggWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1031,7 +1033,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = WidgetEggWatch/WidgetEggWatch.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1063,7 +1065,7 @@
 				CODE_SIGN_ENTITLEMENTS = MissionInfo/MissionInfo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_HARDENED_RUNTIME = NO;
@@ -1105,7 +1107,7 @@
 				CODE_SIGN_ENTITLEMENTS = MissionInfo/MissionInfo.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 16;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7ABT9UL8L8;
 				ENABLE_HARDENED_RUNTIME = NO;
