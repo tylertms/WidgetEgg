@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MissionInfoEntryViewSmall: View {
+struct MissionInfoSmall: View {
     let entry: Provider.Entry
     
     var body: some View {
@@ -21,7 +21,7 @@ struct MissionInfoEntryViewSmall: View {
                             if index < entry.missionData.count {
                                 CustomGauge(mission: entry.missionData[index], scale: Double(scale))
                             } else {
-                                EmptyMissionInfoSmall(scale: scale)
+                                MissionInfoEmptySmall(scale: scale)
                             }
                         }
                     }
@@ -31,7 +31,6 @@ struct MissionInfoEntryViewSmall: View {
         }
         .font(.system(size: 20, weight: .medium))
         .padding(15)
-        .widgetBackground(Color.gray.opacity(0.15))
     }
 }
 

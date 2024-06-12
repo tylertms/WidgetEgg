@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MissionInfoEntryViewMedium : View {
+struct MissionInfoMedium : View {
     
     @AppStorage("ShowTankLevels", store: UserDefaults(suiteName: "group.com.MissionInfo")) var showTankLevels: Bool = false
     
@@ -36,6 +36,5 @@ struct MissionInfoEntryViewMedium : View {
         }
         .font(.system(size: .infinity, weight: .medium))
         .padding(15)
-        .widgetBackground(Color.gray.opacity(0.15))
     }
 }

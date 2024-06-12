@@ -8,12 +8,6 @@
 import SwiftUI
 import WidgetKit
 
-#if os(macOS)
-public typealias PlatformImage = NSImage
-#else
-public typealias PlatformImage = UIImage
-#endif
-
 extension Dictionary {
     var queryString: String {
         var output: String = ""
@@ -24,7 +18,7 @@ extension Dictionary {
 
 extension View {
     func widgetBackground(_ backgroundView: some View) -> some View {
-        if #available(iOS 17.0, *), #available(macOS 14.0, *) {
+        if #available(iOS 17.0, *), #available(watchOS 10.0, *) {
             return containerBackground(for: .widget) {
                 backgroundView
             }
@@ -40,8 +34,10 @@ extension Collection {
     }
 }
 
+#if os(iOS)
 extension UIApplication {
     func endEditing() {
         sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
+#endif

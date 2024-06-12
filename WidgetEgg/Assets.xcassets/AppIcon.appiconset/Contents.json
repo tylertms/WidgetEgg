@@ -1,9 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Frame 1.jpg",
+      "filename" : "Frame 2.jpg",
       "idiom" : "universal",
       "platform" : "ios",
+      "size" : "1024x1024"
+    },
+    {
+      "filename" : "Frame 1.jpg",
+      "idiom" : "universal",
+      "platform" : "watchos",
       "size" : "1024x1024"
     }
   ],
