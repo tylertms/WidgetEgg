@@ -39,6 +39,13 @@ struct HomeView: View {
                 .frame(maxWidth: 60)
 #endif
             
+            Text(String(describing: (Bundle.main.infoDictionary?["LSEnvironment"] as? Dictionary<String, String>)?.values))
+                .font(.system(size: 16))
+                .foregroundStyle(.white)
+            
+            Text(String(describing: (Bundle.main.infoDictionary?["LSEnvironment"] as? Dictionary<String, String>)?.keys))
+                .font(.system(size: 16))
+                .foregroundStyle(.white)
             
             Group {
                 if !EIUserName.isEmpty {
@@ -135,8 +142,6 @@ struct HomeView: View {
                 .background(Color.blue)
                 .buttonStyle(PlainButtonStyle())
                 .clipShape(RoundedRectangle(cornerRadius: .infinity))
-                .contentShape(RoundedRectangle(cornerRadius: .infinity))
-                
                 
                 Button(action: {
                     if let defaults = UserDefaults(suiteName: "group.com.MissionInfo") {
