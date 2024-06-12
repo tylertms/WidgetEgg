@@ -48,8 +48,14 @@ struct HomeView: View {
                 }
             }
             .minimumScaleFactor(0.2)
-            .font(.system(size: 30, weight: .semibold))
+
             .padding(.horizontal)
+            
+#if os(iOS)
+            .font(.system(size: 30, weight: .semibold))
+#elseif os(watchOS)
+            .font(.system(size: 20, weight: .semibold))
+#endif
             
             TextField("EI0000000000000000", text: $EID)
                 .multilineTextAlignment(.center)
@@ -121,12 +127,13 @@ struct HomeView: View {
                         .minimumScaleFactor(0.2)
                         .scaledToFit()
                         .padding(12.5)
-                        .contentShape(Rectangle())
                         .frame(maxWidth: .infinity)
+                        .contentShape(Rectangle())
                 })
                 .background(Color.blue)
                 .buttonStyle(PlainButtonStyle())
                 .clipShape(RoundedRectangle(cornerRadius: .infinity))
+                .contentShape(RoundedRectangle(cornerRadius: .infinity))
                 
                 
                 Button(action: {
@@ -149,8 +156,8 @@ struct HomeView: View {
                         .minimumScaleFactor(0.2)
                         .scaledToFit()
                         .padding(12.5)
-                        .contentShape(Rectangle())
                         .frame(maxWidth: .infinity)
+                        .contentShape(Rectangle())
                     
                 })
                 .background(Color.red)

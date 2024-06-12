@@ -22,7 +22,7 @@ let ALL_SHIPS = [
     "afx_ship_atreggies"
 ]
 
-let TANK_SIZES: [Int] = [
+let TANK_SIZES: [Int64] = [
     2000000000,
     200000000000,
     10000000000000,
