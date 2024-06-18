@@ -12,7 +12,7 @@ struct MissionInfoEmptySmall: View {
     
     var body: some View {
         Circle()
-            .stroke(lineWidth: 5)
+            .stroke(lineWidth: 5.5)
             .frame(width: scale, height: scale)
             .foregroundStyle(.gray.opacity(0.18))
     }
@@ -23,7 +23,7 @@ struct MissionInfoEmptyMedium: View {
     var body: some View {
         HStack {
             Circle()
-                .stroke(lineWidth: 5)
+                .stroke(lineWidth: 5.5)
                 .frame(width: scale, height: scale)
             
             Spacer()

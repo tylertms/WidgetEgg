@@ -20,8 +20,6 @@
 		2F4772DA2BE41E9600EC6E07 /* WidgetEggApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4772D92BE41E9600EC6E07 /* WidgetEggApp.swift */; };
 		2F4772DC2BE41E9600EC6E07 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4772DB2BE41E9600EC6E07 /* HomeView.swift */; };
 		2F4772EB2BE4231F00EC6E07 /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4772EA2BE4231F00EC6E07 /* ei.pb.swift */; };
-		2F4A7F742BE55BB900AD68A0 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F722BE55B9C00AD68A0 /* Provider.swift */; };
-		2F4A7F772BE55BE500AD68A0 /* MissionInfoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F752BE55BE100AD68A0 /* MissionInfoEntry.swift */; };
 		2F4A7F7C2BE55C6B00AD68A0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F782BE55BFF00AD68A0 /* Extensions.swift */; };
 		2F4A7F7D2BE55C6F00AD68A0 /* MissionInfoEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F7A2BE55C5800AD68A0 /* MissionInfoEntryView.swift */; };
 		2F4A7F7F2BE55C8A00AD68A0 /* MissionInfoSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F7E2BE55C8A00AD68A0 /* MissionInfoSmall.swift */; };
@@ -35,8 +33,8 @@
 		2F4D91452BEE803A00C6899F /* ArtifactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91412BEE7F9A00C6899F /* ArtifactInfo.swift */; };
 		2F4D91462BEE805600C6899F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20FDF82BE43C1700B30302 /* API.swift */; };
 		2F4D91472BEE805D00C6899F /* ArtifactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91412BEE7F9A00C6899F /* ArtifactInfo.swift */; };
-		2F4D91492BEE80A600C6899F /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91482BEE80A600C6899F /* UI.swift */; };
-		2F4D914A2BEE815200C6899F /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91482BEE80A600C6899F /* UI.swift */; };
+		2F4D91492BEE80A600C6899F /* UITools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91482BEE80A600C6899F /* UITools.swift */; };
+		2F4D914A2BEE815200C6899F /* UITools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91482BEE80A600C6899F /* UITools.swift */; };
 		2F4D914B2BEE815400C6899F /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91432BEE803700C6899F /* Numbers.swift */; };
 		2F4D914E2BEE823E00C6899F /* MediumGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D914D2BEE823E00C6899F /* MediumGauge.swift */; };
 		2F544BCE2BE5BE7500A83B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */; };
@@ -45,6 +43,34 @@
 		2F546F0E2BE487860009DBEF /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 2F546F0D2BE487860009DBEF /* SwiftProtobufPluginLibrary */; };
 		2F546F102BE487FC0009DBEF /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 2F546F0F2BE487FC0009DBEF /* SwiftProtobuf */; };
 		2F546F122BE487FC0009DBEF /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 2F546F112BE487FC0009DBEF /* SwiftProtobufPluginLibrary */; };
+		2F6638632C22190500858E1C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F47730C2BE430FC00EC6E07 /* WidgetKit.framework */; };
+		2F6638642C22190500858E1C /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F47730E2BE430FC00EC6E07 /* SwiftUI.framework */; };
+		2F6638692C22190500858E1C /* FuelTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6638682C22190500858E1C /* FuelTimer.swift */; };
+		2F66386F2C22190600858E1C /* FuelTimerExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2F6638622C22190500858E1C /* FuelTimerExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2F6638742C2219A900858E1C /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F722BE55B9C00AD68A0 /* Provider.swift */; };
+		2F6638752C2219B000858E1C /* FuelTimerEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F752BE55BE100AD68A0 /* FuelTimerEntry.swift */; };
+		2F6638792C221A4F00858E1C /* FuelTimerEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6638782C221A4C00858E1C /* FuelTimerEntryView.swift */; };
+		2F66387C2C221AD800858E1C /* FuelTimerSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66387B2C221AD600858E1C /* FuelTimerSmall.swift */; };
+		2F66387F2C221B0B00858E1C /* MissionInfoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66387D2C221B0B00858E1C /* MissionInfoEntry.swift */; };
+		2F6638802C221B0B00858E1C /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66387E2C221B0B00858E1C /* Provider.swift */; };
+		2F6638812C221B0B00858E1C /* MissionInfoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66387D2C221B0B00858E1C /* MissionInfoEntry.swift */; };
+		2F6638822C221B0B00858E1C /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66387E2C221B0B00858E1C /* Provider.swift */; };
+		2F6638842C221CBD00858E1C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F782BE55BFF00AD68A0 /* Extensions.swift */; };
+		2F6638882C221D4A00858E1C /* FuelTimerBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6638872C221D4A00858E1C /* FuelTimerBundle.swift */; };
+		2F66388B2C221E1300858E1C /* ActivateTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66388A2C221E0100858E1C /* ActivateTimer.swift */; };
+		2F66388D2C221E6E00858E1C /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66388C2C221E6C00858E1C /* TimerState.swift */; };
+		2F6638902C22211000858E1C /* ArtifactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66388F2C22210D00858E1C /* ArtifactInfo.swift */; };
+		2F6638922C2227E500858E1C /* TimerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6638912C2227E300858E1C /* TimerSettings.swift */; };
+		2F6638942C2232C500858E1C /* ModifyShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6638932C2232C100858E1C /* ModifyShip.swift */; };
+		2F6638972C22342700858E1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F20FDE92BE431B700B30302 /* Assets.xcassets */; };
+		2F6638992C22367F00858E1C /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 2F6638982C22367F00858E1C /* SwiftProtobuf */; };
+		2F66389B2C22367F00858E1C /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 2F66389A2C22367F00858E1C /* SwiftProtobufPluginLibrary */; };
+		2F66389C2C22369B00858E1C /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4772EA2BE4231F00EC6E07 /* ei.pb.swift */; };
+		2F66389F2C2236E400858E1C /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66389E2C2236E200858E1C /* UI.swift */; };
+		2F6638A02C2236E400858E1C /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66389E2C2236E200858E1C /* UI.swift */; };
+		2F6638A12C2236E400858E1C /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66389E2C2236E200858E1C /* UI.swift */; };
+		2F6638A22C2236E400858E1C /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F66389E2C2236E200858E1C /* UI.swift */; };
+		2F6638A32C22370E00858E1C /* UITools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91482BEE80A600C6899F /* UITools.swift */; };
 		2F96C9C12C195DDF008C7708 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96C9C02C195DDF008C7708 /* SecureAPI.swift */; };
 		2F96C9C22C195DDF008C7708 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96C9C02C195DDF008C7708 /* SecureAPI.swift */; };
 		2F96C9C32C195DDF008C7708 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96C9C02C195DDF008C7708 /* SecureAPI.swift */; };
@@ -58,13 +84,11 @@
 		2FE674B62C18C16D00B0D2E1 /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4772EA2BE4231F00EC6E07 /* ei.pb.swift */; };
 		2FE674B72C18C16D00B0D2E1 /* MissionInfoEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F822BE55CCA00AD68A0 /* MissionInfoEmpty.swift */; };
 		2FE674B82C18C16D00B0D2E1 /* MissionInfoEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F7A2BE55C5800AD68A0 /* MissionInfoEntryView.swift */; };
-		2FE674B92C18C16D00B0D2E1 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91482BEE80A600C6899F /* UI.swift */; };
+		2FE674B92C18C16D00B0D2E1 /* UITools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91482BEE80A600C6899F /* UITools.swift */; };
 		2FE674BA2C18C16D00B0D2E1 /* MissionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20FDE52BE431B600B30302 /* MissionInfo.swift */; };
 		2FE674BB2C18C16D00B0D2E1 /* ArtifactInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91412BEE7F9A00C6899F /* ArtifactInfo.swift */; };
 		2FE674BC2C18C16D00B0D2E1 /* SignedOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F862BE55E6500AD68A0 /* SignedOutView.swift */; };
 		2FE674BD2C18C16D00B0D2E1 /* MissionInfoBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20FDE32BE431B600B30302 /* MissionInfoBundle.swift */; };
-		2FE674BE2C18C16D00B0D2E1 /* MissionInfoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F752BE55BE100AD68A0 /* MissionInfoEntry.swift */; };
-		2FE674BF2C18C16D00B0D2E1 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F722BE55B9C00AD68A0 /* Provider.swift */; };
 		2FE674C02C18C16D00B0D2E1 /* MediumGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D914D2BEE823E00C6899F /* MediumGauge.swift */; };
 		2FE674C12C18C16D00B0D2E1 /* MissionInfoMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F802BE55CA400AD68A0 /* MissionInfoMedium.swift */; };
 		2FE674C22C18C16D00B0D2E1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20FDF82BE43C1700B30302 /* API.swift */; };
@@ -91,7 +115,7 @@
 		2FE674ED2C18CBE800B0D2E1 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE674EC2C18CBE800B0D2E1 /* SwiftProtobufPluginLibrary */; };
 		2FE674EF2C18CCB100B0D2E1 /* MissionInfoAccessoryRectangular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE674EE2C18CCA300B0D2E1 /* MissionInfoAccessoryRectangular.swift */; };
 		2FE674F02C18CCB100B0D2E1 /* MissionInfoAccessoryRectangular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE674EE2C18CCA300B0D2E1 /* MissionInfoAccessoryRectangular.swift */; };
-		2FE674F22C18D66200B0D2E1 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91482BEE80A600C6899F /* UI.swift */; };
+		2FE674F22C18D66200B0D2E1 /* UITools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4D91482BEE80A600C6899F /* UITools.swift */; };
 		2FE674F72C18FC8800B0D2E1 /* MissionInfoAccessoryCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE674F62C18FC8300B0D2E1 /* MissionInfoAccessoryCircular.swift */; };
 		2FE674F82C18FC8800B0D2E1 /* MissionInfoAccessoryCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE674F62C18FC8300B0D2E1 /* MissionInfoAccessoryCircular.swift */; };
 		2FE674FA2C190DB600B0D2E1 /* MissionInfoAccessoryCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE674F92C190DB200B0D2E1 /* MissionInfoAccessoryCorner.swift */; };
@@ -105,6 +129,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2F20FDDE2BE431B600B30302;
 			remoteInfo = MissionInfoExtension;
+		};
+		2F66386D2C22190600858E1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F4772CE2BE41E9600EC6E07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F6638612C22190500858E1C;
+			remoteInfo = FuelTimerExtension;
 		};
 		2FE674A72C18C12800B0D2E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -129,6 +160,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				2F66386F2C22190600858E1C /* FuelTimerExtension.appex in Embed Foundation Extensions */,
 				2F20FDEF2BE431B700B30302 /* MissionInfoExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -177,7 +209,7 @@
 		2F47730C2BE430FC00EC6E07 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = /System/Library/Frameworks/WidgetKit.framework; sourceTree = "<absolute>"; };
 		2F47730E2BE430FC00EC6E07 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = /System/Library/Frameworks/SwiftUI.framework; sourceTree = "<absolute>"; };
 		2F4A7F722BE55B9C00AD68A0 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
-		2F4A7F752BE55BE100AD68A0 /* MissionInfoEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoEntry.swift; sourceTree = "<group>"; };
+		2F4A7F752BE55BE100AD68A0 /* FuelTimerEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelTimerEntry.swift; sourceTree = "<group>"; };
 		2F4A7F782BE55BFF00AD68A0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2F4A7F7A2BE55C5800AD68A0 /* MissionInfoEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoEntryView.swift; sourceTree = "<group>"; };
 		2F4A7F7E2BE55C8A00AD68A0 /* MissionInfoSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoSmall.swift; sourceTree = "<group>"; };
@@ -189,9 +221,23 @@
 		2F4A7F8C2BE5780700AD68A0 /* EIDHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EIDHelp.swift; sourceTree = "<group>"; };
 		2F4D91412BEE7F9A00C6899F /* ArtifactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactInfo.swift; sourceTree = "<group>"; };
 		2F4D91432BEE803700C6899F /* Numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
-		2F4D91482BEE80A600C6899F /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
+		2F4D91482BEE80A600C6899F /* UITools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITools.swift; sourceTree = "<group>"; };
 		2F4D914D2BEE823E00C6899F /* MediumGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumGauge.swift; sourceTree = "<group>"; };
 		2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F6638622C22190500858E1C /* FuelTimerExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FuelTimerExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F6638682C22190500858E1C /* FuelTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelTimer.swift; sourceTree = "<group>"; };
+		2F66386C2C22190600858E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F6638782C221A4C00858E1C /* FuelTimerEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelTimerEntryView.swift; sourceTree = "<group>"; };
+		2F66387B2C221AD600858E1C /* FuelTimerSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelTimerSmall.swift; sourceTree = "<group>"; };
+		2F66387D2C221B0B00858E1C /* MissionInfoEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoEntry.swift; sourceTree = "<group>"; };
+		2F66387E2C221B0B00858E1C /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		2F6638872C221D4A00858E1C /* FuelTimerBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelTimerBundle.swift; sourceTree = "<group>"; };
+		2F66388A2C221E0100858E1C /* ActivateTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivateTimer.swift; sourceTree = "<group>"; };
+		2F66388C2C221E6C00858E1C /* TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
+		2F66388F2C22210D00858E1C /* ArtifactInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactInfo.swift; sourceTree = "<group>"; };
+		2F6638912C2227E300858E1C /* TimerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettings.swift; sourceTree = "<group>"; };
+		2F6638932C2232C100858E1C /* ModifyShip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyShip.swift; sourceTree = "<group>"; };
+		2F66389E2C2236E200858E1C /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		2F96C9C02C195DDF008C7708 /* SecureAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAPI.swift; sourceTree = "<group>"; };
 		2FA3474E2BE7D0FA00C30E7B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2FE6749C2C18C12700B0D2E1 /* WidgetEggWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetEggWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +267,17 @@
 			files = (
 				2F546F122BE487FC0009DBEF /* SwiftProtobufPluginLibrary in Frameworks */,
 				2F546F102BE487FC0009DBEF /* SwiftProtobuf in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F66385F2C22190500858E1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F66389B2C22367F00858E1C /* SwiftProtobufPluginLibrary in Frameworks */,
+				2F6638642C22190500858E1C /* SwiftUI.framework in Frameworks */,
+				2F6638632C22190500858E1C /* WidgetKit.framework in Frameworks */,
+				2F6638992C22367F00858E1C /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +321,6 @@
 				2F4A7F6C2BE55B6D00AD68A0 /* Views */,
 				2F20FDE32BE431B600B30302 /* MissionInfoBundle.swift */,
 				2F20FDE52BE431B600B30302 /* MissionInfo.swift */,
-				2F20FDE92BE431B700B30302 /* Assets.xcassets */,
 				2F20FDEC2BE431B700B30302 /* MissionInfo.entitlements */,
 			);
 			path = MissionInfo;
@@ -277,6 +333,8 @@
 				2F4772D82BE41E9600EC6E07 /* WidgetEgg */,
 				2FE6749D2C18C12700B0D2E1 /* WidgetEggWatch */,
 				2F20FDE22BE431B600B30302 /* MissionInfo */,
+				2F6638652C22190500858E1C /* FuelTimer */,
+				2F6638952C2233E500858E1C /* Shared */,
 				2F4772E72BE422ED00EC6E07 /* Protobuf */,
 				2F47730B2BE430FC00EC6E07 /* Frameworks */,
 				2F4772D72BE41E9600EC6E07 /* Products */,
@@ -290,6 +348,7 @@
 				2F20FDDF2BE431B600B30302 /* MissionInfoExtension.appex */,
 				2FE6749C2C18C12700B0D2E1 /* WidgetEggWatch.app */,
 				2FE674D12C18C16D00B0D2E1 /* MissionInfoWatchExtension.appex */,
+				2F6638622C22190500858E1C /* FuelTimerExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -300,6 +359,7 @@
 				2F4A7F882BE5624F00AD68A0 /* WidgetEgg.entitlements */,
 				2F4772D92BE41E9600EC6E07 /* WidgetEggApp.swift */,
 				2FE674F12C18D24500B0D2E1 /* Views */,
+				2F6638832C221CAF00858E1C /* Misc */,
 				2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */,
 				2F117C2F2C1A2FF500226CEF /* Info.plist */,
 			);
@@ -341,8 +401,7 @@
 				2F20FDF82BE43C1700B30302 /* API.swift */,
 				2F96C9C02C195DDF008C7708 /* SecureAPI.swift */,
 				2F4D91432BEE803700C6899F /* Numbers.swift */,
-				2F4D91482BEE80A600C6899F /* UI.swift */,
-				2F4A7F782BE55BFF00AD68A0 /* Extensions.swift */,
+				2F66389E2C2236E200858E1C /* UI.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -358,10 +417,94 @@
 		2F4D914C2BEE820800C6899F /* Widget */ = {
 			isa = PBXGroup;
 			children = (
-				2F4A7F722BE55B9C00AD68A0 /* Provider.swift */,
-				2F4A7F752BE55BE100AD68A0 /* MissionInfoEntry.swift */,
+				2F66387D2C221B0B00858E1C /* MissionInfoEntry.swift */,
+				2F66387E2C221B0B00858E1C /* Provider.swift */,
 			);
 			path = Widget;
+			sourceTree = "<group>";
+		};
+		2F6638652C22190500858E1C /* FuelTimer */ = {
+			isa = PBXGroup;
+			children = (
+				2F66388E2C22210700858E1C /* Data */,
+				2F6638892C221DC400858E1C /* Intents */,
+				2F6638762C221A4000858E1C /* Views */,
+				2F6638732C22199400858E1C /* Widget */,
+				2F6638682C22190500858E1C /* FuelTimer.swift */,
+				2F6638872C221D4A00858E1C /* FuelTimerBundle.swift */,
+				2F66386C2C22190600858E1C /* Info.plist */,
+			);
+			path = FuelTimer;
+			sourceTree = "<group>";
+		};
+		2F6638732C22199400858E1C /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				2F66388C2C221E6C00858E1C /* TimerState.swift */,
+				2F4A7F722BE55B9C00AD68A0 /* Provider.swift */,
+				2F4A7F752BE55BE100AD68A0 /* FuelTimerEntry.swift */,
+			);
+			path = Widget;
+			sourceTree = "<group>";
+		};
+		2F6638762C221A4000858E1C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2F6638772C221A4500858E1C /* Main */,
+				2F66387A2C221AAE00858E1C /* Standard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2F6638772C221A4500858E1C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2F6638782C221A4C00858E1C /* FuelTimerEntryView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2F66387A2C221AAE00858E1C /* Standard */ = {
+			isa = PBXGroup;
+			children = (
+				2F66387B2C221AD600858E1C /* FuelTimerSmall.swift */,
+			);
+			path = Standard;
+			sourceTree = "<group>";
+		};
+		2F6638832C221CAF00858E1C /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				2F4A7F782BE55BFF00AD68A0 /* Extensions.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		2F6638892C221DC400858E1C /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				2F6638912C2227E300858E1C /* TimerSettings.swift */,
+				2F6638932C2232C100858E1C /* ModifyShip.swift */,
+				2F66388A2C221E0100858E1C /* ActivateTimer.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
+		2F66388E2C22210700858E1C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2F66388F2C22210D00858E1C /* ArtifactInfo.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2F6638952C2233E500858E1C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				2F4D91482BEE80A600C6899F /* UITools.swift */,
+				2F20FDE92BE431B700B30302 /* Assets.xcassets */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		2FE6749D2C18C12700B0D2E1 /* WidgetEggWatch */ = {
@@ -463,6 +606,7 @@
 			dependencies = (
 				2F20FDEE2BE431B700B30302 /* PBXTargetDependency */,
 				2FE674A82C18C12800B0D2E1 /* PBXTargetDependency */,
+				2F66386E2C22190600858E1C /* PBXTargetDependency */,
 			);
 			name = WidgetEgg;
 			packageProductDependencies = (
@@ -472,6 +616,27 @@
 			productName = EggWidget;
 			productReference = 2F4772D62BE41E9600EC6E07 /* WidgetEgg.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2F6638612C22190500858E1C /* FuelTimerExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F6638702C22190600858E1C /* Build configuration list for PBXNativeTarget "FuelTimerExtension" */;
+			buildPhases = (
+				2F66385E2C22190500858E1C /* Sources */,
+				2F66385F2C22190500858E1C /* Frameworks */,
+				2F6638602C22190500858E1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FuelTimerExtension;
+			packageProductDependencies = (
+				2F6638982C22367F00858E1C /* SwiftProtobuf */,
+				2F66389A2C22367F00858E1C /* SwiftProtobufPluginLibrary */,
+			);
+			productName = FuelTimerExtension;
+			productReference = 2F6638622C22190500858E1C /* FuelTimerExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		2FE6749B2C18C12700B0D2E1 /* WidgetEggWatch */ = {
 			isa = PBXNativeTarget;
@@ -533,6 +698,9 @@
 					2F4772D52BE41E9600EC6E07 = {
 						CreatedOnToolsVersion = 15.3;
 					};
+					2F6638612C22190500858E1C = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					2FE6749B2C18C12700B0D2E1 = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -556,6 +724,7 @@
 			targets = (
 				2F4772D52BE41E9600EC6E07 /* WidgetEgg */,
 				2F20FDDE2BE431B600B30302 /* MissionInfoExtension */,
+				2F6638612C22190500858E1C /* FuelTimerExtension */,
 				2FE6749B2C18C12700B0D2E1 /* WidgetEggWatch */,
 				2FE674AE2C18C16D00B0D2E1 /* MissionInfoWatchExtension */,
 			);
@@ -577,6 +746,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F544BCE2BE5BE7500A83B15 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F6638602C22190500858E1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F6638972C22342700858E1C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,18 +805,19 @@
 				2F4A7F852BE55D2700AD68A0 /* CustomGauge.swift in Sources */,
 				2F96C9C22C195DDF008C7708 /* SecureAPI.swift in Sources */,
 				2F22B0E92BEBF24A00627D5F /* FuelList.swift in Sources */,
+				2F6638812C221B0B00858E1C /* MissionInfoEntry.swift in Sources */,
+				2F6638822C221B0B00858E1C /* Provider.swift in Sources */,
 				2F4D91442BEE803700C6899F /* Numbers.swift in Sources */,
 				2F20FDF32BE432FF00B30302 /* ei.pb.swift in Sources */,
+				2F66389F2C2236E400858E1C /* UI.swift in Sources */,
 				2F4A7F832BE55CCA00AD68A0 /* MissionInfoEmpty.swift in Sources */,
 				2F4A7F7D2BE55C6F00AD68A0 /* MissionInfoEntryView.swift in Sources */,
-				2F4D91492BEE80A600C6899F /* UI.swift in Sources */,
+				2F4D91492BEE80A600C6899F /* UITools.swift in Sources */,
 				2F20FDE62BE431B600B30302 /* MissionInfo.swift in Sources */,
 				2F4D91452BEE803A00C6899F /* ArtifactInfo.swift in Sources */,
 				2F4A7F872BE55E6500AD68A0 /* SignedOutView.swift in Sources */,
 				2FE674F02C18CCB100B0D2E1 /* MissionInfoAccessoryRectangular.swift in Sources */,
 				2F20FDE42BE431B600B30302 /* MissionInfoBundle.swift in Sources */,
-				2F4A7F772BE55BE500AD68A0 /* MissionInfoEntry.swift in Sources */,
-				2F4A7F742BE55BB900AD68A0 /* Provider.swift in Sources */,
 				2FE674FB2C190DB600B0D2E1 /* MissionInfoAccessoryCorner.swift in Sources */,
 				2F4D914E2BEE823E00C6899F /* MediumGauge.swift in Sources */,
 				2FE674F82C18FC8800B0D2E1 /* MissionInfoAccessoryCircular.swift in Sources */,
@@ -657,15 +835,37 @@
 				2FA3474F2BE7D0FA00C30E7B /* SettingsView.swift in Sources */,
 				2F4A7F8B2BE56DE200AD68A0 /* Extensions.swift in Sources */,
 				2F4772EB2BE4231F00EC6E07 /* ei.pb.swift in Sources */,
-				2F4D914A2BEE815200C6899F /* UI.swift in Sources */,
+				2F4D914A2BEE815200C6899F /* UITools.swift in Sources */,
 				2F4772DC2BE41E9600EC6E07 /* HomeView.swift in Sources */,
 				2F22B0E52BEAD47300627D5F /* WhatNext.swift in Sources */,
 				2F4D91472BEE805D00C6899F /* ArtifactInfo.swift in Sources */,
 				2F96C9C12C195DDF008C7708 /* SecureAPI.swift in Sources */,
 				2F4D914B2BEE815400C6899F /* Numbers.swift in Sources */,
+				2F6638A22C2236E400858E1C /* UI.swift in Sources */,
 				2F4772DA2BE41E9600EC6E07 /* WidgetEggApp.swift in Sources */,
 				2F4D91462BEE805600C6899F /* API.swift in Sources */,
 				2F4A7F8D2BE5780700AD68A0 /* EIDHelp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F66385E2C22190500858E1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F6638752C2219B000858E1C /* FuelTimerEntry.swift in Sources */,
+				2F6638882C221D4A00858E1C /* FuelTimerBundle.swift in Sources */,
+				2F66389C2C22369B00858E1C /* ei.pb.swift in Sources */,
+				2F6638742C2219A900858E1C /* Provider.swift in Sources */,
+				2F6638902C22211000858E1C /* ArtifactInfo.swift in Sources */,
+				2F66388B2C221E1300858E1C /* ActivateTimer.swift in Sources */,
+				2F6638922C2227E500858E1C /* TimerSettings.swift in Sources */,
+				2F6638A32C22370E00858E1C /* UITools.swift in Sources */,
+				2F66388D2C221E6E00858E1C /* TimerState.swift in Sources */,
+				2F66387C2C221AD800858E1C /* FuelTimerSmall.swift in Sources */,
+				2F6638692C22190500858E1C /* FuelTimer.swift in Sources */,
+				2F6638942C2232C500858E1C /* ModifyShip.swift in Sources */,
+				2F6638792C221A4F00858E1C /* FuelTimerEntryView.swift in Sources */,
+				2F6638842C221CBD00858E1C /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,11 +877,12 @@
 				2FE674E02C18CA0800B0D2E1 /* SettingsView.swift in Sources */,
 				2FE674E22C18CA1200B0D2E1 /* EIDHelp.swift in Sources */,
 				2FE674E52C18CACB00B0D2E1 /* ei.pb.swift in Sources */,
-				2FE674F22C18D66200B0D2E1 /* UI.swift in Sources */,
+				2FE674F22C18D66200B0D2E1 /* UITools.swift in Sources */,
 				2FE674E82C18CAF000B0D2E1 /* ArtifactInfo.swift in Sources */,
 				2FE674E92C18CB5100B0D2E1 /* Extensions.swift in Sources */,
 				2F96C9C32C195DDF008C7708 /* SecureAPI.swift in Sources */,
 				2FE6749F2C18C12700B0D2E1 /* WidgetEggWatchApp.swift in Sources */,
+				2F6638A02C2236E400858E1C /* UI.swift in Sources */,
 				2FE674E12C18CA0E00B0D2E1 /* WhatNext.swift in Sources */,
 				2FE674E32C18CA4500B0D2E1 /* API.swift in Sources */,
 				2FE674E62C18CAD900B0D2E1 /* Numbers.swift in Sources */,
@@ -695,18 +896,19 @@
 				2FE674B32C18C16D00B0D2E1 /* CustomGauge.swift in Sources */,
 				2F96C9C42C195DDF008C7708 /* SecureAPI.swift in Sources */,
 				2FE674B42C18C16D00B0D2E1 /* FuelList.swift in Sources */,
+				2F66387F2C221B0B00858E1C /* MissionInfoEntry.swift in Sources */,
+				2F6638802C221B0B00858E1C /* Provider.swift in Sources */,
 				2FE674B52C18C16D00B0D2E1 /* Numbers.swift in Sources */,
 				2FE674B62C18C16D00B0D2E1 /* ei.pb.swift in Sources */,
+				2F6638A12C2236E400858E1C /* UI.swift in Sources */,
 				2FE674B72C18C16D00B0D2E1 /* MissionInfoEmpty.swift in Sources */,
 				2FE674B82C18C16D00B0D2E1 /* MissionInfoEntryView.swift in Sources */,
-				2FE674B92C18C16D00B0D2E1 /* UI.swift in Sources */,
+				2FE674B92C18C16D00B0D2E1 /* UITools.swift in Sources */,
 				2FE674BA2C18C16D00B0D2E1 /* MissionInfo.swift in Sources */,
 				2FE674BB2C18C16D00B0D2E1 /* ArtifactInfo.swift in Sources */,
 				2FE674BC2C18C16D00B0D2E1 /* SignedOutView.swift in Sources */,
 				2FE674EF2C18CCB100B0D2E1 /* MissionInfoAccessoryRectangular.swift in Sources */,
 				2FE674BD2C18C16D00B0D2E1 /* MissionInfoBundle.swift in Sources */,
-				2FE674BE2C18C16D00B0D2E1 /* MissionInfoEntry.swift in Sources */,
-				2FE674BF2C18C16D00B0D2E1 /* Provider.swift in Sources */,
 				2FE674FA2C190DB600B0D2E1 /* MissionInfoAccessoryCorner.swift in Sources */,
 				2FE674C02C18C16D00B0D2E1 /* MediumGauge.swift in Sources */,
 				2FE674F72C18FC8800B0D2E1 /* MissionInfoAccessoryCircular.swift in Sources */,
@@ -724,6 +926,11 @@
 			isa = PBXTargetDependency;
 			target = 2F20FDDE2BE431B600B30302 /* MissionInfoExtension */;
 			targetProxy = 2F20FDED2BE431B700B30302 /* PBXContainerItemProxy */;
+		};
+		2F66386E2C22190600858E1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F6638612C22190500858E1C /* FuelTimerExtension */;
+			targetProxy = 2F66386D2C22190600858E1C /* PBXContainerItemProxy */;
 		};
 		2FE674A82C18C12800B0D2E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1029,6 +1236,72 @@
 			};
 			name = Release;
 		};
+		2F6638712C22190600858E1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7ABT9UL8L8;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FuelTimer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FuelTimer;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiller.WidgetEgg.FuelTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2F6638722C22190600858E1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7ABT9UL8L8;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FuelTimer/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FuelTimer;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiller.WidgetEgg.FuelTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		2FE674AB2C18C12800B0D2E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1207,6 +1480,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		2F6638702C22190600858E1C /* Build configuration list for PBXNativeTarget "FuelTimerExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F6638712C22190600858E1C /* Debug */,
+				2F6638722C22190600858E1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2FE674AD2C18C12800B0D2E1 /* Build configuration list for PBXNativeTarget "WidgetEggWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1263,6 +1545,16 @@
 			productName = SwiftProtobuf;
 		};
 		2F546F112BE487FC0009DBEF /* SwiftProtobufPluginLibrary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F546F0A2BE487860009DBEF /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobufPluginLibrary;
+		};
+		2F6638982C22367F00858E1C /* SwiftProtobuf */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F546F0A2BE487860009DBEF /* XCRemoteSwiftPackageReference "swift-protobuf" */;
+			productName = SwiftProtobuf;
+		};
+		2F66389A2C22367F00858E1C /* SwiftProtobufPluginLibrary */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2F546F0A2BE487860009DBEF /* XCRemoteSwiftPackageReference "swift-protobuf" */;
 			productName = SwiftProtobufPluginLibrary;
