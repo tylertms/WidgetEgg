@@ -2,7 +2,7 @@
 
 # WidgetEgg
 
-[Download](https://apps.apple.com/us/app/widgetegg/id6502221824)
+[Download on the App Store](https://apps.apple.com/us/app/widgetegg/id6502221824)
 
 
 Built for iPhone and iPad.\
