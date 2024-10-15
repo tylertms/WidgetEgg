@@ -26,6 +26,18 @@ struct HomeView: View {
     var body: some View {
         VStack(alignment: .center) {
 #if os(iOS)
+            HStack {
+                Link(destination: URL(string: "https://ko-fi.com/tillers")!) {
+                    Image(.kofi)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 50)
+                        .padding(5)
+                }
+                
+                Spacer()
+            }
+            
             Spacer()
             
             Image(.wireframe)

@@ -172,7 +172,6 @@
 		2F4772D62BE41E9600EC6E07 /* WidgetEgg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetEgg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4772D92BE41E9600EC6E07 /* WidgetEggApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetEggApp.swift; sourceTree = "<group>"; };
 		2F4772DB2BE41E9600EC6E07 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		2F4772E82BE422F400EC6E07 /* ei.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = ei.proto; sourceTree = "<group>"; };
 		2F4772EA2BE4231F00EC6E07 /* ei.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ei.pb.swift; sourceTree = "<group>"; };
 		2F47730C2BE430FC00EC6E07 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = /System/Library/Frameworks/WidgetKit.framework; sourceTree = "<absolute>"; };
 		2F47730E2BE430FC00EC6E07 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = /System/Library/Frameworks/SwiftUI.framework; sourceTree = "<absolute>"; };
@@ -309,7 +308,6 @@
 		2F4772E72BE422ED00EC6E07 /* Protobuf */ = {
 			isa = PBXGroup;
 			children = (
-				2F4772E82BE422F400EC6E07 /* ei.proto */,
 				2F4772EA2BE4231F00EC6E07 /* ei.pb.swift */,
 			);
 			path = Protobuf;
