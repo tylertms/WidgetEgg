@@ -2,7 +2,7 @@
 
 # WidgetEgg
 
-[![Release](https://img.shields.io/github/release/tylertms/Widgetegg.svg?label=Release)](https://GitHub.com/tylertms/WidgetEgg/releases/)
+[![Release](https://img.shields.io/github/release/tylertms/WidgetEgg.svg?label=Release)](https://GitHub.com/tylertms/WidgetEgg/releases/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/tylertms/WidgetEgg/blob/main/LICENSE)
 
 [Download on the App Store](https://apps.apple.com/us/app/widgetegg/id6502221824)
