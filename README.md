@@ -2,18 +2,27 @@
 
 # WidgetEgg
 
+[![Release](https://img.shields.io/github/release/tylertms/Widgetegg.svg?label=Release)](https://GitHub.com/tylertms/WidgetEgg/releases/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/tylertms/WidgetEgg/blob/main/LICENSE)
+
 [Download on the App Store](https://apps.apple.com/us/app/widgetegg/id6502221824)
 
 
-Built for iPhone and iPad.\
-Available on Mac if you have it installed on one of those devices.
+Built for iPhone and iPad. Available on Mac.
+
+<p align="left">
+   <img src="./Images/iphone_1.jpg" height="400" />
+   <img src="./Images/iphone_2.jpg" height="400" />
+   <img src="./Images/iphone_3.jpg" height="400" />
+   <img src="./Images/watch_1.jpg" height="400" />
+</p>
 
 
-## Development
+## Building
 1. Clone this repository
 `git clone https://github.com/tylertms/WidgetEgg`
 
-2. Open the project with Xcode
+2. Open `WidgetEgg.xcodeproj` with Xcode and use the integrated build tool.
 3. This app uses a private API function in ~/MissionInfo/Tools/SecureAPI.swift. To use that function, you must supply the given environmental variables yourself, which will automatically be injected when building.
 
    
