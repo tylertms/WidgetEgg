@@ -8,7 +8,7 @@
 [Download on the App Store](https://apps.apple.com/us/app/widgetegg/id6502221824)
 
 
-Built for iPhone and iPad. Available on Mac.
+Built for iPhone, iPad, and Apple Watch. Available on Mac.
 
 <p align="left">
    <img src="./Images/iphone_1.jpg" height="400" />
