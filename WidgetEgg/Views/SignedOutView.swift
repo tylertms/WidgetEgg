@@ -1,6 +1,6 @@
 //
-//  FetchDataFailed.swift
-//  MissionInfoExtension
+//  SignedOutView.swift
+//  WidgetEgg
 //
 //  Created by Tyler on 5/3/24.
 //

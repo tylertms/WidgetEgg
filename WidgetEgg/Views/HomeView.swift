@@ -20,7 +20,7 @@ struct HomeView: View {
     @State private var showConfirmation: Bool = false
     
     init() {
-        self.EIUserName = UserDefaults(suiteName: "group.com.MissionInfo")?.string(forKey: "EIUserName") ?? ""
+        self.EIUserName = UserDefaults(suiteName: "group.com.WidgetEgg")?.string(forKey: "EIUserName") ?? ""
     }
     
     var body: some View {
@@ -108,7 +108,7 @@ struct HomeView: View {
                     Task {
                         do {
                             let backup = try await fetchBackup(basicRequestInfo: basicRequestInfo)
-                            if let defaults = UserDefaults(suiteName: "group.com.MissionInfo") {
+                            if let defaults = UserDefaults(suiteName: "group.com.WidgetEgg") {
                                 defaults.setValue(EID, forKey: "EID")
                                 defaults.setValue(backup.userName, forKey: "EIUserName")
                             }
@@ -167,7 +167,7 @@ struct HomeView: View {
                     titleVisibility: .visible
                 ) {
                     Button("Sign Out", role: .destructive) {
-                        if let defaults = UserDefaults(suiteName: "group.com.MissionInfo") {
+                        if let defaults = UserDefaults(suiteName: "group.com.WidgetEgg") {
                             defaults.removeObject(forKey: "EID")
                             defaults.removeObject(forKey: "EIUserName")
                             

@@ -12,8 +12,8 @@ struct CustomGauge: View {
     @Environment(\.colorScheme) var theme
     @Environment(\.widgetFamily) var family
     
-    @AppStorage("TargetIconSmall", store: UserDefaults(suiteName: "group.com.MissionInfo")) var targetIconSmall: Bool = false
-    @AppStorage("TargetIconMedium", store: UserDefaults(suiteName: "group.com.MissionInfo")) var targetIconMedium: Bool = false
+    @AppStorage("TargetIconSmall", store: UserDefaults(suiteName: "group.com.WidgetEgg")) var targetIconSmall: Bool = false
+    @AppStorage("TargetIconMedium", store: UserDefaults(suiteName: "group.com.WidgetEgg")) var targetIconMedium: Bool = false
     
     let mission: Ei_MissionInfo
     let scale: CGFloat

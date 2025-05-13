@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MediumGauge: View {
     
-    @AppStorage("UseAbsoluteTime", store: UserDefaults(suiteName: "group.com.MissionInfo")) var useAbsoluteTime: Bool = false
+    @AppStorage("UseAbsoluteTime", store: UserDefaults(suiteName: "group.com.WidgetEgg")) var useAbsoluteTime: Bool = false
     
     let entry: Provider.Entry
     let index: Int

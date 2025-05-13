@@ -21,7 +21,7 @@ struct Defaults {
 }
 
 struct SettingsView: View {
-    let suite = UserDefaults(suiteName: "group.com.MissionInfo")
+    let suite = UserDefaults(suiteName: "group.com.WidgetEgg")
     
     let generalSettings: [BooleanSetting] = [
         BooleanSetting(title: "Home Screen Redirect", subtitle: "Tap home screen widgets to open Egg, Inc.", key: "DeepLinkHome"),

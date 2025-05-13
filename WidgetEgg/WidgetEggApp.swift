@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct WidgetEggApp: App {
-    @AppStorage("DeepLinkHome", store: UserDefaults(suiteName: "group.com.MissionInfo")) var deepLinkHome: Bool = false
-    @AppStorage("DeepLinkLock", store: UserDefaults(suiteName: "group.com.MissionInfo")) var deepLinkLock: Bool = false
+    @AppStorage("DeepLinkHome", store: UserDefaults(suiteName: "group.com.WidgetEgg")) var deepLinkHome: Bool = false
+    @AppStorage("DeepLinkLock", store: UserDefaults(suiteName: "group.com.WidgetEgg")) var deepLinkLock: Bool = false
     
     init() {
-        let userDefaults = UserDefaults(suiteName: "group.com.MissionInfo")!
+        let userDefaults = UserDefaults(suiteName: "group.com.WidgetEgg")!
         userDefaults.register(defaults: Defaults.boolDefaults)
     }
     

@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.com.MissionInfo</string>
+		<string>group.com.WidgetEgg</string>
 	</array>
 </dict>
 </plist>

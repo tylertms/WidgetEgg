@@ -1,6 +1,6 @@
 //
 //  UI.swift
-//  MissionInfoExtension
+//  WidgetEgg
 //
 //  Created by Tyler on 5/10/24.
 //
@@ -19,7 +19,8 @@ func getRoundingCircle(progress: CGFloat, scale: CGFloat) -> AnyView {
 }
 
 public func fetchImage(ship: Int? = nil, afx: Int? = nil) -> UIImage? {
-    var key = ""
+    var key: String
+    
     if let ship = ship {
         key = ALL_SHIPS[ship]
     } else if let afx = afx {

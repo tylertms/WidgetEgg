@@ -18,7 +18,7 @@ struct Provider: TimelineProvider {
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<MissionInfoEntry>) -> ()) {
         
-        guard let defaults = UserDefaults(suiteName: "group.com.MissionInfo"), let EID = defaults.string(forKey: "EID") else {
+        guard let defaults = UserDefaults(suiteName: "group.com.WidgetEgg"), let EID = defaults.string(forKey: "EID") else {
             return completion(
                 Timeline(
                     entries: [MissionInfoEntry(date: Date(timeIntervalSince1970: 0), originalData: [], missionData: [], artifactInfo: nil)],
