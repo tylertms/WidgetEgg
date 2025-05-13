@@ -10,10 +10,8 @@ import SwiftUI
 import WidgetKit
 
 struct SignedOutView: View {
-    
     let family: WidgetFamily
-    
-    let resizedIcon = resizeImage(image: UIImage(named: "Wireframe")!, targetSize: CGSize(width: 64, height: 64))
+    let resizedIcon = resizeImage(image: UIImage(named: "Wireframe")!, targetSize: CGSize(width: 128, height: 128))
     
     var body: some View {
         VStack(alignment: .center) {
