@@ -20,6 +20,7 @@ struct SettingsView: View {
     @AppStorage("UseAbsoluteTime", store: UserDefaults(suiteName: "group.com.MissionInfo")) var useAbsoluteTime: Bool = false
     @AppStorage("TargetIconSmall", store: UserDefaults(suiteName: "group.com.MissionInfo")) var targetIconSmall: Bool = false
     @AppStorage("ShowTankLevels", store: UserDefaults(suiteName: "group.com.MissionInfo")) var showTankLevels: Bool = false
+    @AppStorage("UseTankLimits", store: UserDefaults(suiteName: "group.com.MissionInfo")) var useTankLimits: Bool = true
     @AppStorage("TargetIconMedium", store: UserDefaults(suiteName: "group.com.MissionInfo")) var targetIconMedium: Bool = true
     
     @AppStorage("DeepLinkHome", store: UserDefaults(suiteName: "group.com.MissionInfo")) var deepLinkHome: Bool = true
@@ -81,6 +82,14 @@ struct SettingsView: View {
                     
                     Toggle(isOn: $showTankLevels, label: {
                         Text("Show fuel tank levels in 4th slot")
+                            .fontWeight(.medium)
+                    })
+                    .padding()
+                    .background(Color.gray.opacity(0.15))
+                    .clipShape(RoundedRectangle(cornerRadius: .infinity))
+                    
+                    Toggle(isOn: $useTankLimits, label: {
+                        Text("Scale fuel levels to your in-game limits")
                             .fontWeight(.medium)
                     })
                     .padding()

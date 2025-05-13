@@ -26,6 +26,7 @@ struct HomeView: View {
     var body: some View {
         VStack(alignment: .center) {
 #if os(iOS)
+            /*
             HStack {
                 Link(destination: URL(string: "https://ko-fi.com/tillers")!) {
                     Image(.kofi)
@@ -37,6 +38,7 @@ struct HomeView: View {
                 
                 Spacer()
             }
+            */
             
             Spacer()
             
