@@ -8,6 +8,9 @@ struct MissionInfo: Widget {
     init() {
 #if os(iOS)
         supportedFamilyList = [.systemSmall, .systemMedium, .accessoryCircular, .accessoryRectangular]
+        
+        let userDefaults = UserDefaults(suiteName: "group.com.MissionInfo")!
+        userDefaults.register(defaults: Defaults.boolDefaults)
 #else
         supportedFamilyList = [.accessoryRectangular, .accessoryCircular, .accessoryCorner]
 #endif

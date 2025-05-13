@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct WidgetEggApp: App {
+    @AppStorage("DeepLinkHome", store: UserDefaults(suiteName: "group.com.MissionInfo")) var deepLinkHome: Bool = false
+    @AppStorage("DeepLinkLock", store: UserDefaults(suiteName: "group.com.MissionInfo")) var deepLinkLock: Bool = false
     
-    @AppStorage("DeepLinkHome", store: UserDefaults(suiteName: "group.com.MissionInfo")) var deepLinkHome: Bool = true
-    @AppStorage("DeepLinkLock", store: UserDefaults(suiteName: "group.com.MissionInfo")) var deepLinkLock: Bool = true
+    init() {
+        let userDefaults = UserDefaults(suiteName: "group.com.MissionInfo")!
+        userDefaults.register(defaults: Defaults.boolDefaults)
+    }
     
     var body: some Scene {
         WindowGroup {

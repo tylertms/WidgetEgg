@@ -78,7 +78,6 @@
 		2FE674CD2C18C16D00B0D2E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F20FDE92BE431B700B30302 /* Assets.xcassets */; };
 		2FE674D32C18C21100B0D2E1 /* MissionInfoWatchExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2FE674D12C18C16D00B0D2E1 /* MissionInfoWatchExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2FE674DF2C18CA0200B0D2E1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4772DB2BE41E9600EC6E07 /* HomeView.swift */; };
-		2FE674E02C18CA0800B0D2E1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA3474E2BE7D0FA00C30E7B /* SettingsView.swift */; };
 		2FE674E12C18CA0E00B0D2E1 /* WhatNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22B0E42BEAD47300627D5F /* WhatNext.swift */; };
 		2FE674E22C18CA1200B0D2E1 /* EIDHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F8C2BE5780700AD68A0 /* EIDHelp.swift */; };
 		2FE674E32C18CA4500B0D2E1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20FDF82BE43C1700B30302 /* API.swift */; };
@@ -96,6 +95,7 @@
 		2FE674F82C18FC8800B0D2E1 /* MissionInfoAccessoryCircular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE674F62C18FC8300B0D2E1 /* MissionInfoAccessoryCircular.swift */; };
 		2FE674FA2C190DB600B0D2E1 /* MissionInfoAccessoryCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE674F92C190DB200B0D2E1 /* MissionInfoAccessoryCorner.swift */; };
 		2FE674FB2C190DB600B0D2E1 /* MissionInfoAccessoryCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE674F92C190DB200B0D2E1 /* MissionInfoAccessoryCorner.swift */; };
+		2FF48F6F2DD3D8B500DD94C3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA3474E2BE7D0FA00C30E7B /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -624,6 +624,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F4A7F852BE55D2700AD68A0 /* CustomGauge.swift in Sources */,
+				2FF48F6F2DD3D8B500DD94C3 /* SettingsView.swift in Sources */,
 				2F96C9C22C195DDF008C7708 /* SecureAPI.swift in Sources */,
 				2F22B0E92BEBF24A00627D5F /* FuelList.swift in Sources */,
 				2F4D91442BEE803700C6899F /* Numbers.swift in Sources */,
@@ -672,7 +673,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FE674DF2C18CA0200B0D2E1 /* HomeView.swift in Sources */,
-				2FE674E02C18CA0800B0D2E1 /* SettingsView.swift in Sources */,
 				2FE674E22C18CA1200B0D2E1 /* EIDHelp.swift in Sources */,
 				2FE674E52C18CACB00B0D2E1 /* ei.pb.swift in Sources */,
 				2FE674F22C18D66200B0D2E1 /* UI.swift in Sources */,

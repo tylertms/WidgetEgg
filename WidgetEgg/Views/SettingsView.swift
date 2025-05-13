@@ -8,23 +8,35 @@
 import SwiftUI
 import WidgetKit
 
+struct Defaults {
+    static let boolDefaults: [String: Bool] = [
+        "DeepLinkHome": false,
+        "DeepLinkLock": true,
+        "TargetIconSmall": true,
+        "UseAbsoluteTime": true,
+        "ShowTankLevels": true,
+        "UseTankLimits": false,
+        "TargetIconMedium": true
+    ]
+}
+
 struct SettingsView: View {
     let suite = UserDefaults(suiteName: "group.com.MissionInfo")
     
     let generalSettings: [BooleanSetting] = [
-        BooleanSetting(title: "Home Screen Redirect", subtitle: "Tap home screen widgets to open Egg, Inc.", key: "DeepLinkHome", defaultValue: false),
-        BooleanSetting(title: "Lock Screen Redirect", subtitle: "Tap lock screen widgets to open Egg, Inc.", key: "DeepLinkLock", defaultValue: true)
+        BooleanSetting(title: "Home Screen Redirect", subtitle: "Tap home screen widgets to open Egg, Inc.", key: "DeepLinkHome"),
+        BooleanSetting(title: "Lock Screen Redirect", subtitle: "Tap lock screen widgets to open Egg, Inc.", key: "DeepLinkLock")
     ]
     
     let smallWidgetSettings: [BooleanSetting] = [
-        BooleanSetting(title: "Show Targets", subtitle: "Display the targeted artifact for each mission.", key: "TargetIconSmall", defaultValue: true)
+        BooleanSetting(title: "Show Targets", subtitle: "Display the targeted artifact for each mission.", key: "TargetIconSmall")
     ]
     
     let mediumWidgetSettings: [BooleanSetting] = [
-        BooleanSetting(title: "Absolute Time", subtitle: "Show exact return time rather than countdown timer.", key: "UseAbsoluteTime", defaultValue: true),
-        BooleanSetting(title: "Fuel Tank", subtitle: "Show fuel tank levels in the fourth slot.", key: "ShowTankLevels", defaultValue: true),
-        BooleanSetting(title: "Fuel Limits", subtitle: "Scale fuel tank levels to your in-game limits.", key: "UseTankLimits", defaultValue: false),
-        BooleanSetting(title: "Show Targets", subtitle: "Display the targeted artifact for each mission.", key: "TargetIconMedium", defaultValue: true)
+        BooleanSetting(title: "Absolute Time", subtitle: "Show exact return time rather than countdown timer.", key: "UseAbsoluteTime"),
+        BooleanSetting(title: "Fuel Tank", subtitle: "Show fuel tank levels in the fourth slot.", key: "ShowTankLevels"),
+        BooleanSetting(title: "Fuel Limits", subtitle: "Scale fuel tank levels to your in-game limits.", key: "UseTankLimits"),
+        BooleanSetting(title: "Show Targets", subtitle: "Display the targeted artifact for each mission.", key: "TargetIconMedium")
     ]
     
     var body: some View {
@@ -58,30 +70,30 @@ struct BooleanSetting: Identifiable {
     let title: String
     let subtitle: String
     let key: String
-    let defaultValue: Bool
 }
 
 struct ToggleRow: View {
     let title: String
     let subtitle: String
-
-    @AppStorage private var isOn: Bool
-
-    init(_ setting: BooleanSetting, for store: UserDefaults?) {
+    
+    @AppStorage var isOn: Bool
+    
+    init(_ setting: BooleanSetting, for suite: UserDefaults?) {
         self.title = setting.title
         self.subtitle = setting.subtitle
-
+        
         _isOn = AppStorage(
-            wrappedValue: setting.defaultValue,
+            wrappedValue: Defaults.boolDefaults[setting.key] ?? false,
             setting.key,
-            store: store
+            store: suite
         )
     }
-
+    
     var body: some View {
         Toggle(isOn: $isOn) {
             VStack(alignment: .leading, spacing: 2) {
-                Text(title).font(.body)
+                Text(title)
+                    .font(.body)
                 if !subtitle.isEmpty {
                     Text(subtitle)
                         .font(.caption)

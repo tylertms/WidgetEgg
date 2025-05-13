@@ -12,7 +12,7 @@ struct FuelList: View {
     @Environment(\.colorScheme) var theme
     @Environment(\.widgetFamily) var family
     
-    @AppStorage("UseTankLimits", store: UserDefaults(suiteName: "group.com.MissionInfo")) var useTankLimits: Bool = true
+    @AppStorage("UseTankLimits", store: UserDefaults(suiteName: "group.com.MissionInfo")) var useTankLimits: Bool = false
     
     let artifacts: Ei_Backup.Artifacts
     let scale: CGFloat
