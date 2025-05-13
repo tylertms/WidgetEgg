@@ -9,120 +9,88 @@ import SwiftUI
 import WidgetKit
 
 struct SettingsView: View {
-    let sharedUserDefaults: UserDefaults? = {
-        guard let sharedDefaults = UserDefaults(suiteName: "group.com.MissionInfo") else {
-            print("Error: Unable to create shared user defaults suite")
-            return nil
-        }
-        return sharedDefaults
-    }()
-
-    @AppStorage("UseAbsoluteTime", store: UserDefaults(suiteName: "group.com.MissionInfo")) var useAbsoluteTime: Bool = false
-    @AppStorage("TargetIconSmall", store: UserDefaults(suiteName: "group.com.MissionInfo")) var targetIconSmall: Bool = false
-    @AppStorage("ShowTankLevels", store: UserDefaults(suiteName: "group.com.MissionInfo")) var showTankLevels: Bool = false
-    @AppStorage("UseTankLimits", store: UserDefaults(suiteName: "group.com.MissionInfo")) var useTankLimits: Bool = true
-    @AppStorage("TargetIconMedium", store: UserDefaults(suiteName: "group.com.MissionInfo")) var targetIconMedium: Bool = true
+    let suite = UserDefaults(suiteName: "group.com.MissionInfo")
     
-    @AppStorage("DeepLinkHome", store: UserDefaults(suiteName: "group.com.MissionInfo")) var deepLinkHome: Bool = true
-    @AppStorage("DeepLinkLock", store: UserDefaults(suiteName: "group.com.MissionInfo")) var deepLinkLock: Bool = true
+    let generalSettings: [BooleanSetting] = [
+        BooleanSetting(title: "Home Screen Redirect", subtitle: "Tap home screen widgets to open Egg, Inc.", key: "DeepLinkHome", defaultValue: false),
+        BooleanSetting(title: "Lock Screen Redirect", subtitle: "Tap lock screen widgets to open Egg, Inc.", key: "DeepLinkLock", defaultValue: true)
+    ]
+    
+    let smallWidgetSettings: [BooleanSetting] = [
+        BooleanSetting(title: "Show Targets", subtitle: "Display the targeted artifact for each mission.", key: "TargetIconSmall", defaultValue: true)
+    ]
+    
+    let mediumWidgetSettings: [BooleanSetting] = [
+        BooleanSetting(title: "Absolute Time", subtitle: "Show exact return time rather than countdown timer.", key: "UseAbsoluteTime", defaultValue: true),
+        BooleanSetting(title: "Fuel Tank", subtitle: "Show fuel tank levels in the fourth slot.", key: "ShowTankLevels", defaultValue: true),
+        BooleanSetting(title: "Fuel Limits", subtitle: "Scale fuel tank levels to your in-game limits.", key: "UseTankLimits", defaultValue: false),
+        BooleanSetting(title: "Show Targets", subtitle: "Display the targeted artifact for each mission.", key: "TargetIconMedium", defaultValue: true)
+    ]
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(alignment: .leading) {
-                    
-                    Text("General")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                    
-                    Toggle(isOn: $deepLinkHome, label: {
-                        Text("Tap Home screen widgets to open Egg, Inc.")
-                            .fontWeight(.medium)
-                    })
-                    .padding()
-                    .background(Color.gray.opacity(0.15))
-                    .clipShape(RoundedRectangle(cornerRadius: .infinity))
-                    
-                    Toggle(isOn: $deepLinkLock, label: {
-                        Text("Tap Lock screen widgets to open Egg, Inc.")
-                            .fontWeight(.medium)
-                    })
-                    .padding()
-                    .background(Color.gray.opacity(0.15))
-                    .clipShape(RoundedRectangle(cornerRadius: .infinity))
-                    
-                    
-                    Text("Small Widget")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .padding(.top)
-                    
-                    Toggle(isOn: $targetIconSmall, label: {
-                        Text("Show targeted artifact")
-                            .fontWeight(.medium)
-                    })
-                    .padding()
-                    .background(Color.gray.opacity(0.15))
-                    .clipShape(RoundedRectangle(cornerRadius: .infinity))
-                    
-                    
-                    
-                    Text("Medium Widget")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .padding(.top)
-                    
-                    Toggle(isOn: $useAbsoluteTime, label: {
-                        Text("Use absolute time")
-                            .fontWeight(.medium)
-                    })
-                    .padding()
-                    .background(Color.gray.opacity(0.15))
-                    .clipShape(RoundedRectangle(cornerRadius: .infinity))
-                    
-                    Toggle(isOn: $showTankLevels, label: {
-                        Text("Show fuel tank levels in 4th slot")
-                            .fontWeight(.medium)
-                    })
-                    .padding()
-                    .background(Color.gray.opacity(0.15))
-                    .clipShape(RoundedRectangle(cornerRadius: .infinity))
-                    
-                    Toggle(isOn: $useTankLimits, label: {
-                        Text("Scale fuel levels to your in-game limits")
-                            .fontWeight(.medium)
-                    })
-                    .padding()
-                    .background(Color.gray.opacity(0.15))
-                    .clipShape(RoundedRectangle(cornerRadius: .infinity))
-                    
-                    Toggle(isOn: $targetIconMedium, label: {
-                        Text("Show targeted artifact")
-                            .fontWeight(.medium)
-                    })
-                    .padding()
-                    .background(Color.gray.opacity(0.15))
-                    .clipShape(RoundedRectangle(cornerRadius: .infinity))
-                    
-                    
-                    Spacer()
+            Form {
+                Section(header: Text("General")) {
+                    ForEach(generalSettings) { setting in
+                        ToggleRow(setting, for: suite)
+                    }
                 }
-                .padding()
+                
+                Section(header: Text("Small Widget")) {
+                    ForEach(smallWidgetSettings) { setting in
+                        ToggleRow(setting, for: suite)
+                    }
+                }
+                
+                Section(header: Text("Medium Widget")) {
+                    ForEach(mediumWidgetSettings) { setting in
+                        ToggleRow(setting, for: suite)
+                    }
+                }
             }
             .navigationTitle("Settings")
-            
-            .onChange(of: useAbsoluteTime) { _ in
-                WidgetCenter.shared.reloadAllTimelines()
+        }
+    }
+}
+
+struct BooleanSetting: Identifiable {
+    var id: String { key }
+    let title: String
+    let subtitle: String
+    let key: String
+    let defaultValue: Bool
+}
+
+struct ToggleRow: View {
+    let title: String
+    let subtitle: String
+
+    @AppStorage private var isOn: Bool
+
+    init(_ setting: BooleanSetting, for store: UserDefaults?) {
+        self.title = setting.title
+        self.subtitle = setting.subtitle
+
+        _isOn = AppStorage(
+            wrappedValue: setting.defaultValue,
+            setting.key,
+            store: store
+        )
+    }
+
+    var body: some View {
+        Toggle(isOn: $isOn) {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(title).font(.body)
+                if !subtitle.isEmpty {
+                    Text(subtitle)
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                }
             }
-            .onChange(of: targetIconSmall) { _ in
-                WidgetCenter.shared.reloadAllTimelines()
-            }
-            .onChange(of: targetIconMedium) { _ in
-                WidgetCenter.shared.reloadAllTimelines()
-            }
-            .onChange(of: showTankLevels) { _ in
-                WidgetCenter.shared.reloadAllTimelines()
-            }
+        }
+        .onChange(of: isOn) { _ in
+            WidgetCenter.shared.reloadAllTimelines()
         }
     }
 }
