@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Frame 5-2 1.png",
+      "filename" : "icon_player 1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,7 +12,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Frame 5-3 2.png",
+      "filename" : "icon_player.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -43,11 +43,6 @@
       ],
       "idiom" : "universal",
       "scale" : "3x"
-    },
-    {
-      "filename" : "Frame 5-3 1.png",
-      "idiom" : "watch",
-      "scale" : "2x"
     }
   ],
   "info" : {
