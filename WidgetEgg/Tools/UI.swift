@@ -37,7 +37,6 @@ public func fetchImage(ship: Int? = nil, afx: Int? = nil) -> UIImage? {
 }
 
 func getMissionColor(mission: Ei_MissionInfo, family: WidgetFamily) -> Color {
-    
     if family == .accessoryRectangular || family == .accessoryCircular {
 #if os(iOS)
         return .white

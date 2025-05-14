@@ -28,8 +28,8 @@ func fetchActiveMissions(basicRequestInfo: Ei_BasicRequestInfo) async throws -> 
         throw NSError(domain: "InvalidData", code: 0, userInfo: nil)
     }
     
-    let authMessageDecoded = try Ei_AuthenticatedMessage(serializedData: b64decoded).message
-    let activeMissionsResponse = try Ei_GetActiveMissionsResponse(serializedData: authMessageDecoded)
+    let authMessageDecoded = try Ei_AuthenticatedMessage(serializedBytes: b64decoded).message
+    let activeMissionsResponse = try Ei_GetActiveMissionsResponse(serializedBytes: authMessageDecoded)
     let activeMissions = activeMissionsResponse.activeMissions
     
     return activeMissions
@@ -52,7 +52,7 @@ func fetchBackup(basicRequestInfo: Ei_BasicRequestInfo) async throws -> Ei_Backu
     let (data, _) = try await URLSession.shared.data(for: request)
     guard let b64decoded = Data(base64Encoded: data) else { throw NSError(domain: "InvalidData", code: 0, userInfo: nil) }
     
-    let backup = try Ei_EggIncFirstContactResponse(serializedData: b64decoded).backup
+    let backup = try Ei_EggIncFirstContactResponse(serializedBytes: b64decoded).backup
     guard backup.hasChecksum else { throw NSError(domain: "InvalidData", code: 0, userInfo: nil) }
     
     return backup

@@ -108,12 +108,17 @@
 		2FF48FB42DD3F43800DD94C3 /* UserInfoEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF48FB32DD3F43500DD94C3 /* UserInfoEntryView.swift */; };
 		2FF48FB52DD3F47200DD94C3 /* SignedOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F862BE55E6500AD68A0 /* SignedOutView.swift */; };
 		2FF48FB92DD3F4C100DD94C3 /* UserInfoSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF48FB82DD3F4BD00DD94C3 /* UserInfoSmall.swift */; };
-		2FF48FBB2DD3F4CE00DD94C3 /* UserInfoMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF48FBA2DD3F4CB00DD94C3 /* UserInfoMedium.swift */; };
 		2FF48FBF2DD3F79200DD94C3 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 2FF48FBE2DD3F79200DD94C3 /* SwiftProtobuf */; };
 		2FF48FC12DD3F81B00DD94C3 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 2FF48FC02DD3F81B00DD94C3 /* SwiftProtobuf */; };
 		2FF48FC32DD3F82300DD94C3 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 2FF48FC22DD3F82300DD94C3 /* SwiftProtobuf */; };
 		2FF48FC52DD3F82B00DD94C3 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 2FF48FC42DD3F82B00DD94C3 /* SwiftProtobuf */; };
 		2FF48FC62DD3F9C200DD94C3 /* EggIncAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F20FDE92BE431B700B30302 /* EggIncAssets.xcassets */; };
+		2FF48FC82DD40F8B00DD94C3 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF48FC72DD40F8600DD94C3 /* GameInfo.swift */; };
+		2FF48FC92DD40F8B00DD94C3 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF48FC72DD40F8600DD94C3 /* GameInfo.swift */; };
+		2FF48FCA2DD40F8B00DD94C3 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF48FC72DD40F8600DD94C3 /* GameInfo.swift */; };
+		2FF48FCB2DD40F8B00DD94C3 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF48FC72DD40F8600DD94C3 /* GameInfo.swift */; };
+		2FF48FCC2DD40F8B00DD94C3 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF48FC72DD40F8600DD94C3 /* GameInfo.swift */; };
+		2FF48FCD2DD4265D00DD94C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,8 +240,8 @@
 		2FF48FA92DD3F03000DD94C3 /* UserInfoEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoEntry.swift; sourceTree = "<group>"; };
 		2FF48FB32DD3F43500DD94C3 /* UserInfoEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoEntryView.swift; sourceTree = "<group>"; };
 		2FF48FB82DD3F4BD00DD94C3 /* UserInfoSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoSmall.swift; sourceTree = "<group>"; };
-		2FF48FBA2DD3F4CB00DD94C3 /* UserInfoMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoMedium.swift; sourceTree = "<group>"; };
 		2FF48FBC2DD3F6B500DD94C3 /* UserInfoExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UserInfoExtension.entitlements; sourceTree = "<group>"; };
+		2FF48FC72DD40F8600DD94C3 /* GameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4D91412BEE7F9A00C6899F /* ArtifactInfo.swift */,
+				2FF48FC72DD40F8600DD94C3 /* GameInfo.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -511,7 +517,6 @@
 			isa = PBXGroup;
 			children = (
 				2FF48FB82DD3F4BD00DD94C3 /* UserInfoSmall.swift */,
-				2FF48FBA2DD3F4CB00DD94C3 /* UserInfoMedium.swift */,
 			);
 			path = Standard;
 			sourceTree = "<group>";
@@ -717,6 +722,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FF48FA22DD3EFF400DD94C3 /* Assets.xcassets in Resources */,
+				2FF48FCD2DD4265D00DD94C3 /* Assets.xcassets in Resources */,
 				2FF48FC62DD3F9C200DD94C3 /* EggIncAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -772,6 +778,7 @@
 				2F20FDF92BE43CAF00B30302 /* API.swift in Sources */,
 				2F4A7F7C2BE55C6B00AD68A0 /* Extensions.swift in Sources */,
 				2F4A7F7F2BE55C8A00AD68A0 /* MissionInfoSmall.swift in Sources */,
+				2FF48FCC2DD40F8B00DD94C3 /* GameInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,6 +798,7 @@
 				2F4772DA2BE41E9600EC6E07 /* WidgetEggApp.swift in Sources */,
 				2F4D91462BEE805600C6899F /* API.swift in Sources */,
 				2F4A7F8D2BE5780700AD68A0 /* EIDHelp.swift in Sources */,
+				2FF48FC92DD40F8B00DD94C3 /* GameInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,6 +817,7 @@
 				2FE674E12C18CA0E00B0D2E1 /* WhatNext.swift in Sources */,
 				2FE674E32C18CA4500B0D2E1 /* API.swift in Sources */,
 				2FE674E62C18CAD900B0D2E1 /* Numbers.swift in Sources */,
+				2FF48FC82DD40F8B00DD94C3 /* GameInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,6 +845,7 @@
 				2FE674F72C18FC8800B0D2E1 /* MissionInfoAccessoryCircular.swift in Sources */,
 				2FE674C12C18C16D00B0D2E1 /* MissionInfoMedium.swift in Sources */,
 				2FE674C22C18C16D00B0D2E1 /* API.swift in Sources */,
+				2FF48FCA2DD40F8B00DD94C3 /* GameInfo.swift in Sources */,
 				2FE674C42C18C16D00B0D2E1 /* Extensions.swift in Sources */,
 				2FE674C52C18C16D00B0D2E1 /* MissionInfoSmall.swift in Sources */,
 			);
@@ -846,7 +856,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FF48FA42DD3EFF400DD94C3 /* UserInfo.swift in Sources */,
-				2FF48FBB2DD3F4CE00DD94C3 /* UserInfoMedium.swift in Sources */,
 				2FF48FAC2DD3F16300DD94C3 /* SecureAPI.swift in Sources */,
 				2FF48FA82DD3F02500DD94C3 /* Provider.swift in Sources */,
 				2FF48FB02DD3F1C200DD94C3 /* UI.swift in Sources */,
@@ -860,6 +869,7 @@
 				2FF48FB12DD3F1C700DD94C3 /* Extensions.swift in Sources */,
 				2FF48FAF2DD3F1BC00DD94C3 /* Numbers.swift in Sources */,
 				2FF48FB52DD3F47200DD94C3 /* SignedOutView.swift in Sources */,
+				2FF48FCB2DD40F8B00DD94C3 /* GameInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

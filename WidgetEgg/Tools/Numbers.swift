@@ -31,7 +31,7 @@ func formatSecondsToHMS(seconds: Int) -> String {
 }
 
 
-func bigNumberToString(_ number: Double) -> String {
+func bigNumberToString(_ number: Double, digits: Int = 3) -> String {
     var num = number
     var unit = ""
     
@@ -48,29 +48,47 @@ func bigNumberToString(_ number: Double) -> String {
     
     let fmt = NumberFormatter()
     fmt.numberStyle = .decimal
-    fmt.minimumSignificantDigits = 3
-    fmt.maximumSignificantDigits = 3
+    fmt.minimumSignificantDigits = digits
+    fmt.maximumSignificantDigits = digits
 
     return "\(fmt.string(for: num) ?? "NaN")\(unit)"
 }
 
+func calculateEB(from backup: Ei_Backup?) -> Double {
+    guard let backup = backup else {
+        return 0
+    }
+    
+    let peCount = Int(backup.game.eggsOfProphecy)
+    let seCount = backup.game.soulEggsD
+    
+    let peBonusLevel = Int(
+        backup.game.epicResearch
+            .first { $0.id == "prophecy_bonus" }?
+            .level ?? 0
+    )
+    
+    let seBonusLevel = Int(
+        backup.game.epicResearch
+            .first { $0.id == "soul_eggs" }?
+            .level ?? 0
+    )
+    
+    let bonusFactor = Double(peBonusLevel) * 0.01
+    let perEgg = (10.0 + Double(seBonusLevel)) * pow(1.05 + bonusFactor, Double(peCount))
+    
+    return seCount * perEgg
+}
 
-/*
- 
- func getFuelSecondsRemaining(mission: Ei_MissionInfo, tankLevel: Int) -> Int {
- let totalEggsRequired = getTotalFuel(mission: mission)
- var totalEggsFueled = 0
- 
- for fuel in mission.fuel {
- totalEggsFueled += Int(ceil(fuel.amount))
- }
- 
- if totalEggsFueled >= totalEggsRequired { return 0 }
- return (totalEggsRequired - totalEggsFueled) / FUEL_RATES[tankLevel]
- }
- 
- func getTotalFuel(mission: Ei_MissionInfo) -> Int {
- return TOTAL_FUEL_AMOUNTS[mission.ship.rawValue][mission.durationType.rawValue]
- }
- 
- */
+func ebToRole(_ eb: Double) -> String {
+    return ALL_ROLES[min(Int(log10(max(eb, 1))), ALL_ROLES.count - 1)]
+}
+
+func shortenRole(_ role: String) -> String {
+    let split = role.split(separator: " ")
+    guard split.count == 2 else {
+        return "F1"
+    }
+    
+    return split[0].prefix(1) + String(split[1].count)
+}
