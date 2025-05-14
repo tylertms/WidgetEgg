@@ -19,7 +19,7 @@ struct UserInfoSmall: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 16)
                     
-                    Text(entry.backup?.userName ?? "username")
+                    Text(entry.backup?.userName ?? "")
                         .lineLimit(1)
                     
                     Spacer(minLength: 5)
@@ -95,17 +95,22 @@ struct UserInfoSmall: View {
                 
                 HStack(spacing: 2) {
                     if let homeFarm = entry.backup?.farms.first(where: { $0.farmType == .home }) {
+                        Image("icon_home")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 16)
+                        
                         Image("egg_" + homeFarm.eggType.description)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(height: 16)
                         
+                        Spacer(minLength: 5)
+                        
                         Image("chicken")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(height: 16)
-                        
-                        Spacer(minLength: 5)
                         
                         Text(bigNumberToString(Double(homeFarm.numChickens)))
                     }
