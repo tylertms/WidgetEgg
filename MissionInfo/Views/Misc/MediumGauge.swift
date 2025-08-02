@@ -32,11 +32,7 @@ struct MediumGauge: View {
                                 Text(formatSecondsToHMS(seconds: Int(mission.durationSeconds)))
                             } else {
                                 if mission.secondsRemaining <= 0 {
-                                    if useAbsoluteTime {
-                                        Text(Date(timeIntervalSinceNow: mission.secondsRemaining), style: .time)
-                                    } else {
-                                        Text("0:00")
-                                    }
+                                    Text("Returned")
                                 } else {
                                     Text(Date(timeIntervalSinceNow: originalMission.secondsRemaining), style: useAbsoluteTime ? .time : .timer)
                                 }
