@@ -29,6 +29,7 @@ struct NotificationManager {
                 ALL_SHIP_NAMES[mission.ship.rawValue] +
                 " has returned!"
             content.sound = .default
+            content.userInfo = ["url": "egginc://widget"]
 
             let trigger = UNTimeIntervalNotificationTrigger(
                 timeInterval: mission.secondsRemaining,
@@ -80,6 +81,7 @@ struct NotificationManager {
         content.title = "Don't Forget to Launch!"
         content.body  = "You have an empty ship slot in Egg, Inc. - Check in and hit launch!"
         content.sound = .default
+        content.userInfo = ["url": "egginc://widget"]
         
         let request = UNNotificationRequest(
             identifier: "ForgottenLaunchNotification",
