@@ -57,7 +57,7 @@ struct NotificationManager {
         let activeMissions = missions
             .filter { $0.status.rawValue >= Ei_MissionInfo.Status.exploring.rawValue }
 
-        let newHash = activeMissions.map { $0.identifier.hashValue }.sorted().hashValue
+        let newHash = missions.map { $0.identifier.hashValue }.sorted().hashValue
         guard newHash != lastActiveMissionsHash else { return }
         lastActiveMissionsHash = newHash
 
