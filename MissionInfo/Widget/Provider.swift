@@ -6,6 +6,7 @@
 //
 
 import WidgetKit
+import UserNotifications
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> MissionInfoEntry {
@@ -32,14 +33,17 @@ struct Provider: TimelineProvider {
                 let numRefreshes = 36
                 var entries = [MissionInfoEntry(date: Date(), originalData: data.0, missionData: data.0, artifactInfo: data.1)]
                 
-                
                 let activeMissions = data.0.filter({ $0.secondsRemaining > 0 })
+                
+                await NotificationManager.scheduleMissionReturnedNotifications(for: activeMissions)
+                await NotificationManager.submitForgottenLaunchNotifications(data.1, data.0)
+                
                 if let minRemaining = activeMissions.compactMap({ $0.secondsRemaining }).min() {
                     let refreshInterval = (minRemaining + 10) / Double(numRefreshes)
 
                     for i in 1...numRefreshes {
                         for j in 0..<data.0.count {
-                            data.0[j].secondsRemaining -= refreshInterval
+                            data.0[j].secondsRemaining = max(0, data.0[j].secondsRemaining - refreshInterval)
                         }
                         entries.append(MissionInfoEntry(date: Date().advanced(by: refreshInterval * Double(i)), originalData: entries[0].missionData, missionData: data.0, artifactInfo: data.1))
                     }
@@ -57,6 +61,5 @@ struct Provider: TimelineProvider {
             }
         }
     }
-
 }
 

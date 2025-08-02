@@ -36,6 +36,7 @@ struct WidgetEggApp: App {
                     UIApplication.shared.open(URL(string: "egginc://widget")!)
                 }
             })
+            .onAppear(perform: requestNotificationPermission)
 #endif
             
         }
@@ -44,6 +45,10 @@ struct WidgetEggApp: App {
     private func shouldOpenEggInc(widget: String) -> Bool {
         return (deepLinkLock && widget.starts(with: "accessory")) ||
         (deepLinkHome && widget.starts(with: "system"))
+    }
+    
+    private func requestNotificationPermission() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { _, _ in }
     }
 }
 

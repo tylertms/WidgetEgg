@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct MissionInfoMedium : View {
-    
+struct MissionInfoMedium: View {
     @AppStorage("ShowTankLevels", store: UserDefaults(suiteName: "group.com.WidgetEgg")) var showTankLevels: Bool = false
     
     let entry: Provider.Entry

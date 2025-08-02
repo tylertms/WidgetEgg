@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 struct MediumGauge: View {
-    
     @AppStorage("UseAbsoluteTime", store: UserDefaults(suiteName: "group.com.WidgetEgg")) var useAbsoluteTime: Bool = false
     
     let entry: Provider.Entry
