@@ -131,6 +131,11 @@ struct UserInfoSmall: View {
                     
                     Spacer(minLength: 5)
                     
+                    Image("icon_leaderboard")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 16)
+                    
                     Text(totalCxp)
                 }
                 
@@ -145,7 +150,7 @@ struct UserInfoSmall: View {
                     let exploringCount = missionInfos.filter{ $0.status.rawValue >= Ei_MissionInfo.Status.exploring.rawValue }.count
                     let missionCount = completedCount + exploringCount
                     
-                    Text(String(missionCount))
+                    Text(bigNumberToString(Double(missionCount)))
                     
                     Spacer(minLength: 5)
                     
@@ -154,7 +159,7 @@ struct UserInfoSmall: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 18)
                     
-                    Text(String(entry.backup?.stats.droneTakedowns ?? 0))
+                    Text(bigNumberToString(Double(entry.backup?.stats.droneTakedowns ?? 0)))
                 }
                 
                 Spacer(minLength: 0)

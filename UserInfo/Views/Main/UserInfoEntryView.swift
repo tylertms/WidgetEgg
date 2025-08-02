@@ -33,5 +33,4 @@ struct UserInfoEntryView: View {
         }
         .widgetBackground(Color.gray.opacity(0.15))
     }
-    
 }

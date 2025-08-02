@@ -39,7 +39,7 @@ func bigNumberToString(_ number: Double, digits: Int = 3) -> String {
         return String(Int(num))
     }
     
-    var units = ["k", "M", "B", "T", "Q", "q", "s", "S", "o", "N", "d", "U", "D", "Td", "qd", "Qd", "sd", "Sd", "Od", "Nd", "V", "uV", "dV", "tV", "qV", "QV", "sV", "SV", "OV", "NV", "tT"]
+    var units = ["k", "M", "B", "T", "q", "Q", "s", "S", "o", "N", "d", "U", "D", "Td", "qd", "Qd", "sd", "Sd", "Od", "Nd", "V", "uV", "dV", "tV", "qV", "QV", "sV", "SV", "OV", "NV", "tT"]
     
     while num >= 1000 {
         num /= 1000
@@ -92,3 +92,24 @@ func shortenRole(_ role: String) -> String {
     
     return split[0].prefix(1) + String(split[1].count)
 }
+
+func getMaxFuelingTimeSeconds(
+  _ artifactsInfo: Ei_Backup.Artifacts,
+  _ missions: [Ei_MissionInfo]
+) -> Int64 {
+    let tankEggsPerSecond = FUEL_RATES[Int(artifactsInfo.tankLevel)]
+    guard tankEggsPerSecond > 0 else { return 0 }
+    let maxFuelAmount = missions
+      .map { TOTAL_FUEL_AMOUNTS[$0.ship.rawValue][$0.durationType.rawValue] }
+      .max() ?? 0
+    guard maxFuelAmount > 0 else { return 0 }
+    return maxFuelAmount / tankEggsPerSecond
+}
+
+func getLatestShipLaunch(_ missions: [Ei_MissionInfo]) -> Date {
+    return missions
+      .map { Date().addingTimeInterval($0.secondsRemaining - $0.durationSeconds) }
+      .max()
+      ?? Date(timeIntervalSince1970: 0)
+}
+
