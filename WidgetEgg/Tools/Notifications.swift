@@ -79,7 +79,7 @@ struct NotificationManager {
 
     private static func sendForgottenLaunchNotification() async {
         let content = UNMutableNotificationContent()
-        content.title = "Don't Forget to Launch!"
+        content.title = "WidgetEgg"
         content.body  = "You have an empty ship slot in Egg, Inc. - Check in and hit launch!"
         content.sound = .default
         content.userInfo = ["url": "egginc://widget"]
