@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct WidgetEggApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     @AppStorage("DeepLinkHome", store: UserDefaults(suiteName: "group.com.WidgetEgg")) var deepLinkHome: Bool = false
     @AppStorage("DeepLinkLock", store: UserDefaults(suiteName: "group.com.WidgetEgg")) var deepLinkLock: Bool = false
     
@@ -36,7 +38,6 @@ struct WidgetEggApp: App {
                     UIApplication.shared.open(URL(string: "egginc://widget")!)
                 }
             })
-            .onAppear(perform: requestNotificationPermission)
 #endif
             
         }
@@ -45,10 +46,6 @@ struct WidgetEggApp: App {
     private func shouldOpenEggInc(widget: String) -> Bool {
         return (deepLinkLock && widget.starts(with: "accessory")) ||
         (deepLinkHome && widget.starts(with: "system"))
-    }
-    
-    private func requestNotificationPermission() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { _, _ in }
     }
 }
 
