@@ -59,12 +59,12 @@ struct NotificationManager {
 
         let newHash = missions.map { $0.identifier.hashValue }.sorted().hashValue
         guard newHash != lastActiveMissionsHash else { return }
-        lastActiveMissionsHash = newHash
 
         guard activeMissions.count < 3 else { return }
 
         let maxFuelTime = getMaxFuelingTimeSeconds(artifactsInfo, activeMissions)
         guard maxFuelTime > 0 else {
+            lastActiveMissionsHash = newHash
             await sendForgottenLaunchNotification()
             return
         }
@@ -72,6 +72,7 @@ struct NotificationManager {
         let latestLaunch = getLatestShipLaunch(activeMissions)
         let readyDate = latestLaunch.addingTimeInterval(TimeInterval(maxFuelTime))
         if readyDate <= Date() {
+            lastActiveMissionsHash = newHash
             await sendForgottenLaunchNotification()
         }
     }
