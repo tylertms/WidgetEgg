@@ -18,7 +18,7 @@ struct NotificationManager {
     @AppStorage("LastActiveMissionsHash", store: UserDefaults(suiteName: "group.com.WidgetEgg"))
     static var lastActiveMissionsHash: Int = 0
 
-    private final let fuelingTimeBuffer: Int = 10
+    private static let fuelingTimeBuffer: Int64 = 10
 
     static func scheduleMissionReturnedNotifications(for missions: [Ei_MissionInfo]) async {
         guard shipReturnNotifications else { return }
