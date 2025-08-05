@@ -18,6 +18,8 @@ struct NotificationManager {
     @AppStorage("LastActiveMissionsHash", store: UserDefaults(suiteName: "group.com.WidgetEgg"))
     static var lastActiveMissionsHash: Int = 0
 
+    private final let fuelingTimeBuffer: Int = 10
+
     static func scheduleMissionReturnedNotifications(for missions: [Ei_MissionInfo]) async {
         guard shipReturnNotifications else { return }
 
@@ -70,7 +72,7 @@ struct NotificationManager {
         }
 
         let latestLaunch = getLatestShipLaunch(activeMissions)
-        let readyDate = latestLaunch.addingTimeInterval(TimeInterval(maxFuelTime))
+        let readyDate = latestLaunch.addingTimeInterval(TimeInterval(maxFuelTime + fuelingTimeBuffer))
         if readyDate <= Date() {
             lastActiveMissionsHash = newHash
             await sendForgottenLaunchNotification()
