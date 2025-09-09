@@ -59,3 +59,24 @@ let ALL_GRADES = [
     "grade_aa",
     "grade_aaa"
 ]
+
+func getGradeImageString(grade: Ei_Contract.PlayerGrade?) -> String {
+    guard let grade else {
+        return "egg_unknown"
+    }
+    
+    switch grade {
+    case .gradeUnset:
+        return "egg_unknown"
+    case .gradeC:
+        return "grade_c"
+    case .gradeB:
+        return "grade_b"
+    case .gradeA:
+        return "grade_a"
+    case .gradeAa:
+        return "grade_aa"
+    case .gradeAaa:
+        return "grade_aaa"
+    }
+}

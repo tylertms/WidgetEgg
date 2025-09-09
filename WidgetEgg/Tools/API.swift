@@ -79,6 +79,34 @@ func fetchData(EID: String) async throws -> ([Ei_MissionInfo], Ei_Backup.Artifac
     return (activeMissions + fuelingMissions, backup.artifacts)
 }
 
+func fetchCoop(EID: String, contract: String, coop: String) async throws -> Ei_ContractCoopStatusResponse {
+    guard let url = URL(string: COOP_STATUS_ENDPOINT) else { throw NSError(domain: "InvalidURL", code: 0, userInfo: nil) }
+    
+    let basicRequestInfo = getBasicRequestInfo(EID: EID)
+    let coopStatusRequest = Ei_ContractCoopStatusRequest.with {
+        $0.clientVersion = 127
+        $0.rinfo = basicRequestInfo
+        $0.contractIdentifier = contract
+        $0.coopIdentifier = coop
+        $0.userID = EID
+    }
+    
+    let parameters = ["data": try coopStatusRequest.serializedData().base64EncodedString()]
+    
+    var request = URLRequest(url: url)
+    request.httpMethod = "POST"
+    request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+    request.httpBody = parameters.queryString.data(using: .utf8)
+    
+    let (data, _) = try await URLSession.shared.data(for: request)
+    guard let b64decoded = Data(base64Encoded: data) else { throw NSError(domain: "InvalidData", code: 0, userInfo: nil) }
+    
+    let authMessage = try Ei_AuthenticatedMessage(serializedBytes: b64decoded)
+    let coopStatus = try Ei_ContractCoopStatusResponse(serializedBytes: authMessage.message)
+
+    return coopStatus
+}
+
 func getBasicRequestInfo(EID: String) -> Ei_BasicRequestInfo {
     return Ei_BasicRequestInfo.with {
         $0.eiUserID = EID

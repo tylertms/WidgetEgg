@@ -30,6 +30,25 @@ func formatSecondsToHMS(seconds: Int) -> String {
     return String(format: "%02d:%02d:%02d", hours, minutes, remainingSeconds)
 }
 
+func formatCompactDuration(_ totalSeconds: Double) -> String {
+    var seconds = Int(totalSeconds.rounded(.down))  // safely truncate
+    
+    let days = seconds / 86_400
+    seconds %= 86_400
+    
+    let hours = seconds / 3_600
+    seconds %= 3_600
+    
+    let minutes = seconds / 60
+    
+    if days > 0 {
+        return "\(days)d\(hours)h"
+    } else if hours > 0 {
+        return "\(hours)h\(minutes)m"
+    } else {
+        return "\(minutes)m"
+    }
+}
 
 func bigNumberToString(_ number: Double, digits: Int = 3) -> String {
     var num = number
