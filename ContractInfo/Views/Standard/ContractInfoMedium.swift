@@ -1,5 +1,5 @@
 //
-//  ContractInfoSmall.swift
+//  ContractInfoMedium.swift
 //  WidgetEgg
 //
 //  Created by Tyler on 9/4/25.
@@ -36,7 +36,7 @@ struct ContractInfoMedium: View {
                     }
                 }
             } else {
-                ContractInfoEmpty()
+                ContractInfoEmpty(large: false)
             }
             
             Spacer(minLength: 0)

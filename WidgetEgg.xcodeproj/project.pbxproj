@@ -32,6 +32,7 @@
 		2F22B0E52BEAD47300627D5F /* WhatNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22B0E42BEAD47300627D5F /* WhatNext.swift */; };
 		2F22B0E92BEBF24A00627D5F /* FuelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F22B0E82BEBF24A00627D5F /* FuelList.swift */; };
 		2F351D1E2E708DA700C75DE7 /* ContractInfoEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F351D1D2E708DA200C75DE7 /* ContractInfoEmpty.swift */; };
+		2F351D202E70AE8F00C75DE7 /* ContractInfoLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F351D1F2E70AE8F00C75DE7 /* ContractInfoLarge.swift */; };
 		2F4772DA2BE41E9600EC6E07 /* WidgetEggApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4772D92BE41E9600EC6E07 /* WidgetEggApp.swift */; };
 		2F4772DC2BE41E9600EC6E07 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4772DB2BE41E9600EC6E07 /* HomeView.swift */; };
 		2F4772EB2BE4231F00EC6E07 /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4772EA2BE4231F00EC6E07 /* ei.pb.swift */; };
@@ -247,6 +248,7 @@
 		2F22B0E42BEAD47300627D5F /* WhatNext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatNext.swift; sourceTree = "<group>"; };
 		2F22B0E82BEBF24A00627D5F /* FuelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuelList.swift; sourceTree = "<group>"; };
 		2F351D1D2E708DA200C75DE7 /* ContractInfoEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractInfoEmpty.swift; sourceTree = "<group>"; };
+		2F351D1F2E70AE8F00C75DE7 /* ContractInfoLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractInfoLarge.swift; sourceTree = "<group>"; };
 		2F4772D62BE41E9600EC6E07 /* WidgetEgg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WidgetEgg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4772D92BE41E9600EC6E07 /* WidgetEggApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetEggApp.swift; sourceTree = "<group>"; };
 		2F4772DB2BE41E9600EC6E07 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -503,6 +505,7 @@
 			children = (
 				2F4DF90D2E69F83300733C9F /* ContractInfoSmall.swift */,
 				2F4DF91D2E6B1D9800733C9F /* ContractInfoMedium.swift */,
+				2F351D1F2E70AE8F00C75DE7 /* ContractInfoLarge.swift */,
 			);
 			path = Standard;
 			sourceTree = "<group>";
@@ -983,6 +986,7 @@
 			files = (
 				2F4DF91C2E6B1D3600733C9F /* GoalList.swift in Sources */,
 				2FE59E092E19897500E125B2 /* GameInfo.swift in Sources */,
+				2F351D202E70AE8F00C75DE7 /* ContractInfoLarge.swift in Sources */,
 				2FE59E052E19893C00E125B2 /* ei.pb.swift in Sources */,
 				2FE59DFF2E19884800E125B2 /* ContractInfo.swift in Sources */,
 				2FE59E002E19884800E125B2 /* ContractInfoBundle.swift in Sources */,

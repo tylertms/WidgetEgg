@@ -9,6 +9,12 @@ import SwiftUI
 import WidgetKit
 
 struct ContractInfoEmpty: View {
+    let large: Bool
+    
+    func lineCount() -> Int {
+        return large ? 4 : 2
+    }
+    
     var body: some View {
         VStack {
             RoundedRectangle(cornerRadius: 8)
@@ -16,13 +22,13 @@ struct ContractInfoEmpty: View {
                 .foregroundStyle(.gray.opacity(0.25))
             
             VStack {
-                ForEach(0..<2) { index in
+                ForEach(0..<lineCount(), id: \.self) { index in
                     RoundedRectangle(cornerRadius: 5)
                         .frame(height: 10)
                         .foregroundStyle(.gray.opacity(0.18))
                 }
             }
-            .padding(.bottom)
+            .padding(.bottom, large ? 10 : 20)
             
             VStack {
                 ForEach(0..<3) { index in

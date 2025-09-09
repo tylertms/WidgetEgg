@@ -34,7 +34,7 @@ struct ContractInfoSmall: View {
                     }
                 }
             } else {
-                ContractInfoEmpty()
+                ContractInfoEmpty(large: false)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

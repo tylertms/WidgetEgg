@@ -25,6 +25,9 @@ struct ContractInfoEntryView: View {
                     case .systemMedium:
                         ContractInfoMedium(entry: entry)
                         
+                    case .systemLarge:
+                        ContractInfoLarge(entry: entry)
+                        
                     default:
                         EmptyView()
                     }
