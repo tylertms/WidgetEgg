@@ -18,7 +18,12 @@ struct ContractInfoEntryView: View {
             } else {
                 Group {
                     switch family {
-
+                    
+                    case .systemSmall:
+                        ContractInfoSmall(entry: entry)
+                        
+                    case .systemMedium:
+                        ContractInfoMedium(entry: entry)
                         
                     default:
                         EmptyView()

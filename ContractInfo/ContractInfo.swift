@@ -13,7 +13,7 @@ struct ContractInfo: Widget {
     var supportedFamilyList: [WidgetFamily]
     
     init() {
-        supportedFamilyList = [/*.systemSmall*/]
+        supportedFamilyList = [.systemSmall, .systemMedium, .systemLarge]
     }
     
     var body: some WidgetConfiguration {
