@@ -14,14 +14,12 @@ struct ContractInfoEmpty: View {
             RoundedRectangle(cornerRadius: 8)
                 .frame(height: 16)
                 .foregroundStyle(.gray.opacity(0.25))
-                .padding(.horizontal, -15)
             
             VStack {
                 ForEach(0..<2) { index in
                     RoundedRectangle(cornerRadius: 5)
                         .frame(height: 10)
                         .foregroundStyle(.gray.opacity(0.18))
-                        .padding(.horizontal, -15)
                 }
             }
             .padding(.bottom)
@@ -31,7 +29,6 @@ struct ContractInfoEmpty: View {
                     RoundedRectangle(cornerRadius: 5)
                         .frame(height: 10)
                         .foregroundStyle(.gray.opacity(0.18))
-                        .padding(.horizontal, -15)
                 }
             }
         }

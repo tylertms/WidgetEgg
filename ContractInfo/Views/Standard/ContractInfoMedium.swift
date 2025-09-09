@@ -15,7 +15,7 @@ struct ContractInfoMedium: View {
     }
     var body: some View {
         HStack(spacing: spacing()) {
-            if let contracts = entry.backup?.contracts.contracts {
+            if let contracts = entry.backup?.contracts.contracts, contracts.count > 0 {
                 ForEach(contracts, id: \.hashValue) { contract in
                     if let gradeSpec = getGradeSpec(for: contract),
                        let coopStatus = getCoopStatus(for: contract) {
