@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StatsView: View {
+    let large: Bool
     let contract: Ei_LocalContract
     let gradeSpec: Ei_Contract.GradeSpec
     let coopStatus: Ei_ContractCoopStatusResponse
@@ -26,6 +27,24 @@ struct StatsView: View {
                     .font(.system(size: 13, weight: .medium))
                     .padding(.leading, 1)
                     .padding(.trailing, 4)
+                                
+                if large {
+                    Image("icon_player")
+                        .resizable()
+                        .frame(width: 16, height: 16)
+                        .padding(.leading, 1)
+                        .padding(.trailing, -2)
+                    
+                    Text(bigNumberToString(userContribution.contributionAmount))
+                        .padding(.trailing, 4)
+                            
+                    Image("icon_coop")
+                        .resizable()
+                        .frame(width: 16, height: 16)
+                        .padding(.horizontal, 1)
+                    
+                    Text(bigNumberToString(coopStatus.totalAmount))
+                }
                 
                 Spacer(minLength: 0)
                 
@@ -41,7 +60,7 @@ struct StatsView: View {
                 Text(completionTime())
                     .lineLimit(1)
                     .font(.system(size: 13, weight: .medium))
-                    .foregroundStyle(completionSeconds() > coopStatus.secondsRemaining ? .yellow : .white)
+                    .foregroundStyle(completionSecondsColor())
             }
         }
     }
@@ -54,6 +73,10 @@ struct StatsView: View {
         } else {
             return .clear
         }
+    }
+    
+    func completionSecondsColor() -> Color {
+        return completionSeconds() > coopStatus.secondsRemaining ? .yellow : .primary
     }
     
     func completionSeconds() -> Double {

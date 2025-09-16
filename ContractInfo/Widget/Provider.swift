@@ -17,7 +17,6 @@ struct Provider: TimelineProvider {
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<ContractInfoEntry>) -> ()) {
-        print("GETTING TIMELINE")
         guard let defaults = UserDefaults(suiteName: "group.com.WidgetEgg"), let EID = defaults.string(forKey: "EID") else {
             return completion(
                 Timeline(

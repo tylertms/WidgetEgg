@@ -5,6 +5,8 @@
 //  Created by Tyler on 5/10/24.
 //
 
+import SwiftUI
+
 let MISSION_ENDPOINT = "https://www.auxbrain.com/ei_afx/get_active_missions"
 let BACKUP_ENDPOINT = "https://www.auxbrain.com/ei/bot_first_contact"
 let COOP_STATUS_ENDPOINT = "https://www.auxbrain.com/ei/coop_status"
@@ -188,6 +190,17 @@ func getImageFromAfxID(AFX_ID: Int) -> String {
     }
 }
 
+func getImageFromCompleteArtifact(artifact: Ei_CompleteArtifact) -> AnyView {
+    let tier = artifact.spec.level.rawValue + 1
+    let name = getImageFromAfxID(AFX_ID: artifact.spec.name.rawValue)
+    
+    let base = String(name.dropLast())
+    let finalKey = "\(base)\(tier)"
+    return AnyView(
+        Image(finalKey)
+            .resizable()
+    )
+}
 
 let FUEL_RATES: [Int64] = [
     5_000_000,

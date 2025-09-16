@@ -12,10 +12,10 @@ struct ContractInfoLarge: View {
     
     var body: some View {
         VStack {
-            if let contracts = entry.backup?.contracts.contracts {
+            if let contracts = entry.backup?.contracts.contracts, !contracts.isEmpty {
                 ForEach(0..<2) { index in
-                    if 0 < contracts.count {
-                        ContractInfoMedium(entry: entry)
+                    if index < contracts.count {
+                        ContractInfoMedium(entry: entry, large: true)
                     } else {
                         ContractInfoEmpty(large: true)
                     }
@@ -24,10 +24,13 @@ struct ContractInfoLarge: View {
                         Spacer(minLength: 0)
                     }
                 }
+            } else {
+                ContractInfoEmpty(large: true)
+                Spacer(minLength: 15)
+                ContractInfoEmpty(large: true)
             }
         }
         .font(.system(size: 14, weight: .medium))
-        .padding(15)
     }
     
     func getGradeSpec(for contract: Ei_LocalContract) -> Ei_Contract.GradeSpec? {

@@ -25,7 +25,7 @@ struct ContractInfoSmall: View {
                             
                             SubtitleView(contract: contract)
                             
-                            StatsView(contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus)
+                            StatsView(large: false, contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus)
                             
                             GoalList(contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus, proxy: proxy)
                             
@@ -39,7 +39,6 @@ struct ContractInfoSmall: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .font(.system(size: 14, weight: .medium))
-        .padding(15)
     }
     
     func getGradeSpec(for contract: Ei_LocalContract) -> Ei_Contract.GradeSpec? {

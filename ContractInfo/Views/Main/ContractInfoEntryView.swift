@@ -21,12 +21,15 @@ struct ContractInfoEntryView: View {
                     
                     case .systemSmall:
                         ContractInfoSmall(entry: entry)
+                            .padding(15)
                         
                     case .systemMedium:
-                        ContractInfoMedium(entry: entry)
+                        ContractInfoMedium(entry: entry, large: false)
+                            .padding(15)
                         
                     case .systemLarge:
                         ContractInfoLarge(entry: entry)
+                            .padding(15)
                         
                     default:
                         EmptyView()

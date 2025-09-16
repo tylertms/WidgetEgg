@@ -9,10 +9,12 @@ import SwiftUI
 
 struct ContractInfoMedium: View {
     let entry: Provider.Entry
+    let large: Bool
     
     func spacing() -> CGFloat {
         return (entry.backup?.contracts.contracts.count ?? 0) > 1 ? 15 : 0
     }
+    
     var body: some View {
         HStack(spacing: spacing()) {
             if let contracts = entry.backup?.contracts.contracts, contracts.count > 0 {
@@ -25,7 +27,11 @@ struct ContractInfoMedium: View {
                                 
                                 SubtitleView(contract: contract)
                                 
-                                StatsView(contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus)
+                                StatsView(large: large, contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus)
+                                
+                                if large {
+                                    ArtifactView(coopStatus: coopStatus)
+                                }
                                 
                                 GoalList(contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus, proxy: proxy)
                                 
@@ -42,7 +48,6 @@ struct ContractInfoMedium: View {
             Spacer(minLength: 0)
         }
         .font(.system(size: 14, weight: .medium))
-        .padding(15)
         .padding(.trailing, -spacing())
     }
     
