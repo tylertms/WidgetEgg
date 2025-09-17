@@ -11,34 +11,38 @@ import AppIntents
 
 struct ContractInfoSmall: View {
     let entry: Provider.Entry
-    @AppStorage("ContractInfoSmall.index", store: UserDefaults(suiteName: "group.com.WidgetEgg")) private var contractIndex: Int = 0
     
     var body: some View {
-        VStack(alignment: .leading) {
-            if let contracts = entry.backup?.contracts.contracts, contracts.count > 0 {
-                let contract = contracts[contractIndex % contracts.count]
-                if let gradeSpec = getGradeSpec(for: contract),
-                   let coopStatus = getCoopStatus(for: contract) {
-                    GeometryReader { proxy in
-                        VStack(alignment: .leading, spacing: 0) {
-                            TitleView(contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus, proxy: proxy)
-                            
-                            SubtitleView(contract: contract)
-                            
-                            StatsView(large: false, contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus)
-                            
-                            GoalList(contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus, proxy: proxy)
-                            
-                            Spacer(minLength: 0)
+        if let contracts = entry.backup?.contracts.contracts, contracts.count > 0 {
+            ZStack {
+                ForEach(0 ..< contracts.count, id: \.self) { contractIndex in
+                    VStack(alignment: .leading) {
+                        let contract = contracts[contractIndex]
+                        if let gradeSpec = getGradeSpec(for: contract),
+                           let coopStatus = getCoopStatus(for: contract) {
+                            GeometryReader { proxy in
+                                VStack(alignment: .leading, spacing: 0) {
+                                    TitleView(contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus, proxy: proxy)
+                                    
+                                    SubtitleView(large: false, contract: contract, coopStatus: coopStatus)
+                                    
+                                    StatsView(large: false, contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus)
+                                    
+                                    GoalList(contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus, proxy: proxy)
+                                    
+                                    Spacer(minLength: 0)
+                                }
+                            }
                         }
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .font(.system(size: 14, weight: .medium))
+                    .animationMasked(index: contractIndex, count: contracts.count)
                 }
-            } else {
-                ContractInfoEmpty(large: false)
             }
+        } else {
+            ContractInfoEmpty(large: false)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .font(.system(size: 14, weight: .medium))
     }
     
     func getGradeSpec(for contract: Ei_LocalContract) -> Ei_Contract.GradeSpec? {
@@ -54,3 +58,4 @@ struct ContractInfoSmall: View {
         }
     }
 }
+

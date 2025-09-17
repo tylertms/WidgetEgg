@@ -24,7 +24,7 @@ struct ContractInfoEntryView: View {
                             .padding(15)
                         
                     case .systemMedium:
-                        ContractInfoMedium(entry: entry, large: false)
+                        ContractInfoMedium(entry: entry)
                             .padding(15)
                         
                     case .systemLarge:

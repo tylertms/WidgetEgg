@@ -29,6 +29,11 @@ struct StatsView: View {
                     .padding(.trailing, 4)
                                 
                 if large {
+                    Image("r_icon_vehicle_capacity")
+                        .resizable()
+                        .frame(width: 16, height: 16)
+                        .padding(.leading, 4)
+                    
                     Image("icon_player")
                         .resizable()
                         .frame(width: 16, height: 16)
@@ -102,6 +107,6 @@ struct StatsView: View {
             return "Forever"
         }
         
-        return formatCompactDuration(secondsRemaining)
+        return (large ? "Est. " : "") + formatCompactDuration(secondsRemaining)
     }
 }

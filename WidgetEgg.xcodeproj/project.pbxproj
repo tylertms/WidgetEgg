@@ -21,10 +21,14 @@
 		2F0FED522E3E866200BFA62C /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0FED4D2E3E865D00BFA62C /* Notifications.swift */; };
 		2F0FED532E3E866200BFA62C /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0FED4D2E3E865D00BFA62C /* Notifications.swift */; };
 		2F11AEB12E7475F90004FFA9 /* ArtifactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F11AEB02E7475F50004FFA9 /* ArtifactView.swift */; };
+		2F185AEA2E7A2AD1008210FA /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F185AE72E7A2ACF008210FA /* Animation.swift */; };
+		2F185AEC2E7A2AD1008210FA /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F185AE72E7A2ACF008210FA /* Animation.swift */; };
+		2F185AEF2E7A2BDF008210FA /* ClockHandRotationEffect.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */; };
+		2F185AF02E7A2BDF008210FA /* ClockHandRotationEffect.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2F185AF22E7A2BFC008210FA /* ClockHandRotationEffect.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */; };
+		2F185AF32E7A2BFC008210FA /* ClockHandRotationEffect.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2F20EFB82E3EE543006102F7 /* WidgetEggDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20EFB42E3EE543006102F7 /* WidgetEggDelegate.swift */; };
 		2F20F04B2E3FB326006102F7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20FDF82BE43C1700B30302 /* API.swift */; };
-		2F20FDE02BE431B600B30302 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F47730C2BE430FC00EC6E07 /* WidgetKit.framework */; };
-		2F20FDE12BE431B600B30302 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F47730E2BE430FC00EC6E07 /* SwiftUI.framework */; };
 		2F20FDE42BE431B600B30302 /* MissionInfoBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20FDE32BE431B600B30302 /* MissionInfoBundle.swift */; };
 		2F20FDE62BE431B600B30302 /* MissionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20FDE52BE431B600B30302 /* MissionInfo.swift */; };
 		2F20FDEA2BE431B700B30302 /* EggIncAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F20FDE92BE431B700B30302 /* EggIncAssets.xcassets */; };
@@ -71,8 +75,6 @@
 		2F96C9C32C195DDF008C7708 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96C9C02C195DDF008C7708 /* SecureAPI.swift */; };
 		2F96C9C42C195DDF008C7708 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96C9C02C195DDF008C7708 /* SecureAPI.swift */; };
 		2FA3474F2BE7D0FA00C30E7B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA3474E2BE7D0FA00C30E7B /* SettingsView.swift */; };
-		2FE59DE52E19881000E125B2 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F47730C2BE430FC00EC6E07 /* WidgetKit.framework */; };
-		2FE59DE62E19881000E125B2 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F47730E2BE430FC00EC6E07 /* SwiftUI.framework */; };
 		2FE59DF12E19881200E125B2 /* ContractInfoExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2FE59DE42E19881000E125B2 /* ContractInfoExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2FE59DF72E19883E00E125B2 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE59DF62E19883E00E125B2 /* SwiftProtobuf */; };
 		2FE59DFD2E19884800E125B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FE59DF82E19884800E125B2 /* Assets.xcassets */; };
@@ -104,8 +106,6 @@
 		2FE674C42C18C16D00B0D2E1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F782BE55BFF00AD68A0 /* Extensions.swift */; };
 		2FE674C52C18C16D00B0D2E1 /* MissionInfoSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4A7F7E2BE55C8A00AD68A0 /* MissionInfoSmall.swift */; };
 		2FE674C72C18C16D00B0D2E1 /* SwiftProtobufPluginLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE674B12C18C16D00B0D2E1 /* SwiftProtobufPluginLibrary */; };
-		2FE674C82C18C16D00B0D2E1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F47730E2BE430FC00EC6E07 /* SwiftUI.framework */; };
-		2FE674C92C18C16D00B0D2E1 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F47730C2BE430FC00EC6E07 /* WidgetKit.framework */; };
 		2FE674CA2C18C16D00B0D2E1 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 2FE674AF2C18C16D00B0D2E1 /* SwiftProtobuf */; };
 		2FE674CC2C18C16D00B0D2E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */; };
 		2FE674CD2C18C16D00B0D2E1 /* EggIncAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F20FDE92BE431B700B30302 /* EggIncAssets.xcassets */; };
@@ -127,8 +127,6 @@
 		2FE674FA2C190DB600B0D2E1 /* MissionInfoAccessoryCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE674F92C190DB200B0D2E1 /* MissionInfoAccessoryCorner.swift */; };
 		2FE674FB2C190DB600B0D2E1 /* MissionInfoAccessoryCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE674F92C190DB200B0D2E1 /* MissionInfoAccessoryCorner.swift */; };
 		2FF48F6F2DD3D8B500DD94C3 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA3474E2BE7D0FA00C30E7B /* SettingsView.swift */; };
-		2FF48F8C2DD3EFEA00DD94C3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F47730C2BE430FC00EC6E07 /* WidgetKit.framework */; };
-		2FF48F8D2DD3EFEA00DD94C3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F47730E2BE430FC00EC6E07 /* SwiftUI.framework */; };
 		2FF48F982DD3EFEB00DD94C3 /* UserInfoExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2FF48F8B2DD3EFEA00DD94C3 /* UserInfoExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2FF48FA22DD3EFF400DD94C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FF48F9D2DD3EFF400DD94C3 /* Assets.xcassets */; };
 		2FF48FA42DD3EFF400DD94C3 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF48F9F2DD3EFF400DD94C3 /* UserInfo.swift */; };
@@ -197,6 +195,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2F185AF12E7A2BDF008210FA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2F185AF02E7A2BDF008210FA /* ClockHandRotationEffect.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2F4773212BE430FD00EC6E07 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,6 +217,17 @@
 				2FE59DF12E19881200E125B2 /* ContractInfoExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FCDA0622E7A21A700580F07 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2F185AF32E7A2BFC008210FA /* ClockHandRotationEffect.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2FE674A92C18C12800B0D2E1 /* Embed Watch Content */ = {
@@ -240,6 +260,8 @@
 		2F117C2F2C1A2FF500226CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F11AEB02E7475F50004FFA9 /* ArtifactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactView.swift; sourceTree = "<group>"; };
 		2F1830112C1A0B5000119A88 /* ci_pre_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_pre_xcodebuild.sh; sourceTree = "<group>"; };
+		2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ClockHandRotationEffect.xcframework; sourceTree = "<group>"; };
+		2F185AE72E7A2ACF008210FA /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		2F20EFB42E3EE543006102F7 /* WidgetEggDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetEggDelegate.swift; sourceTree = "<group>"; };
 		2F20FDDF2BE431B600B30302 /* MissionInfoExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MissionInfoExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F20FDE32BE431B600B30302 /* MissionInfoBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoBundle.swift; sourceTree = "<group>"; };
@@ -255,8 +277,6 @@
 		2F4772D92BE41E9600EC6E07 /* WidgetEggApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetEggApp.swift; sourceTree = "<group>"; };
 		2F4772DB2BE41E9600EC6E07 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2F4772EA2BE4231F00EC6E07 /* ei.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ei.pb.swift; sourceTree = "<group>"; };
-		2F47730C2BE430FC00EC6E07 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = /System/Library/Frameworks/WidgetKit.framework; sourceTree = "<absolute>"; };
-		2F47730E2BE430FC00EC6E07 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = /System/Library/Frameworks/SwiftUI.framework; sourceTree = "<absolute>"; };
 		2F4A7F722BE55B9C00AD68A0 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		2F4A7F752BE55BE100AD68A0 /* MissionInfoEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoEntry.swift; sourceTree = "<group>"; };
 		2F4A7F782BE55BFF00AD68A0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -314,8 +334,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F20FDE12BE431B600B30302 /* SwiftUI.framework in Frameworks */,
-				2F20FDE02BE431B600B30302 /* WidgetKit.framework in Frameworks */,
 				2FF48FC12DD3F81B00DD94C3 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +342,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F185AEF2E7A2BDF008210FA /* ClockHandRotationEffect.xcframework in Frameworks */,
 				2FF48FBF2DD3F79200DD94C3 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,8 +351,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FE59DE62E19881000E125B2 /* SwiftUI.framework in Frameworks */,
-				2FE59DE52E19881000E125B2 /* WidgetKit.framework in Frameworks */,
+				2F185AF22E7A2BFC008210FA /* ClockHandRotationEffect.xcframework in Frameworks */,
 				2FE59DF72E19883E00E125B2 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,8 +369,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FE674C72C18C16D00B0D2E1 /* SwiftProtobufPluginLibrary in Frameworks */,
-				2FE674C82C18C16D00B0D2E1 /* SwiftUI.framework in Frameworks */,
-				2FE674C92C18C16D00B0D2E1 /* WidgetKit.framework in Frameworks */,
 				2FE674CA2C18C16D00B0D2E1 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,8 +377,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FF48F8D2DD3EFEA00DD94C3 /* SwiftUI.framework in Frameworks */,
-				2FF48F8C2DD3EFEA00DD94C3 /* WidgetKit.framework in Frameworks */,
 				2FF48FC52DD3F82B00DD94C3 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +401,14 @@
 			path = ci_scripts;
 			sourceTree = "<group>";
 		};
+		2F185AE42E7A220C008210FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		2F20FDE22BE431B600B30302 /* MissionInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,7 +431,7 @@
 				2F4772E72BE422ED00EC6E07 /* Protobuf */,
 				2FF48FA12DD3EFF400DD94C3 /* UserInfo */,
 				2FE59DFC2E19884800E125B2 /* ContractInfo */,
-				2F47730B2BE430FC00EC6E07 /* Frameworks */,
+				2F185AE42E7A220C008210FA /* Frameworks */,
 				2F4772D72BE41E9600EC6E07 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -451,15 +473,6 @@
 			path = Protobuf;
 			sourceTree = "<group>";
 		};
-		2F47730B2BE430FC00EC6E07 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2F47730C2BE430FC00EC6E07 /* WidgetKit.framework */,
-				2F47730E2BE430FC00EC6E07 /* SwiftUI.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		2F4A7F6C2BE55B6D00AD68A0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +487,7 @@
 		2F4A7F6D2BE55B7600AD68A0 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				2F185AE72E7A2ACF008210FA /* Animation.swift */,
 				2F20FDF82BE43C1700B30302 /* API.swift */,
 				2F96C9C02C195DDF008C7708 /* SecureAPI.swift */,
 				2F0FED4D2E3E865D00BFA62C /* Notifications.swift */,
@@ -697,6 +711,7 @@
 				2F4772D42BE41E9600EC6E07 /* Resources */,
 				2F4773212BE430FD00EC6E07 /* Embed Foundation Extensions */,
 				2FE674A92C18C12800B0D2E1 /* Embed Watch Content */,
+				2F185AF12E7A2BDF008210FA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -721,6 +736,7 @@
 				2FE59DE02E19881000E125B2 /* Sources */,
 				2FE59DE12E19881000E125B2 /* Frameworks */,
 				2FE59DE22E19881000E125B2 /* Resources */,
+				2FCDA0622E7A21A700580F07 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -975,6 +991,7 @@
 				2F22B0E52BEAD47300627D5F /* WhatNext.swift in Sources */,
 				2F4D91472BEE805D00C6899F /* ArtifactInfo.swift in Sources */,
 				2F96C9C12C195DDF008C7708 /* SecureAPI.swift in Sources */,
+				2F185AEC2E7A2AD1008210FA /* Animation.swift in Sources */,
 				2F4D914B2BEE815400C6899F /* Numbers.swift in Sources */,
 				2F4772DA2BE41E9600EC6E07 /* WidgetEggApp.swift in Sources */,
 				2F4D91462BEE805600C6899F /* API.swift in Sources */,
@@ -1010,6 +1027,7 @@
 				2F0FED3F2E3E7C7800BFA62C /* SignedOutView.swift in Sources */,
 				2FE59E082E19897100E125B2 /* ArtifactInfo.swift in Sources */,
 				2F4DF90E2E69F83500733C9F /* ContractInfoSmall.swift in Sources */,
+				2F185AEA2E7A2AD1008210FA /* Animation.swift in Sources */,
 				2F0FED442E3E7CE100BFA62C /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1263,7 +1281,7 @@
 				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 2.2.1;
+				MARKETING_VERSION = 3.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1327,7 +1345,7 @@
 				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 2.2.1;
+				MARKETING_VERSION = 3.0.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

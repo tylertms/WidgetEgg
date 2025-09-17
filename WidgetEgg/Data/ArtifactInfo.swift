@@ -190,18 +190,6 @@ func getImageFromAfxID(AFX_ID: Int) -> String {
     }
 }
 
-func getImageFromCompleteArtifact(artifact: Ei_CompleteArtifact) -> AnyView {
-    let tier = artifact.spec.level.rawValue + 1
-    let name = getImageFromAfxID(AFX_ID: artifact.spec.name.rawValue)
-    
-    let base = String(name.dropLast())
-    let finalKey = "\(base)\(tier)"
-    return AnyView(
-        Image(finalKey)
-            .resizable()
-    )
-}
-
 let FUEL_RATES: [Int64] = [
     5_000_000,
     200_000_000,

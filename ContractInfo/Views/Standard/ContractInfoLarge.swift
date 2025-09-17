@@ -13,20 +13,31 @@ struct ContractInfoLarge: View {
     var body: some View {
         VStack {
             if let contracts = entry.backup?.contracts.contracts, !contracts.isEmpty {
-                ForEach(0..<2) { index in
-                    if index < contracts.count {
-                        ContractInfoMedium(entry: entry, large: true)
-                    } else {
-                        ContractInfoEmpty(large: true)
-                    }
-                    
-                    if index == 0 {
-                        Spacer(minLength: 0)
+                let pages = (contracts.count + 1) / 2
+                ZStack {
+                    ForEach(0 ..< pages, id: \.self) { pageIndex in
+                        VStack {
+                            ForEach(0..<2, id: \.self) { (contractIndex: Int) in
+                                let index = contractIndex + pageIndex * 2
+                                
+                                if index < contracts.count {
+                                    ContractInfoMedium(entry: entry, index: index)
+                                } else {
+                                    ContractInfoEmpty(large: true)
+                                }
+                                
+                                if index.isMultiple(of: 2) {
+                                    Spacer(minLength: 10)
+                                }
+                            }
+                        }
+                        .font(.system(size: 14, weight: .medium))
+                        .animationMasked(index: pageIndex, count: pages)
                     }
                 }
             } else {
                 ContractInfoEmpty(large: true)
-                Spacer(minLength: 15)
+                Spacer(minLength: 10)
                 ContractInfoEmpty(large: true)
             }
         }
@@ -46,3 +57,4 @@ struct ContractInfoLarge: View {
         }
     }
 }
+
