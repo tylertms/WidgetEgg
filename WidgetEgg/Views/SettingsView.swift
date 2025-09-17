@@ -75,13 +75,13 @@ struct SettingsView: View {
                 }
                 .disabled(!notificationsAllowed)
 
-                Section(header: Text("Small Widget")) {
+                Section(header: Text("Missions - Small")) {
                     ForEach(smallWidgetSettings) { setting in
                         ToggleRow(setting, for: suite)
                     }
                 }
 
-                Section(header: Text("Medium Widget")) {
+                Section(header: Text("Missions - Medium")) {
                     ForEach(mediumWidgetSettings) { setting in
                         ToggleRow(setting, for: suite)
                     }

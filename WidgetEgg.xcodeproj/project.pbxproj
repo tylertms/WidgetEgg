@@ -24,7 +24,7 @@
 		2F185AEA2E7A2AD1008210FA /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F185AE72E7A2ACF008210FA /* Animation.swift */; };
 		2F185AEC2E7A2AD1008210FA /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F185AE72E7A2ACF008210FA /* Animation.swift */; };
 		2F185AEF2E7A2BDF008210FA /* ClockHandRotationEffect.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */; };
-		2F185AF02E7A2BDF008210FA /* ClockHandRotationEffect.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2F185AF02E7A2BDF008210FA /* ClockHandRotationEffect.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2F185AF22E7A2BFC008210FA /* ClockHandRotationEffect.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */; };
 		2F185AF32E7A2BFC008210FA /* ClockHandRotationEffect.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2F20EFB82E3EE543006102F7 /* WidgetEggDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20EFB42E3EE543006102F7 /* WidgetEggDelegate.swift */; };
