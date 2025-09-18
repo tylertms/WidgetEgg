@@ -100,7 +100,7 @@ struct UserInfoSmall: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(height: 16)
                         
-                        Image("egg_" + homeFarm.eggType.description)
+                        Image("egg_" + String(describing: homeFarm.eggType))
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(height: 16)

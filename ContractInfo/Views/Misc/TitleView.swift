@@ -38,7 +38,12 @@ struct TitleView: View {
     }
     
     func getEggImage(for contract: Ei_LocalContract?) -> Image {
-        return Image("egg_" + (contract?.contract.egg.description ?? "unknown"))
+        guard let egg = contract?.contract.egg else {
+            return Image("egg_unknown")
+                .resizable()
+        }
+        
+        return Image("egg_" + String(describing: egg))
             .resizable()
     }
 }

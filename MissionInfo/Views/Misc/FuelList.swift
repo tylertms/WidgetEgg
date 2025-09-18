@@ -31,7 +31,7 @@ struct FuelList: View {
                 ForEach(0..<4, id: \.self) { index in
                     if index < topFuels.count {
                         let eggInfo = topFuels[index]
-                        if let egg = Ei_Egg(rawValue: Int(eggInfo.index + 1)), let image = UIImage(named: "egg_" + egg.description) {
+                        if let egg = Ei_Egg(rawValue: Int(eggInfo.index + 1)), let image = UIImage(named: "egg_" + String(describing: egg)) {
                             Image(uiImage: image)
                                 .resizable()
                         } else {
