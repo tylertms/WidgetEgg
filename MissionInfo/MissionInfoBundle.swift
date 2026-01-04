@@ -12,6 +12,7 @@ import SwiftUI
 struct MissionInfoBundle: WidgetBundle {
     var body: some Widget {
         MissionInfo()
+        VirtueMissionInfo()
     }
 }
 

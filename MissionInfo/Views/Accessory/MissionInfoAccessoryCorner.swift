@@ -18,9 +18,6 @@ struct MissionInfoAccessoryCorner : View {
             Group {
                 if let earliestMission {
                     CustomGauge(mission: earliestMission, scale: Double(scale), lineWidth: 5)
-                        .onAppear {
-                            print(min(1, 1 - earliestMission.secondsRemaining / earliestMission.durationSeconds))
-                        }
                 } else {
                     MissionInfoEmptySmall(scale: scale)
                 }

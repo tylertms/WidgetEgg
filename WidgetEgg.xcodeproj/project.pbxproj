@@ -21,12 +21,6 @@
 		2F0FED522E3E866200BFA62C /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0FED4D2E3E865D00BFA62C /* Notifications.swift */; };
 		2F0FED532E3E866200BFA62C /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0FED4D2E3E865D00BFA62C /* Notifications.swift */; };
 		2F11AEB12E7475F90004FFA9 /* ArtifactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F11AEB02E7475F50004FFA9 /* ArtifactView.swift */; };
-		2F185AEA2E7A2AD1008210FA /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F185AE72E7A2ACF008210FA /* Animation.swift */; };
-		2F185AEC2E7A2AD1008210FA /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F185AE72E7A2ACF008210FA /* Animation.swift */; };
-		2F185AEF2E7A2BDF008210FA /* ClockHandRotationEffect.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */; };
-		2F185AF02E7A2BDF008210FA /* ClockHandRotationEffect.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2F185AF22E7A2BFC008210FA /* ClockHandRotationEffect.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */; };
-		2F185AF32E7A2BFC008210FA /* ClockHandRotationEffect.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2F20EFB82E3EE543006102F7 /* WidgetEggDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20EFB42E3EE543006102F7 /* WidgetEggDelegate.swift */; };
 		2F20F04B2E3FB326006102F7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20FDF82BE43C1700B30302 /* API.swift */; };
 		2F20FDE42BE431B600B30302 /* MissionInfoBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F20FDE32BE431B600B30302 /* MissionInfoBundle.swift */; };
@@ -201,7 +195,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2F185AF02E7A2BDF008210FA /* ClockHandRotationEffect.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,7 +218,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2F185AF32E7A2BFC008210FA /* ClockHandRotationEffect.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,8 +252,6 @@
 		2F117C2F2C1A2FF500226CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F11AEB02E7475F50004FFA9 /* ArtifactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactView.swift; sourceTree = "<group>"; };
 		2F1830112C1A0B5000119A88 /* ci_pre_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_pre_xcodebuild.sh; sourceTree = "<group>"; };
-		2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ClockHandRotationEffect.xcframework; sourceTree = "<group>"; };
-		2F185AE72E7A2ACF008210FA /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		2F20EFB42E3EE543006102F7 /* WidgetEggDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetEggDelegate.swift; sourceTree = "<group>"; };
 		2F20FDDF2BE431B600B30302 /* MissionInfoExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MissionInfoExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F20FDE32BE431B600B30302 /* MissionInfoBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionInfoBundle.swift; sourceTree = "<group>"; };
@@ -342,7 +332,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F185AEF2E7A2BDF008210FA /* ClockHandRotationEffect.xcframework in Frameworks */,
 				2FA6D52F2E7C761A00063C10 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,7 +340,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F185AF22E7A2BFC008210FA /* ClockHandRotationEffect.xcframework in Frameworks */,
 				2FA6D5372E7C76AF00063C10 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,14 +389,6 @@
 			path = ci_scripts;
 			sourceTree = "<group>";
 		};
-		2F185AE42E7A220C008210FA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2F185ADD2E7A21F9008210FA /* ClockHandRotationEffect.xcframework */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 		2F20FDE22BE431B600B30302 /* MissionInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,7 +411,6 @@
 				2F4772E72BE422ED00EC6E07 /* Protobuf */,
 				2FF48FA12DD3EFF400DD94C3 /* UserInfo */,
 				2FE59DFC2E19884800E125B2 /* ContractInfo */,
-				2F185AE42E7A220C008210FA /* Frameworks */,
 				2F4772D72BE41E9600EC6E07 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -487,7 +466,6 @@
 		2F4A7F6D2BE55B7600AD68A0 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				2F185AE72E7A2ACF008210FA /* Animation.swift */,
 				2F20FDF82BE43C1700B30302 /* API.swift */,
 				2F96C9C02C195DDF008C7708 /* SecureAPI.swift */,
 				2F0FED4D2E3E865D00BFA62C /* Notifications.swift */,
@@ -991,7 +969,6 @@
 				2F4D91472BEE805D00C6899F /* ArtifactInfo.swift in Sources */,
 				2F6DAA8B2F0AF4B60047F03E /* ei.pb.swift in Sources */,
 				2F96C9C12C195DDF008C7708 /* SecureAPI.swift in Sources */,
-				2F185AEC2E7A2AD1008210FA /* Animation.swift in Sources */,
 				2F4D914B2BEE815400C6899F /* Numbers.swift in Sources */,
 				2F4772DA2BE41E9600EC6E07 /* WidgetEggApp.swift in Sources */,
 				2F4D91462BEE805600C6899F /* API.swift in Sources */,
@@ -1027,7 +1004,6 @@
 				2F0FED3F2E3E7C7800BFA62C /* SignedOutView.swift in Sources */,
 				2FE59E082E19897100E125B2 /* ArtifactInfo.swift in Sources */,
 				2F4DF90E2E69F83500733C9F /* ContractInfoSmall.swift in Sources */,
-				2F185AEA2E7A2AD1008210FA /* Animation.swift in Sources */,
 				2F0FED442E3E7CE100BFA62C /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

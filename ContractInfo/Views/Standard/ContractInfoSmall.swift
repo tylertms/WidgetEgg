@@ -11,35 +11,36 @@ import AppIntents
 
 struct ContractInfoSmall: View {
     let entry: Provider.Entry
+    @State var contractIndex = 0
     
     var body: some View {
         if let contracts = entry.backup?.contracts.contracts, contracts.count > 0 {
-            ZStack {
-                ForEach(0 ..< contracts.count, id: \.self) { contractIndex in
-                    VStack(alignment: .leading) {
-                        let contract = contracts[contractIndex]
-                        if let gradeSpec = getGradeSpec(for: contract),
-                           let coopStatus = getCoopStatus(for: contract) {
-                            GeometryReader { proxy in
-                                VStack(alignment: .leading, spacing: 0) {
-                                    TitleView(contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus, proxy: proxy)
-                                    
-                                    SubtitleView(large: false, contract: contract, coopStatus: coopStatus)
-                                    
-                                    StatsView(large: false, contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus)
-                                    
-                                    GoalList(contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus, proxy: proxy)
-                                    
-                                    Spacer(minLength: 0)
-                                }
+            Button {
+                contractIndex = (contractIndex + 1) % contracts.count
+            } label: {
+                VStack(alignment: .leading) {
+                    let contract = contracts[contractIndex]
+                    if let gradeSpec = getGradeSpec(for: contract),
+                       let coopStatus = getCoopStatus(for: contract) {
+                        GeometryReader { proxy in
+                            VStack(alignment: .leading, spacing: 0) {
+                                TitleView(contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus, proxy: proxy)
+                                
+                                SubtitleView(large: false, contract: contract, coopStatus: coopStatus)
+                                
+                                StatsView(large: false, contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus)
+                                
+                                GoalList(contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus, proxy: proxy)
+                                
+                                Spacer(minLength: 0)
                             }
                         }
                     }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .font(.system(size: 14, weight: .medium))
-                    .animationMasked(index: contractIndex, count: contracts.count)
                 }
             }
+            .buttonStyle(.plain)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .font(.system(size: 14, weight: .medium))
         } else {
             ContractInfoEmpty(large: false)
         }

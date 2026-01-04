@@ -19,7 +19,6 @@ struct SignedOutView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(maxWidth: 50)
-            
         }
     }
 }

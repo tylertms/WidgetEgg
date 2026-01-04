@@ -8,11 +8,15 @@
 import Foundation
 import SwiftUI
 
-func fetchActiveMissions(basicRequestInfo: Ei_BasicRequestInfo) async throws -> [Ei_MissionInfo] {
+func fetchActiveMissions(basicRequestInfo: Ei_BasicRequestInfo, resetIndex: UInt32 = 0) async throws -> [Ei_MissionInfo] {
     guard let url = URL(string: MISSION_ENDPOINT) else { throw NSError(domain: "InvalidURL", code: 0, userInfo: nil) }
     
+    let getActiveMissionsRequest = Ei_GetActiveMissionsRequest.with {
+        $0.rinfo = basicRequestInfo
+        $0.resetIndex = resetIndex
+    }
     
-    guard let authMessage = buildSecureAuthMessage(data: try basicRequestInfo.serializedData()) else {
+    guard let authMessage = buildSecureAuthMessage(data: try getActiveMissionsRequest.serializedData()) else {
         throw NSError(domain: "InvalidSecrets", code: 0, userInfo: nil)
     }
     
@@ -30,9 +34,13 @@ func fetchActiveMissions(basicRequestInfo: Ei_BasicRequestInfo) async throws -> 
     
     let authMessageDecoded = try Ei_AuthenticatedMessage(serializedBytes: b64decoded).message
     let activeMissionsResponse = try Ei_GetActiveMissionsResponse(serializedBytes: authMessageDecoded)
-    let activeMissions = activeMissionsResponse.activeMissions
     
-    return activeMissions
+    
+    if activeMissionsResponse.success != true {
+        throw NSError(domain: "Unsuccessful", code: 0, userInfo: nil)
+    }
+
+    return activeMissionsResponse.activeMissions
 }
 
 func fetchBackup(basicRequestInfo: Ei_BasicRequestInfo) async throws -> Ei_Backup {
@@ -59,14 +67,11 @@ func fetchBackup(basicRequestInfo: Ei_BasicRequestInfo) async throws -> Ei_Backu
 }
 
 
-func fetchData(EID: String) async throws -> ([Ei_MissionInfo], Ei_Backup.Artifacts) {
+func fetchData(EID: String, virtue: Bool) async throws -> ([Ei_MissionInfo], Ei_Backup.Artifacts) {
     let basicRequestInfo = getBasicRequestInfo(EID: EID)
     
-    async let activeMissionsTask = fetchActiveMissions(basicRequestInfo: basicRequestInfo)
-    async let backupTask = fetchBackup(basicRequestInfo: basicRequestInfo)
-    
-    let activeMissions = try await activeMissionsTask
-    let backup = try await backupTask
+    let backup = try await fetchBackup(basicRequestInfo: basicRequestInfo)
+    let activeMissions = try await fetchActiveMissions(basicRequestInfo: basicRequestInfo, resetIndex: backup.virtue.resets)
     
     var fuelingMissions: [Ei_MissionInfo] = []
     
@@ -76,7 +81,10 @@ func fetchData(EID: String) async throws -> ([Ei_MissionInfo], Ei_Backup.Artifac
         fuelingMissions.append(fuelingMission)
     }
     
-    return (activeMissions + fuelingMissions, backup.artifacts)
+    var artifacts = virtue ? backup.virtue.afx : backup.artifacts
+    if virtue { artifacts.tankLevel = backup.artifacts.tankLevel }
+    
+    return (activeMissions + fuelingMissions, artifacts)
 }
 
 func fetchCoop(EID: String, contract: String, coop: String) async throws -> Ei_ContractCoopStatusResponse {

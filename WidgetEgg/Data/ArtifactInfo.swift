@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-let MISSION_ENDPOINT = "https://www.auxbrain.com/ei_afx/get_active_missions"
+let MISSION_ENDPOINT = "https://www.auxbrain.com/ei_afx/get_active_missions_v2"
 let BACKUP_ENDPOINT = "https://www.auxbrain.com/ei/bot_first_contact"
 let COOP_STATUS_ENDPOINT = "https://www.auxbrain.com/ei/coop_status"
 

@@ -9,12 +9,18 @@ import WidgetKit
 import UserNotifications
 
 struct Provider: TimelineProvider {
+    let virtue: Bool
+    
+    func missionType() -> Ei_MissionInfo.MissionType {
+        return virtue ? Ei_MissionInfo.MissionType.virtue : Ei_MissionInfo.MissionType.standard
+    }
+    
     func placeholder(in context: Context) -> MissionInfoEntry {
-        MissionInfoEntry(date: Date(), originalData: [], missionData: [], artifactInfo: nil) // Provide placeholder data
+        MissionInfoEntry(date: Date())
     }
     
     func getSnapshot(in context: Context, completion: @escaping (MissionInfoEntry) -> ()) {
-        completion(MissionInfoEntry(date: Date(), originalData: [], missionData: [], artifactInfo: nil))
+        completion(MissionInfoEntry(date: Date()))
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<MissionInfoEntry>) -> ()) {
@@ -22,30 +28,34 @@ struct Provider: TimelineProvider {
         guard let defaults = UserDefaults(suiteName: "group.com.WidgetEgg"), let EID = defaults.string(forKey: "EID") else {
             return completion(
                 Timeline(
-                    entries: [MissionInfoEntry(date: Date(timeIntervalSince1970: 0), originalData: [], missionData: [], artifactInfo: nil)],
+                    entries: [MissionInfoEntry()],
                     policy: .after(Date()))
             )
         }
-        
+                
         Task {
             do {
-                var data = try await fetchData(EID: EID)
+                let data = try await fetchData(EID: EID, virtue: virtue)
                 let numRefreshes = 36
-                var entries = [MissionInfoEntry(date: Date(), originalData: data.0, missionData: data.0, artifactInfo: data.1)]
                 
-                let activeMissions = data.0.filter({ $0.secondsRemaining > 0 })
+                var missionData = data.0.filter{ $0.type == missionType() }
+                let artifactInfo = data.1
+                
+                var entries = [MissionInfoEntry(date: Date(), originalData: missionData, missionData: missionData, artifactInfo: artifactInfo)]
+                
+                let activeMissions = missionData.filter({ $0.secondsRemaining > 0 })
                 
                 await NotificationManager.scheduleMissionReturnedNotifications(for: activeMissions)
-                await NotificationManager.submitForgottenLaunchNotifications(data.1, data.0)
+                await NotificationManager.submitForgottenLaunchNotifications(artifactInfo, missionData)
                 
                 if let minRemaining = activeMissions.compactMap({ $0.secondsRemaining }).min() {
                     let refreshInterval = (minRemaining + 10) / Double(numRefreshes)
 
                     for i in 1...numRefreshes {
-                        for j in 0..<data.0.count {
-                            data.0[j].secondsRemaining = max(0, data.0[j].secondsRemaining - refreshInterval)
+                        for j in 0..<missionData.count {
+                            missionData[j].secondsRemaining = max(0, missionData[j].secondsRemaining - refreshInterval)
                         }
-                        entries.append(MissionInfoEntry(date: Date().advanced(by: refreshInterval * Double(i)), originalData: entries[0].missionData, missionData: data.0, artifactInfo: data.1))
+                        entries.append(MissionInfoEntry(date: Date().advanced(by: refreshInterval * Double(i)), originalData: entries[0].missionData, missionData: missionData, artifactInfo: artifactInfo))
                     }
                 }
                 
@@ -55,7 +65,7 @@ struct Provider: TimelineProvider {
                 print("Error fetching data: \(error)")
                 completion(
                     Timeline(
-                        entries: [MissionInfoEntry(date: Date(timeIntervalSince1970: 0), originalData: [], missionData: [], artifactInfo: nil)],
+                        entries: [MissionInfoEntry()],
                         policy: .after(Date()))
                 )
             }

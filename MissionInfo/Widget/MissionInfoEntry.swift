@@ -13,3 +13,19 @@ struct MissionInfoEntry: TimelineEntry {
     let missionData: [Ei_MissionInfo]
     let artifactInfo: Ei_Backup.Artifacts?
 }
+
+extension MissionInfoEntry {
+    init() {
+        self.date = Date(timeIntervalSince1970: 0)
+        self.originalData = []
+        self.missionData = []
+        self.artifactInfo = nil
+    }
+    
+    init(date: Date) {
+        self.date = date
+        self.originalData = []
+        self.missionData = []
+        self.artifactInfo = nil
+    }
+}

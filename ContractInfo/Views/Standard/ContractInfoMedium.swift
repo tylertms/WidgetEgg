@@ -21,30 +21,25 @@ struct ContractInfoMedium: View {
         index != nil
     }
     
+    @State var pageIndex = 0
+    
     var body: some View {
-        
         if let contracts = entry.backup?.contracts.contracts, contracts.count > 0 {
             if let index = index, index < contracts.count {
                 getPrimaryView(for: contracts[index])
             } else {
                 let pages = (contracts.count + 1) / 2
-                ZStack {
-                    ForEach(0 ..< pages, id: \.self) { pageIndex in
-                        HStack(spacing: 15) {
-                            ForEach(0..<2, id: \.self) { contractIndex in
-                                let index = contractIndex + pageIndex * 2
-                                if index < contracts.count {
-                                    getPrimaryView(for: contracts[index])
-                                } else if pages > 1 {
-                                    ContractInfoEmpty(large: false)
-                                }
-                            }
+                HStack(spacing: 15) {
+                    ForEach(0..<2, id: \.self) { contractIndex in
+                        let index = contractIndex + pageIndex * 2
+                        if index < contracts.count {
+                            getPrimaryView(for: contracts[index])
+                        } else if pages > 1 {
+                            ContractInfoEmpty(large: false)
                         }
-                        .font(.system(size: 14, weight: .medium))
-                        .animationMasked(index: pageIndex, count: pages)
                     }
-                    
                 }
+                .font(.system(size: 14, weight: .medium))
             }
             
         } else {
