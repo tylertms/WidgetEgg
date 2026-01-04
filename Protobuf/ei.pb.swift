@@ -522,6 +522,15 @@ struct Ei_Backup: @unchecked Sendable {
   /// Clears the value of `mailState`. Subsequent reads from it will return its default value.
   mutating func clearMailState() {_uniqueStorage()._mailState = nil}
 
+  var subInfo: Ei_UserSubscriptionInfo {
+    get {return _storage._subInfo ?? Ei_UserSubscriptionInfo()}
+    set {_uniqueStorage()._subInfo = newValue}
+  }
+  /// Returns true if `subInfo` has been explicitly set.
+  var hasSubInfo: Bool {return _storage._subInfo != nil}
+  /// Clears the value of `subInfo`. Subsequent reads from it will return its default value.
+  mutating func clearSubInfo() {_uniqueStorage()._subInfo = nil}
+
   var checksum: UInt64 {
     get {return _storage._checksum ?? 0}
     set {_uniqueStorage()._checksum = newValue}
@@ -1664,6 +1673,15 @@ struct Ei_Backup: @unchecked Sendable {
     /// Clears the value of `lastSync`. Subsequent reads from it will return its default value.
     mutating func clearLastSync() {self._lastSync = nil}
 
+    var pastSimTime: Double {
+      get {return _pastSimTime ?? 0}
+      set {_pastSimTime = newValue}
+    }
+    /// Returns true if `pastSimTime` has been explicitly set.
+    var hasPastSimTime: Bool {return self._pastSimTime != nil}
+    /// Clears the value of `pastSimTime`. Subsequent reads from it will return its default value.
+    mutating func clearPastSimTime() {self._pastSimTime = nil}
+
     var unknownFields = SwiftProtobuf.UnknownStorage()
 
     init() {}
@@ -1672,6 +1690,7 @@ struct Ei_Backup: @unchecked Sendable {
     fileprivate var _resets: UInt32? = nil
     fileprivate var _afx: Ei_Backup.Artifacts? = nil
     fileprivate var _lastSync: Double? = nil
+    fileprivate var _pastSimTime: Double? = nil
   }
 
   struct Shells: Sendable {
@@ -15895,6 +15914,7 @@ struct Ei_SyncPathOfVirtueResponse: Sendable {
   enum Status: Int, SwiftProtobuf.Enum, Swift.CaseIterable {
     case ok = 0
     case problem = 1
+    case httpError = 2
 
     init() {
       self = .ok
@@ -16047,7 +16067,7 @@ extension Ei_Vector4: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementatio
 
 extension Ei_Backup: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = _protobuf_package + ".Backup"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}user_id\0\u{3}user_name\0\u{3}approx_time\0\u{1}settings\0\u{1}tutorial\0\u{1}stats\0\u{1}game\0\u{1}sim\0\u{1}mission\0\u{1}misc\0\u{2}\u{2}farms\0\u{1}contracts\0\u{1}artifacts\0\u{3}artifacts_db\0\u{3}game_services_id\0\u{3}device_id\0\u{3}ei_user_id\0\u{4}\u{2}force_offer_backup\0\u{1}version\0\u{3}force_backup\0\u{3}read_mail_ids\0\u{3}shell_db\0\u{1}shells\0\u{3}push_user_id\0\u{3}mail_state\0\u{2}\u{2}virtue\0\u{2}G\u{1}checksum\0\u{1}signature\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}user_id\0\u{3}user_name\0\u{3}approx_time\0\u{1}settings\0\u{1}tutorial\0\u{1}stats\0\u{1}game\0\u{1}sim\0\u{1}mission\0\u{1}misc\0\u{2}\u{2}farms\0\u{1}contracts\0\u{1}artifacts\0\u{3}artifacts_db\0\u{3}game_services_id\0\u{3}device_id\0\u{3}ei_user_id\0\u{4}\u{2}force_offer_backup\0\u{1}version\0\u{3}force_backup\0\u{3}read_mail_ids\0\u{3}shell_db\0\u{1}shells\0\u{3}push_user_id\0\u{3}mail_state\0\u{2}\u{2}virtue\0\u{3}sub_info\0\u{2}F\u{1}checksum\0\u{1}signature\0")
 
   fileprivate class _StorageClass {
     var _userID: String? = nil
@@ -16076,6 +16096,7 @@ extension Ei_Backup: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementation
     var _shellDb: Ei_ShellDB? = nil
     var _readMailIds: [String] = []
     var _mailState: Ei_MailState? = nil
+    var _subInfo: Ei_UserSubscriptionInfo? = nil
     var _checksum: UInt64? = nil
     var _signature: String? = nil
 
@@ -16114,6 +16135,7 @@ extension Ei_Backup: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementation
       _shellDb = source._shellDb
       _readMailIds = source._readMailIds
       _mailState = source._mailState
+      _subInfo = source._subInfo
       _checksum = source._checksum
       _signature = source._signature
     }
@@ -16160,6 +16182,7 @@ extension Ei_Backup: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementation
         case 26: try { try decoder.decodeSingularStringField(value: &_storage._pushUserID) }()
         case 27: try { try decoder.decodeSingularMessageField(value: &_storage._mailState) }()
         case 29: try { try decoder.decodeSingularMessageField(value: &_storage._virtue) }()
+        case 30: try { try decoder.decodeSingularMessageField(value: &_storage._subInfo) }()
         case 100: try { try decoder.decodeSingularUInt64Field(value: &_storage._checksum) }()
         case 101: try { try decoder.decodeSingularStringField(value: &_storage._signature) }()
         default: break
@@ -16252,6 +16275,9 @@ extension Ei_Backup: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementation
       try { if let v = _storage._virtue {
         try visitor.visitSingularMessageField(value: v, fieldNumber: 29)
       } }()
+      try { if let v = _storage._subInfo {
+        try visitor.visitSingularMessageField(value: v, fieldNumber: 30)
+      } }()
       try { if let v = _storage._checksum {
         try visitor.visitSingularUInt64Field(value: v, fieldNumber: 100)
       } }()
@@ -16293,6 +16319,7 @@ extension Ei_Backup: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementation
         if _storage._shellDb != rhs_storage._shellDb {return false}
         if _storage._readMailIds != rhs_storage._readMailIds {return false}
         if _storage._mailState != rhs_storage._mailState {return false}
+        if _storage._subInfo != rhs_storage._subInfo {return false}
         if _storage._checksum != rhs_storage._checksum {return false}
         if _storage._signature != rhs_storage._signature {return false}
         return true
@@ -17384,7 +17411,7 @@ extension Ei_Backup.Artifacts: SwiftProtobuf.Message, SwiftProtobuf._MessageImpl
 
 extension Ei_Backup.Virtue: SwiftProtobuf.Message, SwiftProtobuf._MessageImplementationBase, SwiftProtobuf._ProtoNameProviding {
   static let protoMessageName: String = Ei_Backup.protoMessageName + ".Virtue"
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}shift_count\0\u{1}resets\0\u{3}eov_earned\0\u{3}eggs_delivered\0\u{1}afx\0\u{3}active_afx\0\u{3}last_sync\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{3}shift_count\0\u{1}resets\0\u{3}eov_earned\0\u{3}eggs_delivered\0\u{1}afx\0\u{3}active_afx\0\u{3}last_sync\0\u{3}past_sim_time\0")
 
   mutating func decodeMessage<D: SwiftProtobuf.Decoder>(decoder: inout D) throws {
     while let fieldNumber = try decoder.nextFieldNumber() {
@@ -17399,6 +17426,7 @@ extension Ei_Backup.Virtue: SwiftProtobuf.Message, SwiftProtobuf._MessageImpleme
       case 5: try { try decoder.decodeSingularMessageField(value: &self._afx) }()
       case 6: try { try decoder.decodeRepeatedMessageField(value: &self.activeAfx) }()
       case 7: try { try decoder.decodeSingularDoubleField(value: &self._lastSync) }()
+      case 8: try { try decoder.decodeSingularDoubleField(value: &self._pastSimTime) }()
       default: break
       }
     }
@@ -17430,6 +17458,9 @@ extension Ei_Backup.Virtue: SwiftProtobuf.Message, SwiftProtobuf._MessageImpleme
     try { if let v = self._lastSync {
       try visitor.visitSingularDoubleField(value: v, fieldNumber: 7)
     } }()
+    try { if let v = self._pastSimTime {
+      try visitor.visitSingularDoubleField(value: v, fieldNumber: 8)
+    } }()
     try unknownFields.traverse(visitor: &visitor)
   }
 
@@ -17441,6 +17472,7 @@ extension Ei_Backup.Virtue: SwiftProtobuf.Message, SwiftProtobuf._MessageImpleme
     if lhs._afx != rhs._afx {return false}
     if lhs.activeAfx != rhs.activeAfx {return false}
     if lhs._lastSync != rhs._lastSync {return false}
+    if lhs._pastSimTime != rhs._pastSimTime {return false}
     if lhs.unknownFields != rhs.unknownFields {return false}
     return true
   }
@@ -32407,5 +32439,5 @@ extension Ei_SyncPathOfVirtueResponse: SwiftProtobuf.Message, SwiftProtobuf._Mes
 }
 
 extension Ei_SyncPathOfVirtueResponse.Status: SwiftProtobuf._ProtoNameProviding {
-  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{2}\0OK\0\u{1}PROBLEM\0")
+  static let _protobuf_nameMap = SwiftProtobuf._NameMap(bytecode: "\0\u{2}\0OK\0\u{1}PROBLEM\0\u{1}HTTP_ERROR\0")
 }

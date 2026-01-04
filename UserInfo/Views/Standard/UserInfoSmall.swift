@@ -13,6 +13,8 @@ struct UserInfoSmall: View {
     var body: some View {
         GeometryReader { proxy in
             VStack(alignment: .leading, spacing: 2) {
+                let EB = calculateEB(from: entry.backup)
+                
                 HStack(spacing: 2) {
                     Image("icon_player")
                         .resizable()
@@ -24,10 +26,12 @@ struct UserInfoSmall: View {
                     
                     Spacer(minLength: 5)
                     
-                    Image((entry.backup?.game.permitLevel ?? 0) > 0 ? "pro_permit" : "standard_permit")
+                    Image("afx_book_of_basan_4")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 16)
+
+                    Text(shortenRole(ebToRole(EB)))
                 }
                 
                 HStack(spacing: 2) {
@@ -50,15 +54,12 @@ struct UserInfoSmall: View {
                 .lineLimit(1)
                 
                 HStack(spacing: 2) {
-                    Image("afx_book_of_basan_4")
+                    Image("egg_truth")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 16)
                     
-                    let EB = calculateEB(from: entry.backup)
-                    let role = shortenRole(ebToRole(EB))
-                    
-                    Text(role)
+                    Text(String(entry.backup?.virtue.eovEarned.reduce(0, +) ?? 0))
                     
                     Spacer(minLength: 5)
                     

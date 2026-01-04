@@ -68,17 +68,17 @@
 		2F4DF91E2E6B1D9800733C9F /* ContractInfoMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4DF91D2E6B1D9800733C9F /* ContractInfoMedium.swift */; };
 		2F544BCE2BE5BE7500A83B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */; };
 		2F544BCF2BE5CE6200A83B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */; };
+		2F6DAA8A2F0AF4B60047F03E /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DAA892F0AF4B60047F03E /* ei.pb.swift */; };
+		2F6DAA8B2F0AF4B60047F03E /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DAA892F0AF4B60047F03E /* ei.pb.swift */; };
+		2F6DAA8C2F0AF4B60047F03E /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DAA892F0AF4B60047F03E /* ei.pb.swift */; };
+		2F6DAA8D2F0AF4B60047F03E /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DAA892F0AF4B60047F03E /* ei.pb.swift */; };
+		2F6DAA8E2F0AF4B60047F03E /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DAA892F0AF4B60047F03E /* ei.pb.swift */; };
+		2F6DAA8F2F0AF4B60047F03E /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6DAA892F0AF4B60047F03E /* ei.pb.swift */; };
 		2F96C9C12C195DDF008C7708 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96C9C02C195DDF008C7708 /* SecureAPI.swift */; };
 		2F96C9C22C195DDF008C7708 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96C9C02C195DDF008C7708 /* SecureAPI.swift */; };
 		2F96C9C32C195DDF008C7708 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96C9C02C195DDF008C7708 /* SecureAPI.swift */; };
 		2F96C9C42C195DDF008C7708 /* SecureAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F96C9C02C195DDF008C7708 /* SecureAPI.swift */; };
 		2FA3474F2BE7D0FA00C30E7B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA3474E2BE7D0FA00C30E7B /* SettingsView.swift */; };
-		2FA6D5272E7C754400063C10 /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA6D5262E7C754400063C10 /* ei.pb.swift */; };
-		2FA6D5282E7C754400063C10 /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA6D5262E7C754400063C10 /* ei.pb.swift */; };
-		2FA6D5292E7C754400063C10 /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA6D5262E7C754400063C10 /* ei.pb.swift */; };
-		2FA6D52A2E7C754400063C10 /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA6D5262E7C754400063C10 /* ei.pb.swift */; };
-		2FA6D52B2E7C754400063C10 /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA6D5262E7C754400063C10 /* ei.pb.swift */; };
-		2FA6D52C2E7C754400063C10 /* ei.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA6D5262E7C754400063C10 /* ei.pb.swift */; };
 		2FA6D52F2E7C761A00063C10 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 2FA6D52E2E7C761A00063C10 /* SwiftProtobuf */; };
 		2FA6D5312E7C769900063C10 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 2FA6D5302E7C769900063C10 /* SwiftProtobuf */; };
 		2FA6D5332E7C76A500063C10 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 2FA6D5322E7C76A500063C10 /* SwiftProtobuf */; };
@@ -299,9 +299,9 @@
 		2F4DF91D2E6B1D9800733C9F /* ContractInfoMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractInfoMedium.swift; sourceTree = "<group>"; };
 		2F4DF9232E6B3F6F00733C9F /* ContractInfoExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContractInfoExtension.entitlements; sourceTree = "<group>"; };
 		2F544BCD2BE5BE7500A83B15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F6DAA892F0AF4B60047F03E /* ei.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ei.pb.swift; sourceTree = "<group>"; };
 		2F96C9C02C195DDF008C7708 /* SecureAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAPI.swift; sourceTree = "<group>"; };
 		2FA3474E2BE7D0FA00C30E7B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		2FA6D5262E7C754400063C10 /* ei.pb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ei.pb.swift; sourceTree = "<group>"; };
 		2FE59DE42E19881000E125B2 /* ContractInfoExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ContractInfoExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FE59DF82E19884800E125B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FE59DF92E19884800E125B2 /* ContractInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractInfo.swift; sourceTree = "<group>"; };
@@ -468,7 +468,7 @@
 		2F4772E72BE422ED00EC6E07 /* Protobuf */ = {
 			isa = PBXGroup;
 			children = (
-				2FA6D5262E7C754400063C10 /* ei.pb.swift */,
+				2F6DAA892F0AF4B60047F03E /* ei.pb.swift */,
 			);
 			path = Protobuf;
 			sourceTree = "<group>";
@@ -953,6 +953,7 @@
 				2FF48F6F2DD3D8B500DD94C3 /* SettingsView.swift in Sources */,
 				2F96C9C22C195DDF008C7708 /* SecureAPI.swift in Sources */,
 				2F22B0E92BEBF24A00627D5F /* FuelList.swift in Sources */,
+				2F6DAA8C2F0AF4B60047F03E /* ei.pb.swift in Sources */,
 				2F4D91442BEE803700C6899F /* Numbers.swift in Sources */,
 				2F4A7F832BE55CCA00AD68A0 /* MissionInfoEmpty.swift in Sources */,
 				2F4A7F7D2BE55C6F00AD68A0 /* MissionInfoEntryView.swift in Sources */,
@@ -963,7 +964,6 @@
 				2FE674F02C18CCB100B0D2E1 /* MissionInfoAccessoryRectangular.swift in Sources */,
 				2F20FDE42BE431B600B30302 /* MissionInfoBundle.swift in Sources */,
 				2F4A7F772BE55BE500AD68A0 /* MissionInfoEntry.swift in Sources */,
-				2FA6D52A2E7C754400063C10 /* ei.pb.swift in Sources */,
 				2F4A7F742BE55BB900AD68A0 /* Provider.swift in Sources */,
 				2FE674FB2C190DB600B0D2E1 /* MissionInfoAccessoryCorner.swift in Sources */,
 				2F0FED512E3E866200BFA62C /* Notifications.swift in Sources */,
@@ -985,11 +985,11 @@
 				2FA3474F2BE7D0FA00C30E7B /* SettingsView.swift in Sources */,
 				2F4A7F8B2BE56DE200AD68A0 /* Extensions.swift in Sources */,
 				2F20EFB82E3EE543006102F7 /* WidgetEggDelegate.swift in Sources */,
-				2FA6D5282E7C754400063C10 /* ei.pb.swift in Sources */,
 				2F4D914A2BEE815200C6899F /* UI.swift in Sources */,
 				2F4772DC2BE41E9600EC6E07 /* HomeView.swift in Sources */,
 				2F22B0E52BEAD47300627D5F /* WhatNext.swift in Sources */,
 				2F4D91472BEE805D00C6899F /* ArtifactInfo.swift in Sources */,
+				2F6DAA8B2F0AF4B60047F03E /* ei.pb.swift in Sources */,
 				2F96C9C12C195DDF008C7708 /* SecureAPI.swift in Sources */,
 				2F185AEC2E7A2AD1008210FA /* Animation.swift in Sources */,
 				2F4D914B2BEE815400C6899F /* Numbers.swift in Sources */,
@@ -1008,6 +1008,7 @@
 				2FE59E092E19897500E125B2 /* GameInfo.swift in Sources */,
 				2F351D202E70AE8F00C75DE7 /* ContractInfoLarge.swift in Sources */,
 				2FE59DFF2E19884800E125B2 /* ContractInfo.swift in Sources */,
+				2F6DAA8A2F0AF4B60047F03E /* ei.pb.swift in Sources */,
 				2FE59E002E19884800E125B2 /* ContractInfoBundle.swift in Sources */,
 				2F4DF9182E6B1D0E00733C9F /* SubtitleView.swift in Sources */,
 				2F0FED402E3E7CAB00BFA62C /* API.swift in Sources */,
@@ -1018,7 +1019,6 @@
 				2F0FED422E3E7CD700BFA62C /* SecureAPI.swift in Sources */,
 				2F0FED432E3E7CDB00BFA62C /* Numbers.swift in Sources */,
 				2F11AEB12E7475F90004FFA9 /* ArtifactView.swift in Sources */,
-				2FA6D5292E7C754400063C10 /* ei.pb.swift in Sources */,
 				2FE59E042E1988F300E125B2 /* ContractInfoEntry.swift in Sources */,
 				2F0FED412E3E7CC100BFA62C /* UI.swift in Sources */,
 				2F4DF9162E6B1CFE00733C9F /* TitleView.swift in Sources */,
@@ -1037,11 +1037,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FE674DF2C18CA0200B0D2E1 /* HomeView.swift in Sources */,
-				2FA6D5272E7C754400063C10 /* ei.pb.swift in Sources */,
 				2FE674E22C18CA1200B0D2E1 /* EIDHelp.swift in Sources */,
 				2FE674F22C18D66200B0D2E1 /* UI.swift in Sources */,
 				2FE674E82C18CAF000B0D2E1 /* ArtifactInfo.swift in Sources */,
 				2FE674E92C18CB5100B0D2E1 /* Extensions.swift in Sources */,
+				2F6DAA8D2F0AF4B60047F03E /* ei.pb.swift in Sources */,
 				2F96C9C32C195DDF008C7708 /* SecureAPI.swift in Sources */,
 				2FE6749F2C18C12700B0D2E1 /* WidgetEggWatchApp.swift in Sources */,
 				2F0FED532E3E866200BFA62C /* Notifications.swift in Sources */,
@@ -1059,8 +1059,8 @@
 				2FE674B32C18C16D00B0D2E1 /* CustomGauge.swift in Sources */,
 				2F96C9C42C195DDF008C7708 /* SecureAPI.swift in Sources */,
 				2FE674B42C18C16D00B0D2E1 /* FuelList.swift in Sources */,
+				2F6DAA8F2F0AF4B60047F03E /* ei.pb.swift in Sources */,
 				2FE674B52C18C16D00B0D2E1 /* Numbers.swift in Sources */,
-				2FA6D52B2E7C754400063C10 /* ei.pb.swift in Sources */,
 				2FE674B72C18C16D00B0D2E1 /* MissionInfoEmpty.swift in Sources */,
 				2FE674B82C18C16D00B0D2E1 /* MissionInfoEntryView.swift in Sources */,
 				2FE674B92C18C16D00B0D2E1 /* UI.swift in Sources */,
@@ -1091,11 +1091,11 @@
 				2FF48FAC2DD3F16300DD94C3 /* SecureAPI.swift in Sources */,
 				2FF48FA82DD3F02500DD94C3 /* Provider.swift in Sources */,
 				2FF48FB02DD3F1C200DD94C3 /* UI.swift in Sources */,
-				2FA6D52C2E7C754400063C10 /* ei.pb.swift in Sources */,
 				2FF48FA52DD3EFF400DD94C3 /* UserInfoBundle.swift in Sources */,
 				2FF48FAA2DD3F03300DD94C3 /* UserInfoEntry.swift in Sources */,
 				2FF48FB92DD3F4C100DD94C3 /* UserInfoSmall.swift in Sources */,
 				2FF48FB42DD3F43800DD94C3 /* UserInfoEntryView.swift in Sources */,
+				2F6DAA8E2F0AF4B60047F03E /* ei.pb.swift in Sources */,
 				2FF48FAD2DD3F16800DD94C3 /* API.swift in Sources */,
 				2FF48FAE2DD3F1B500DD94C3 /* ArtifactInfo.swift in Sources */,
 				2FF48FB12DD3F1C700DD94C3 /* Extensions.swift in Sources */,
