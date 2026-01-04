@@ -80,6 +80,7 @@ func calculateEB(from backup: Ei_Backup?) -> Double {
     
     let peCount = Int(backup.game.eggsOfProphecy)
     let seCount = backup.game.soulEggsD
+    let teCount = Double(backup.virtue.eovEarned.reduce(0, +))
     
     let peBonusLevel = Int(
         backup.game.epicResearch
@@ -96,7 +97,9 @@ func calculateEB(from backup: Ei_Backup?) -> Double {
     let bonusFactor = Double(peBonusLevel) * 0.01
     let perEgg = (10.0 + Double(seBonusLevel)) * pow(1.05 + bonusFactor, Double(peCount))
     
-    return seCount * perEgg
+    let teBonus = powl(1.01, teCount)
+    
+    return seCount * perEgg * teBonus
 }
 
 func ebToRole(_ eb: Double) -> String {
