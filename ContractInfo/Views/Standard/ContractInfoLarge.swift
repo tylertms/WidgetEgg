@@ -26,7 +26,7 @@ struct ContractInfoLarge: View {
                             ContractInfoEmpty(large: true)
                         }
                         
-                        if index.isMultiple(of: 2) {
+                        if contractIndex == 0 {
                             Spacer(minLength: 10)
                         }
                     }

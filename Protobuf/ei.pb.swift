@@ -62,8 +62,8 @@ enum Ei_Egg: Int, SwiftProtobuf.Enum, Swift.CaseIterable {
   case edible = 1
   case superfood = 2
   case medical = 3
-  case rocketFuel = 4
-  case superMaterial = 5
+  case rocketfuel = 4
+  case supermaterial = 5
   case fusion = 6
   case quantum = 7
   case immortality = 8
@@ -73,7 +73,7 @@ enum Ei_Egg: Int, SwiftProtobuf.Enum, Swift.CaseIterable {
   case prodigy = 12
   case terraform = 13
   case antimatter = 14
-  case darkMatter = 15
+  case darkmatter = 15
   case ai = 16
   case nebula = 17
   case universe = 18
