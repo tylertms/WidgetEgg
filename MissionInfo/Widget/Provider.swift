@@ -46,7 +46,7 @@ struct Provider: TimelineProvider {
                 let activeMissions = missionData.filter({ $0.secondsRemaining > 0 })
                 
                 await NotificationManager.scheduleMissionReturnedNotifications(for: activeMissions)
-                await NotificationManager.submitForgottenLaunchNotifications(artifactInfo, missionData)
+                await NotificationManager.submitForgottenLaunchNotifications(artifactInfo, missionData, missionType: missionType())
                 
                 if let minRemaining = activeMissions.compactMap({ $0.secondsRemaining }).min() {
                     let refreshInterval = (minRemaining + 10) / Double(numRefreshes)
@@ -72,4 +72,3 @@ struct Provider: TimelineProvider {
         }
     }
 }
-

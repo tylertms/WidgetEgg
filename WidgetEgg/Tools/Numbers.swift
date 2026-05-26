@@ -9,8 +9,9 @@ import Foundation
 
 
 func getMissionDuration(mission: Ei_MissionInfo, epicResearch: [Ei_Backup.ResearchItem]) -> Double {
-    if let FTL_LEVEL = epicResearch.first(where: { $0.id == "afx_mission_time"})?.level {
-        var seconds = Double(SHIP_TIMES[mission.ship.rawValue][mission.durationType.rawValue])
+    if let FTL_LEVEL = epicResearch.first(where: { $0.id == "afx_mission_time"})?.level,
+       let baseSeconds = SHIP_TIMES[safe: mission.ship.rawValue]?[safe: mission.durationType.rawValue] {
+        var seconds = Double(baseSeconds)
         if mission.ship.rawValue >= Ei_MissionInfo.Spaceship.milleniumChicken.rawValue {
             seconds *= (1 - 0.01 * Double(FTL_LEVEL))
         }
@@ -97,7 +98,7 @@ func calculateEB(from backup: Ei_Backup?) -> Double {
     let bonusFactor = Double(peBonusLevel) * 0.01
     let perEgg = (10.0 + Double(seBonusLevel)) * pow(1.05 + bonusFactor, Double(peCount))
     
-    let teBonus = powl(1.01, teCount)
+    let teBonus = pow(1.01, teCount)
     
     return seCount * perEgg * teBonus
 }
@@ -119,10 +120,10 @@ func getMaxFuelingTimeSeconds(
   _ artifactsInfo: Ei_Backup.Artifacts,
   _ missions: [Ei_MissionInfo]
 ) -> Int64 {
-    let tankEggsPerSecond = FUEL_RATES[Int(artifactsInfo.tankLevel)]
+    guard let tankEggsPerSecond = FUEL_RATES[safe: Int(artifactsInfo.tankLevel)] else { return 0 }
     guard tankEggsPerSecond > 0 else { return 0 }
     let maxFuelAmount = missions
-      .map { TOTAL_FUEL_AMOUNTS[$0.ship.rawValue][$0.durationType.rawValue] }
+      .compactMap { TOTAL_FUEL_AMOUNTS[safe: $0.ship.rawValue]?[safe: $0.durationType.rawValue] }
       .max() ?? 0
     guard maxFuelAmount > 0 else { return 0 }
     return maxFuelAmount / tankEggsPerSecond
@@ -134,4 +135,3 @@ func getLatestShipLaunch(_ missions: [Ei_MissionInfo]) -> Date {
       .max()
       ?? Date(timeIntervalSince1970: 0)
 }
-

@@ -53,7 +53,7 @@ struct ContractInfoMedium: View {
            let coopStatus = getCoopStatus(for: contract) {
             GeometryReader { proxy in
                 VStack(alignment: .leading, spacing: 0) {
-                    TitleView(contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus, proxy: proxy)
+                    TitleView(contract: contract, gradeSpec: gradeSpec, coopStatus: coopStatus, proxy: proxy, customEggIconData: entry.customEggIconData)
                     
                     SubtitleView(large: large, contract: contract, coopStatus: coopStatus)
                     

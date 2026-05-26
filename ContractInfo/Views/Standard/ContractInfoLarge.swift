@@ -15,7 +15,6 @@ struct ContractInfoLarge: View {
     var body: some View {
         VStack {
             if let contracts = entry.backup?.contracts.contracts, !contracts.isEmpty {
-                let pages = (contracts.count + 1) / 2
                 VStack {
                     ForEach(0..<2, id: \.self) { (contractIndex: Int) in
                         let index = contractIndex + pageIndex * 2
@@ -54,4 +53,3 @@ struct ContractInfoLarge: View {
         }
     }
 }
-
