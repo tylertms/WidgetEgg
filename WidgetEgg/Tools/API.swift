@@ -32,8 +32,8 @@ func fetchActiveMissions(basicRequestInfo: Ei_BasicRequestInfo, resetIndex: UInt
         throw NSError(domain: "InvalidData", code: 0, userInfo: nil)
     }
     
-    let authMessageDecoded = try Ei_AuthenticatedMessage(serializedBytes: b64decoded).message
-    let activeMissionsResponse = try Ei_GetActiveMissionsResponse(serializedBytes: authMessageDecoded)
+    let activeMissionsData = try decodeAuthenticatedMessagePayload(serializedBytes: b64decoded)
+    let activeMissionsResponse = try Ei_GetActiveMissionsResponse(serializedBytes: activeMissionsData)
     
     
     if activeMissionsResponse.success != true {
@@ -109,8 +109,8 @@ func fetchCoop(EID: String, contract: String, coop: String) async throws -> Ei_C
     let (data, _) = try await URLSession.shared.data(for: request)
     guard let b64decoded = Data(base64Encoded: data) else { throw NSError(domain: "InvalidData", code: 0, userInfo: nil) }
     
-    let authMessage = try Ei_AuthenticatedMessage(serializedBytes: b64decoded)
-    let coopStatus = try Ei_ContractCoopStatusResponse(serializedBytes: authMessage.message)
+    let coopStatusData = try decodeAuthenticatedMessagePayload(serializedBytes: b64decoded)
+    let coopStatus = try Ei_ContractCoopStatusResponse(serializedBytes: coopStatusData)
 
     return coopStatus
 }
