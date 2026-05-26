@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 100;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -191,58 +191,48 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		2F185AF12E7A2BDF008210FA /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolder = Frameworks;
 			files = (
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2F4773212BE430FD00EC6E07 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 13;
+			dstSubfolder = PlugIns;
 			files = (
 				2F20FDEF2BE431B700B30302 /* MissionInfoExtension.appex in Embed Foundation Extensions */,
 				2FF48F982DD3EFEB00DD94C3 /* UserInfoExtension.appex in Embed Foundation Extensions */,
 				2FE59DF12E19881200E125B2 /* ContractInfoExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2FCDA0622E7A21A700580F07 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolder = Frameworks;
 			files = (
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2FE674A92C18C12800B0D2E1 /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
+			dstSubfolder = Product;
 			files = (
 				2FE674AA2C18C12800B0D2E1 /* WidgetEggWatch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2FE674D62C18C21100B0D2E1 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 13;
+			dstSubfolder = PlugIns;
 			files = (
 				2FE674D32C18C21100B0D2E1 /* MissionInfoWatchExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -322,52 +312,40 @@
 /* Begin PBXFrameworksBuildPhase section */
 		2F20FDDC2BE431B600B30302 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2FA6D5312E7C769900063C10 /* SwiftProtobuf in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2F4772D32BE41E9600EC6E07 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2FA6D52F2E7C761A00063C10 /* SwiftProtobuf in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2FE59DE12E19881000E125B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2FA6D5372E7C76AF00063C10 /* SwiftProtobuf in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2FE674992C18C12700B0D2E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2FA6D5332E7C76A500063C10 /* SwiftProtobuf in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2FE674C62C18C16D00B0D2E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2FE674C72C18C16D00B0D2E1 /* SwiftProtobufPluginLibrary in Frameworks */,
 				2FE674CA2C18C16D00B0D2E1 /* SwiftProtobuf in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2FF48F882DD3EFEA00DD94C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2FA6D5352E7C76AB00063C10 /* SwiftProtobuf in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -670,8 +648,6 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			name = MissionInfoExtension;
 			packageProductDependencies = (
 				2FA6D5302E7C769900063C10 /* SwiftProtobuf */,
@@ -718,8 +694,6 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			name = ContractInfoExtension;
 			packageProductDependencies = (
 				2FA6D5362E7C76AF00063C10 /* SwiftProtobuf */,
@@ -760,8 +734,6 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			name = MissionInfoWatchExtension;
 			packageProductDependencies = (
 				2FE674AF2C18C16D00B0D2E1 /* SwiftProtobuf */,
@@ -780,8 +752,6 @@
 				2FF48F892DD3EFEA00DD94C3 /* Resources */,
 			);
 			buildRules = (
-			);
-			dependencies = (
 			);
 			name = UserInfoExtension;
 			packageProductDependencies = (
@@ -819,7 +789,6 @@
 				};
 			};
 			buildConfigurationList = 2F4772D12BE41E9600EC6E07 /* Build configuration list for PBXProject "WidgetEgg" */;
-			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -830,6 +799,7 @@
 			packageReferences = (
 				2FA6D52D2E7C761A00063C10 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
 			);
+			preferredProjectObjectVersion = 100;
 			productRefGroup = 2F4772D72BE41E9600EC6E07 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -847,85 +817,66 @@
 /* Begin PBXResourcesBuildPhase section */
 		2F20FDDD2BE431B600B30302 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2F544BCF2BE5CE6200A83B15 /* Assets.xcassets in Resources */,
 				2F20FDEA2BE431B700B30302 /* EggIncAssets.xcassets in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2F4772D42BE41E9600EC6E07 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2F544BCE2BE5BE7500A83B15 /* Assets.xcassets in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2FE59DE22E19881000E125B2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2FE59DFD2E19884800E125B2 /* Assets.xcassets in Resources */,
 				2F4DF9142E6A158100733C9F /* Assets.xcassets in Resources */,
 				2F4DF9132E6A039B00733C9F /* EggIncAssets.xcassets in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2FE6749A2C18C12700B0D2E1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2FE674E42C18CAB800B0D2E1 /* Assets.xcassets in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2FE674CB2C18C16D00B0D2E1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2FE674CC2C18C16D00B0D2E1 /* Assets.xcassets in Resources */,
 				2FE674CD2C18C16D00B0D2E1 /* EggIncAssets.xcassets in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2FF48F892DD3EFEA00DD94C3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2FF48FA22DD3EFF400DD94C3 /* Assets.xcassets in Resources */,
 				2FF48FCD2DD4265D00DD94C3 /* Assets.xcassets in Resources */,
 				2FF48FC62DD3F9C200DD94C3 /* EggIncAssets.xcassets in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		2F117C222C1A13B200226CEF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(SRCROOT)/WidgetEgg/ExtensionInfo.plist",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nsh ${SRCROOT}/ci_scripts/ci_pre_xcodebuild.sh\n";
+			shellScript = (
+				"# Type a script or drag a script file from your workspace to insert its path.",
+				"sh ${SRCROOT}/ci_scripts/ci_pre_xcodebuild.sh",
+				"",
+			);
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F20FDDB2BE431B600B30302 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2F4A7F852BE55D2700AD68A0 /* CustomGauge.swift in Sources */,
 				2FF48F6F2DD3D8B500DD94C3 /* SettingsView.swift in Sources */,
@@ -953,11 +904,9 @@
 				2F4A7F7F2BE55C8A00AD68A0 /* MissionInfoSmall.swift in Sources */,
 				2FF48FCC2DD40F8B00DD94C3 /* GameInfo.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2F4772D22BE41E9600EC6E07 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2F0FED4E2E3E866200BFA62C /* Notifications.swift in Sources */,
 				2FA3474F2BE7D0FA00C30E7B /* SettingsView.swift in Sources */,
@@ -975,11 +924,9 @@
 				2F4A7F8D2BE5780700AD68A0 /* EIDHelp.swift in Sources */,
 				2FF48FC92DD40F8B00DD94C3 /* GameInfo.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2FE59DE02E19881000E125B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2F4DF91C2E6B1D3600733C9F /* GoalList.swift in Sources */,
 				2FE59E092E19897500E125B2 /* GameInfo.swift in Sources */,
@@ -1006,11 +953,9 @@
 				2F4DF90E2E69F83500733C9F /* ContractInfoSmall.swift in Sources */,
 				2F0FED442E3E7CE100BFA62C /* Extensions.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2FE674982C18C12700B0D2E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2FE674DF2C18CA0200B0D2E1 /* HomeView.swift in Sources */,
 				2FE674E22C18CA1200B0D2E1 /* EIDHelp.swift in Sources */,
@@ -1026,11 +971,9 @@
 				2FE674E62C18CAD900B0D2E1 /* Numbers.swift in Sources */,
 				2FF48FC82DD40F8B00DD94C3 /* GameInfo.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2FE674B22C18C16D00B0D2E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2FE674B32C18C16D00B0D2E1 /* CustomGauge.swift in Sources */,
 				2F96C9C42C195DDF008C7708 /* SecureAPI.swift in Sources */,
@@ -1057,11 +1000,9 @@
 				2FE674C42C18C16D00B0D2E1 /* Extensions.swift in Sources */,
 				2FE674C52C18C16D00B0D2E1 /* MissionInfoSmall.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2FF48F872DD3EFEA00DD94C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				2FF48FA42DD3EFF400DD94C3 /* UserInfo.swift in Sources */,
 				2FF48FAC2DD3F16300DD94C3 /* SecureAPI.swift in Sources */,
@@ -1080,7 +1021,6 @@
 				2FF48FB52DD3F47200DD94C3 /* SignedOutView.swift in Sources */,
 				2FF48FCB2DD40F8B00DD94C3 /* GameInfo.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -1113,7 +1053,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2F20FDF12BE431B700B30302 /* Debug */ = {
+		2F20FDF12BE431B700B30302 /* Debug configuration for PBXNativeTarget "MissionInfoExtension" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1156,7 +1096,7 @@
 			};
 			name = Debug;
 		};
-		2F20FDF22BE431B700B30302 /* Release */ = {
+		2F20FDF22BE431B700B30302 /* Release configuration for PBXNativeTarget "MissionInfoExtension" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1199,7 +1139,7 @@
 			};
 			name = Release;
 		};
-		2F4772E22BE41E9700EC6E07 /* Debug */ = {
+		2F4772E22BE41E9700EC6E07 /* Debug configuration for PBXProject "WidgetEgg" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1257,7 +1197,7 @@
 				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 3.0.2;
+				MARKETING_VERSION = 3.0.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1269,7 +1209,7 @@
 			};
 			name = Debug;
 		};
-		2F4772E32BE41E9700EC6E07 /* Release */ = {
+		2F4772E32BE41E9700EC6E07 /* Release configuration for PBXProject "WidgetEgg" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1311,6 +1251,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1321,7 +1262,7 @@
 				INFOPLIST_PREPROCESS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MARKETING_VERSION = 3.0.2;
+				MARKETING_VERSION = 3.0.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1332,7 +1273,7 @@
 			};
 			name = Release;
 		};
-		2F4772E52BE41E9700EC6E07 /* Debug */ = {
+		2F4772E52BE41E9700EC6E07 /* Debug configuration for PBXNativeTarget "WidgetEgg" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1371,7 +1312,7 @@
 			};
 			name = Debug;
 		};
-		2F4772E62BE41E9700EC6E07 /* Release */ = {
+		2F4772E62BE41E9700EC6E07 /* Release configuration for PBXNativeTarget "WidgetEgg" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1410,7 +1351,7 @@
 			};
 			name = Release;
 		};
-		2FE59DF42E19881200E125B2 /* Debug */ = {
+		2FE59DF42E19881200E125B2 /* Debug configuration for PBXNativeTarget "ContractInfoExtension" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1438,7 +1379,7 @@
 			};
 			name = Debug;
 		};
-		2FE59DF52E19881200E125B2 /* Release */ = {
+		2FE59DF52E19881200E125B2 /* Release configuration for PBXNativeTarget "ContractInfoExtension" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1466,7 +1407,7 @@
 			};
 			name = Release;
 		};
-		2FE674AB2C18C12800B0D2E1 /* Debug */ = {
+		2FE674AB2C18C12800B0D2E1 /* Debug configuration for PBXNativeTarget "WidgetEggWatch" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1495,7 +1436,7 @@
 			};
 			name = Debug;
 		};
-		2FE674AC2C18C12800B0D2E1 /* Release */ = {
+		2FE674AC2C18C12800B0D2E1 /* Release configuration for PBXNativeTarget "WidgetEggWatch" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1524,7 +1465,7 @@
 			};
 			name = Release;
 		};
-		2FE674CF2C18C16D00B0D2E1 /* Debug */ = {
+		2FE674CF2C18C16D00B0D2E1 /* Debug configuration for PBXNativeTarget "MissionInfoWatchExtension" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1563,7 +1504,7 @@
 			};
 			name = Debug;
 		};
-		2FE674D02C18C16D00B0D2E1 /* Release */ = {
+		2FE674D02C18C16D00B0D2E1 /* Release configuration for PBXNativeTarget "MissionInfoWatchExtension" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1602,7 +1543,7 @@
 			};
 			name = Release;
 		};
-		2FF48F9B2DD3EFEB00DD94C3 /* Debug */ = {
+		2FF48F9B2DD3EFEB00DD94C3 /* Debug configuration for PBXNativeTarget "UserInfoExtension" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1632,7 +1573,7 @@
 			};
 			name = Debug;
 		};
-		2FF48F9C2DD3EFEB00DD94C3 /* Release */ = {
+		2FF48F9C2DD3EFEB00DD94C3 /* Release configuration for PBXNativeTarget "UserInfoExtension" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1668,64 +1609,57 @@
 		2F20FDF02BE431B700B30302 /* Build configuration list for PBXNativeTarget "MissionInfoExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2F20FDF12BE431B700B30302 /* Debug */,
-				2F20FDF22BE431B700B30302 /* Release */,
+				2F20FDF12BE431B700B30302 /* Debug configuration for PBXNativeTarget "MissionInfoExtension" */,
+				2F20FDF22BE431B700B30302 /* Release configuration for PBXNativeTarget "MissionInfoExtension" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		2F4772D12BE41E9600EC6E07 /* Build configuration list for PBXProject "WidgetEgg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2F4772E22BE41E9700EC6E07 /* Debug */,
-				2F4772E32BE41E9700EC6E07 /* Release */,
+				2F4772E22BE41E9700EC6E07 /* Debug configuration for PBXProject "WidgetEgg" */,
+				2F4772E32BE41E9700EC6E07 /* Release configuration for PBXProject "WidgetEgg" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		2F4772E42BE41E9700EC6E07 /* Build configuration list for PBXNativeTarget "WidgetEgg" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2F4772E52BE41E9700EC6E07 /* Debug */,
-				2F4772E62BE41E9700EC6E07 /* Release */,
+				2F4772E52BE41E9700EC6E07 /* Debug configuration for PBXNativeTarget "WidgetEgg" */,
+				2F4772E62BE41E9700EC6E07 /* Release configuration for PBXNativeTarget "WidgetEgg" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		2FE59DF32E19881200E125B2 /* Build configuration list for PBXNativeTarget "ContractInfoExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2FE59DF42E19881200E125B2 /* Debug */,
-				2FE59DF52E19881200E125B2 /* Release */,
+				2FE59DF42E19881200E125B2 /* Debug configuration for PBXNativeTarget "ContractInfoExtension" */,
+				2FE59DF52E19881200E125B2 /* Release configuration for PBXNativeTarget "ContractInfoExtension" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		2FE674AD2C18C12800B0D2E1 /* Build configuration list for PBXNativeTarget "WidgetEggWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2FE674AB2C18C12800B0D2E1 /* Debug */,
-				2FE674AC2C18C12800B0D2E1 /* Release */,
+				2FE674AB2C18C12800B0D2E1 /* Debug configuration for PBXNativeTarget "WidgetEggWatch" */,
+				2FE674AC2C18C12800B0D2E1 /* Release configuration for PBXNativeTarget "WidgetEggWatch" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		2FE674CE2C18C16D00B0D2E1 /* Build configuration list for PBXNativeTarget "MissionInfoWatchExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2FE674CF2C18C16D00B0D2E1 /* Debug */,
-				2FE674D02C18C16D00B0D2E1 /* Release */,
+				2FE674CF2C18C16D00B0D2E1 /* Debug configuration for PBXNativeTarget "MissionInfoWatchExtension" */,
+				2FE674D02C18C16D00B0D2E1 /* Release configuration for PBXNativeTarget "MissionInfoWatchExtension" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		2FF48F9A2DD3EFEB00DD94C3 /* Build configuration list for PBXNativeTarget "UserInfoExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2FF48F9B2DD3EFEB00DD94C3 /* Debug */,
-				2FF48F9C2DD3EFEB00DD94C3 /* Release */,
+				2FF48F9B2DD3EFEB00DD94C3 /* Debug configuration for PBXNativeTarget "UserInfoExtension" */,
+				2FF48F9C2DD3EFEB00DD94C3 /* Release configuration for PBXNativeTarget "UserInfoExtension" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
